@@ -45,7 +45,7 @@
 }
 
 .link__to-menu {
-    background-image: url('../img/menu.jpg');
+    background-image: url('../../images/dest/menu.jpg');
     @include appearancEffect($translate2: -20%, $translate1: 0);
 
     &._active {
@@ -59,7 +59,7 @@
 }
 
 .link__to-feedback {
-    background-image: url('../img/feedback.jpg');
+    background-image: url('../../images/dest/feedback.jpg');
     @include appearancEffect($translate2: 20%, $translate1: 0);
 
     &._active {

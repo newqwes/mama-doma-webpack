@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('CirceRounded-Bold.eot');
+    src: local('Circe Rounded Bold'), local('CirceRounded-Bold'), url('CirceRounded-Bold.eot?#iefix') format('embedded-opentype'),
+        url('CirceRounded-Bold.woff2') format('woff2'), url('CirceRounded-Bold.woff') format('woff'),
+        url('CirceRounded-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('CirceRounded-Light.eot');
+    src: local('Circe Rounded Light'), local('CirceRounded-Light'), url('CirceRounded-Light.eot?#iefix') format('embedded-opentype'),
+        url('CirceRounded-Light.woff2') format('woff2'), url('CirceRounded-Light.woff') format('woff'),
+        url('CirceRounded-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('CirceRounded.eot');
+    src: local('Circe Rounded'), local('CirceRounded'), url('CirceRounded.eot?#iefix') format('embedded-opentype'),
+        url('CirceRounded.woff2') format('woff2'), url('CirceRounded.woff') format('woff'), url('CirceRounded.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

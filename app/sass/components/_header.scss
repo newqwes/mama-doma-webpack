@@ -188,7 +188,7 @@
 .promo__title-span {
     cursor: pointer;
     display: inline-block;
-    background-image: url('../img/mama-doma-title.svg');
+    background-image: url('../../images/dest/mama-doma-title.svg');
     width: 763px;
     height: 117px;
     @include appearancEffect();
@@ -274,7 +274,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: rgb(10, 8, 8) url('../img/IMG_8164.JPG') no-repeat center center;
+    background: rgb(10, 8, 8) url('../../images/dest/IMG_8164.JPG') no-repeat center center;
     background-size: cover;
 
     &::before {

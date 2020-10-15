@@ -100,9 +100,7 @@
     background-size: cover;
     border-radius: 5px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
-    transform: scale(0);
     transition: all 0.8s ease;
-    opacity: 0;
 
     p,
     h4 {
@@ -119,11 +117,6 @@
         @include font(2rem, 2.4rem, bold);
     }
 
-    &._active {
-        transform: scale(1);
-        opacity: 1;
-    }
-
     &:hover {
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 12px 12px rgba(0, 0, 0, 0.2);
     }
@@ -136,6 +129,6 @@
     margin-bottom: 10px;
 
     &_0 {
-        background-image: url('../img/IMG_8158.JPG');
+        background-image: url('../../images/dest/IMG_8158.JPG');
     }
 }

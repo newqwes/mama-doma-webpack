@@ -109,7 +109,7 @@
 }
 
 .about-us__work {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/about_us_people.JPG') center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../images/dest/about_us_people.JPG') center;
     background-size: cover;
     @include appearancEffect($translate2: -20%, $translate1: 0);
 
@@ -119,7 +119,7 @@
 }
 
 .about-us__instagram {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/about_us_instagram.JPG') bottom;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../images/dest/about_us_instagram.JPG') bottom;
     background-size: cover;
     @include appearancEffect($translate2: 20%, $translate1: 0);
 
