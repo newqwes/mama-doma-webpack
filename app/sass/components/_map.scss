@@ -30,14 +30,7 @@
         grid-template-columns: 1fr;
     }
 }
-.contacts__item {
-    display: grid;
-    grid-template-columns: 1fr 20px;
-    grid-template-rows: 1fr;
-    @include media-tablet-768 {
-        grid-template-columns: 1fr;
-    }
-}
+
 .map__wrapper {
     text-align: center;
 }
@@ -99,6 +92,12 @@
     }
 }
 .contacts__item {
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    grid-template-rows: 1fr;
+    @include media-tablet-768 {
+        grid-template-columns: 1fr;
+    }
     text-align: right;
     color: $color-brand-second;
     padding-bottom: 15px;

@@ -1,4 +1,7 @@
+//подключаем gulp
 const { src, dest, parallel, series, watch } = require('gulp');
+
+// Подключаем расширения для Gulp
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
@@ -10,6 +13,7 @@ const newer = require('gulp-newer');
 const del = require('del');
 const htmlmin = require('gulp-htmlmin');
 
+// Запустить на локальном сервере папку app
 function browsersync() {
     browserSync.init({
         server: { baseDir: 'app/' },
@@ -18,6 +22,7 @@ function browsersync() {
     });
 }
 
+// Минифицируем HTML
 function htmlToMin() {
     return src(['app/**/*.html'])
         .pipe(
@@ -29,6 +34,7 @@ function htmlToMin() {
         .pipe(dest('app/html/'));
 }
 
+// Bundle для js файлов всё собирается в одни, последовательность соблюдать!
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
@@ -48,6 +54,7 @@ function scripts() {
         .pipe(browserSync.stream());
 }
 
+// Стили из главного файла scss в css собирается минифицируется, подлючать все css/scss в файл style.scss
 function styles() {
     return src('app/sass/style.scss')
         .pipe(sass())
@@ -58,10 +65,12 @@ function styles() {
         .pipe(browserSync.stream());
 }
 
+// Все картинки из папки src сжимает удачно и ставить в папку dest
 function images() {
     return src('app/images/src/**/*').pipe(newer('app/images/dest/')).pipe(imagemin()).pipe(dest('app/images/dest/'));
 }
 
+// функции очистки
 function cleanimg() {
     return del('app/images/dest/**/*', { force: true });
 }
@@ -72,6 +81,7 @@ function cleanbuild() {
     return del(['dist/**/*', 'app/html/**/*'], { force: true });
 }
 
+// Можно подключить файлы которые войдут в бандл, просто копируется с app в dist
 function buildcopy() {
     return src(
         [
@@ -89,6 +99,7 @@ function buildcopy() {
     ).pipe(dest('dist'));
 }
 
+// Следит за изменениями файлов
 function startwatch() {
     watch('app/**/*.scss', styles);
     watch(['app/**/*.js', '!app/**/*.min.js'], scripts);
@@ -105,4 +116,6 @@ exports.cleanimg = cleanimg;
 
 exports.default = parallel(images, styles, scripts, browsersync, startwatch);
 exports.cleanall = series(cleanbuild, cleanhtml, cleanimg);
-exports.build = series(cleanbuild, htmlToMin, styles, scripts, images, buildcopy); // после в папке html вытащить и положить в корень
+
+// после в папке html вытащить и положить в корень
+exports.build = series(cleanbuild, htmlToMin, styles, scripts, images, buildcopy);
