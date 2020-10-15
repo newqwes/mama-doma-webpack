@@ -1,0 +1,72 @@
+.ico {
+    cursor: pointer;
+    display: inline-block;
+
+    &_region {
+        background-image: url('../img/icons/region.svg');
+        width: 15px;
+        height: 16px;
+    }
+
+    &_mail {
+        background-image: url('../img/icons/mail.svg');
+        width: 26px;
+        height: 26px;
+        margin-right: 8px;
+    }
+
+    &_phone {
+        background-image: url('../img/icons/phone.svg');
+        width: 26px;
+        height: 26px;
+        margin-right: 8px;
+    }
+    &_place {
+        background-image: url('../img/icons/place.svg');
+        width: 20px;
+        height: 20px;
+    }
+    &_question {
+        background-image: url('../img/icons/1.svg');
+        width: 22px;
+        height: 22px;
+    }
+    &_arrow {
+        background-image: url('../img/icons/up-arrow.svg');
+        width: 50px;
+        height: 50px;
+        transform: rotate(180deg);
+        @extend %transition;
+        border-radius: 50%;
+        opacity: 0.8;
+        &:hover {
+            opacity: 1;
+            background-color: #fecc162a;
+        }
+        @include media-tablet-768 {
+            width: 42px;
+            height: 42px;
+        }
+        @include media-mobile-414 {
+            width: 36px;
+            height: 36px;
+        }
+    }
+}
+
+.logo img {
+    width: 70px;
+}
+
+.logo_instagram img {
+    width: 50px;
+}
+
+.arrow-to-top {
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    top: 80vh;
+    right: 30px;
+    position: fixed;
+}

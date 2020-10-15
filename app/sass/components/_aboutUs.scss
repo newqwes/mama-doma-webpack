@@ -1,0 +1,129 @@
+.about-us {
+    padding: 60px 0;
+    color: $color-text;
+}
+.about-us__wrapper {
+    text-align: center;
+    h2 {
+        padding-bottom: 30px;
+    }
+}
+.about-us__items {
+    border-radius: 5px;
+    text-align: center;
+    height: 360px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 15px;
+
+    a,
+    h3,
+    span {
+        @extend %transition;
+        transform: translateY(20px);
+        margin-top: 10px;
+        @include media-tablet-768 {
+            padding: 0 20px;
+        }
+    }
+    h3 {
+        @include media-tablet-768 {
+            @include font(2.6rem, $weight: bold);
+        }
+        @include media-mobile-414 {
+            @include font(2.4rem, $weight: bold);
+            padding: 0 20px;
+        }
+    }
+
+    button {
+        cursor: pointer;
+        @extend %transition;
+        transform: translateY(-20px);
+        opacity: 0;
+        visibility: hidden;
+        margin-top: 30px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        bottom: 5%;
+        right: 5%;
+        border-top: solid 2px $color-brand-accent;
+        border-bottom: solid 2px $color-brand-accent;
+        @extend %transition;
+        transform: scaleX(0);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        bottom: 5%;
+        right: 5%;
+        border-left: solid 2px $color-brand-accent;
+        border-right: solid 2px $color-brand-accent;
+        @extend %transition;
+        transform: scaleY(0);
+    }
+
+    &:hover::before,
+    &:hover::after {
+        transform: scale(1);
+    }
+    @include media-tablet-768 {
+        &:before,
+        &::after {
+            transform: scale(1);
+        }
+    }
+
+    &:hover a,
+    &:hover h3,
+    &:hover button,
+    &:hover span {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        z-index: 10;
+    }
+    @include media-tablet-768 {
+        a,
+        h3,
+        button,
+        span {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+            z-index: 10;
+        }
+    }
+}
+
+.about-us__work {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/about_us_people.JPG') center;
+    background-size: cover;
+    @include appearancEffect($translate2: -20%, $translate1: 0);
+
+    &._active {
+        @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
+    }
+}
+
+.about-us__instagram {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/about_us_instagram.JPG') bottom;
+    background-size: cover;
+    @include appearancEffect($translate2: 20%, $translate1: 0);
+
+    &._active {
+        @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
+    }
+}

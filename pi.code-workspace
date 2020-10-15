@@ -1,0 +1,11 @@
+{
+    "folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../mama-doma/src/js/lib"
+		}
+	],
+    "settings": {}
+}

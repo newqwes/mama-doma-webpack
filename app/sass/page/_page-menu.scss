@@ -1,0 +1,141 @@
+.body__menu-page {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.menu-page-items {
+    flex: 1;
+    // background-color: $color-brand-accent;
+}
+
+.menu-page-header {
+    background-color: $color-brand-second;
+    padding-top: 10px;
+
+    .region__now_label,
+    .dropbtn {
+        color: $color-text;
+    }
+}
+
+.menu-page__navigatin {
+    margin: 0;
+}
+
+.menu-page-header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu-page-items__wrapper {
+    text-align: center;
+}
+
+.menu-page__navigatin {
+    display: flex;
+}
+
+.menu-page__link {
+    list-style-type: none;
+    padding: 0 20px;
+
+    a {
+        color: $color-text;
+        text-transform: uppercase;
+        @extend %transition;
+        position: relative;
+        line-height: 1;
+        text-decoration: none;
+        letter-spacing: 0.2rem;
+        @include font(1.4rem);
+        line-height: 2rem;
+
+        &:hover {
+            color: $color-brand-accent;
+        }
+    }
+
+    a:after {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: $color-brand-accent;
+        content: '';
+        @extend %transition;
+    }
+
+    a:hover:after,
+    a:focus:after {
+        width: 100%;
+    }
+}
+
+.menu-page__title {
+    margin-bottom: 80px;
+}
+
+.bgctext {
+    background-color: $color-text;
+}
+
+.bgcacent {
+    background-color: $color-brand-accent;
+}
+
+.bgcsecond {
+    background-color: $color-brand-second;
+    color: $color-text;
+}
+
+.menu-page__links {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 360px;
+    height: 350px;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
+    transform: scale(0);
+    transition: all 0.8s ease;
+    opacity: 0;
+
+    p,
+    h4 {
+        margin: 5px 10px;
+        padding: 0;
+        text-align: left;
+    }
+
+    p {
+        @include font(2.2rem, 2.6rem, 300);
+    }
+
+    h4 {
+        @include font(2rem, 2.4rem, bold);
+    }
+
+    &._active {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    &:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 12px 12px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.menu-page__image {
+    flex: 1;
+    background-size: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    &_0 {
+        background-image: url('../img/IMG_8158.JPG');
+    }
+}

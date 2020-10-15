@@ -1,0 +1,70 @@
+.footer {
+    background-color: $color-brand-second;
+    padding: 40px 0 10px;
+}
+
+.footer__wrapper,
+.footer__contacts {
+    display: flex;
+    justify-content: space-between;
+    @include media-tablet-768 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    a {
+        color: $color-brand-accent;
+        display: flex;
+        @include font(1.8rem, 2.4rem);
+        @include media-mobile-414 {
+            @include font(1.3rem, 1.4rem);
+        }
+    }
+}
+.footer__contacts {
+    @include media-tablet-768 {
+        flex-wrap: wrap;
+    }
+}
+.footer__logo {
+    width: 212px;
+    height: 33px;
+    background-image: url('../img/mama-doma-title.svg');
+    background-repeat: no-repeat;
+    @include media-tablet-768 {
+        margin-bottom: 10px;
+    }
+}
+
+.footer__items {
+    margin-left: 20px;
+    @include media-tablet-768 {
+        margin: 10px 0 10px 20px;
+    }
+}
+
+.footer__wrapper_developer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+        color: $color-light;
+    }
+    @include media-tablet-768 {
+        @include font(1.3rem, 1.5rem);
+    }
+    @include media-mobile-414 {
+        @include font(1.1rem, 1.4rem);
+    }
+
+    a {
+        color: $color-brand-accent;
+        @include font(1.8rem, 2.4rem);
+        @include media-tablet-768 {
+            @include font(1.3rem, 1.5rem);
+        }
+        @include media-mobile-414 {
+            @include font(1.1rem, 1.4rem);
+        }
+    }
+}

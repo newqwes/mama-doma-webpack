@@ -1,0 +1,141 @@
+.map {
+    background-color: $color-brand-accent;
+    padding: 70px 0 100px;
+    background-image: url(../img/bg_line-uzor_2.png), url(../img/bg_line-uzor_black.png);
+    background-size: 120% 60px;
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+    @include media-pcsmall-1366 {
+        background-size: 150% 50px;
+    }
+    @include media-laptop-1024 {
+        background-size: 210% 50px;
+    }
+    @include media-tablet-768 {
+        background-size: 350% 50px;
+    }
+    @include media-mobile-414 {
+        background-size: 480% 50px;
+    }
+    @include media-mobilesmall-320 {
+        background-size: 520% 50px;
+    }
+}
+.feedback__layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+    grid-template-rows: 1fr;
+    @include media-tablet-768 {
+        grid-template-columns: 1fr;
+    }
+}
+.contacts__item {
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    grid-template-rows: 1fr;
+    @include media-tablet-768 {
+        grid-template-columns: 1fr;
+    }
+}
+.map__wrapper {
+    text-align: center;
+}
+.feedback__contacts > div:nth-child(n) {
+    @include appearancEffect($translate1: -100%, $translate2: 0%);
+}
+.feedback__contacts > div:last-child {
+    transition: all 0.4s ease 1.2s;
+    transform: scale(0);
+    opacity: 0;
+}
+.feedback__contacts._active > div:nth-child(1) {
+    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1);
+}
+.feedback__contacts._active > div:nth-child(2) {
+    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.1s);
+}
+.feedback__contacts._active > div:nth-child(3) {
+    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.2s);
+}
+.feedback__contacts._active > div:nth-child(4) {
+    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.3s);
+}
+.feedback__contacts._active > div:nth-child(5) {
+    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.4s);
+}
+.feedback__contacts._active > div:nth-child(6) {
+    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.5s);
+}
+.feedback__contacts._active > div:nth-child(7) {
+    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.6s);
+}
+.feedback__contacts._active > div:nth-child(8) {
+    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.7s);
+}
+.feedback__contacts._active > div:nth-child(9) {
+    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.8s);
+}
+.feedback__contacts._active > div:last-child {
+    transform: scale(1);
+    opacity: 1;
+}
+.map__yandex {
+    width: 100%;
+    height: 700px;
+    @include media-tablet-768 {
+        height: 450px;
+    }
+    @include media-mobile-414 {
+        height: 250px;
+    }
+    @include appearancEffect($translate2: 20%, $translate1: 0);
+    &._active {
+        @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
+
+        &:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+.contacts__item {
+    text-align: right;
+    color: $color-brand-second;
+    padding-bottom: 15px;
+    @include media-tablet-768 {
+        text-align: center;
+        span {
+            display: none;
+        }
+    }
+    a {
+        @include font(1.8rem);
+        text-decoration: none;
+        letter-spacing: 0.2rem;
+        color: $color-brand-second;
+    }
+    h4 {
+        padding-bottom: 3px;
+    }
+    span {
+        margin-left: 5px;
+    }
+    p {
+        padding-bottom: 8px;
+        a {
+            @include font(1.6rem);
+            text-decoration: underline;
+            letter-spacing: 0.1rem;
+            color: $color-brand-second;
+        }
+    }
+}
+
+.map__social-links {
+    * {
+        box-sizing: content-box;
+    }
+    h4 {
+        margin-bottom: 10px;
+    }
+}

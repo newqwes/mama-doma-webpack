@@ -1,0 +1,47 @@
+.form-inner {
+    padding: 30px;
+    @include media-tablet-768 {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+    @include media-mobile-414 {
+        font-size: 1.4rem;
+        padding: 5px;
+    }
+}
+.form-inner input,
+.form-inner textarea {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    background: #e9eff6;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-inner input[type='submit'] {
+    margin-top: 30px;
+    background: $color-brand-accent;
+    border-bottom: 4px solid #dfb213;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+        background: #fccd24;
+    }
+}
+
+.form-inner textarea {
+    resize: none;
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+}
