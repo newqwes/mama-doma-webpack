@@ -1,0 +1,45 @@
+.policy {
+    color: $color-brand-second;
+    word-wrap: break-word;
+    h1 {
+        @include font(3.5rem, $height: 4rem, $weight: bold);
+        color: $color-brand-second;
+        text-transform: uppercase;
+        @include media-tablet-768 {
+            @include font(3rem, $height: 3.4rem, $weight: bold);
+        }
+        @include media-mobile-414 {
+            @include font(2.6rem, $height: 3rem, $weight: bold);
+        }
+    }
+    h2 {
+        color: $color-brand-second;
+        @include font(3.2rem, $height: 4rem, $weight: bold);
+        text-transform: none;
+        @include media-tablet-768 {
+            @include font(2.8rem, $height: 4rem, $weight: bold);
+        }
+        @include media-mobile-414 {
+            @include font(2.4rem, $height: 4rem, $weight: bold);
+        }
+    }
+    h3 {
+        color: $color-brand-second;
+        @include font(2.7rem, $height: 3.8rem, $weight: normal);
+        text-transform: none;
+        @include media-tablet-768 {
+            @include font(2.3rem, $height: 3.4rem, $weight: normal);
+        }
+        @include media-mobile-414 {
+            @include font(1.9rem, $height: 3.2rem, $weight: normal);
+        }
+    }
+    p,
+    div {
+        @include font(1.6rem, $height: 2.8rem, $weight: normal);
+        text-align: justify;
+    }
+}
+.policy-padding {
+    padding: 0 0 20px 4rem;
+}
