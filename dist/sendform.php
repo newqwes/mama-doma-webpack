@@ -6,7 +6,7 @@ $feedback = $_POST['feedback']; // Берём данные из input c атри
 
 $token = "961615825:AAEoRf-UDkAFB7BXG1LKTC5-6C4BgG8LaYs"; // Тут пишем токен
 $chat_id = "-367886163"; // Тут пишем ID группы, куда будут отправляться сообщения
-$sitename = "mama-doma.by"; //Указываем название сайта
+$sitename = "mama-doma.by отзыв"; //Указываем название сайта
 
 $arr = array(
 

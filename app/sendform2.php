@@ -2,11 +2,14 @@
 //Сбор данных из полей формы. 
 $name = $_POST['name'];// Берём данные из input c атрибутом name="name"
 $phone = str_replace("+", "", $_POST['phone']);  // Берём данные из input c атрибутом name="phone"
-$feedback = $_POST['feedback']; // Берём данные из input c атрибутом name="mail"
+$citizenship = $_POST['citizenship']; // Берём данные из input c атрибутом name="mail"
+$age = $_POST['age']; // Берём данные из input c атрибутом name="mail"
+$address = $_POST['address']; // Берём данные из input c атрибутом name="mail"
+$comment = $_POST['comment']; // Берём данные из input c атрибутом name="mail"
 
 $token = "961615825:AAEoRf-UDkAFB7BXG1LKTC5-6C4BgG8LaYs"; // Тут пишем токен
 $chat_id = "-367886163"; // Тут пишем ID группы, куда будут отправляться сообщения
-$sitename = "mama-doma.by отзыв"; //Указываем название сайта
+$sitename = "mama-doma.by работа"; //Указываем название сайта
 
 $arr = array(
 
@@ -14,7 +17,11 @@ $arr = array(
   'Дата: ' => date('d-m-Y H:i:s'),
   'Имя: ' => $name,
   'Телефон: %2B' => $phone,
-  'Отзыв: ' => $feedback
+  'Гражданство: ' => $citizenship,
+  'Возраст: ' => $age,
+  'Адрес: ' => $address,
+  'Комментарий: ' => $comment,
+
 );
 
 foreach($arr as $key => $value) {

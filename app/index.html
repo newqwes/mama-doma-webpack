@@ -180,7 +180,7 @@
                         </a>
                         <h3>С нами приятно работать!</h3>
                         <span>Станьте частью нашей команды</span>
-                        <button class="about-us__button">Оставьте заявку</button>
+                        <button href="#popup2" class="about-us__button popup-link">Оставьте заявку</button>
                     </div>
                     <div class="about-us__instagram about-us__items _anim-items">
                         <a href="#" class="logo_instagram">
@@ -314,7 +314,7 @@
                     <a href="#arrowToTop" class="popup__close close-popup">X</a>
                     <div class="popup__title">Оставьте свой отзыв</div>
                     <p class="popup__text">Заполните поля и оставьте отзыв о нас</p>
-                    <form>
+                    <form class="formReview">
                         <div class="form-inner">
                             <input
                                 type="text"
@@ -350,6 +350,70 @@
                 </div>
             </div>
         </div>
+
+        <div id="popup2" class="popup">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="#arrowToTop" class="popup__close close-popup">X</a>
+                    <div class="popup__title">Работай у нас</div>
+                    <p class="popup__text">Заполните поля и наш менеджер свяжется с вами!</p>
+                    <form class="formJob">
+                        <div class="form-inner">
+                            <input
+                                type="text"
+                                name="name"
+                                value
+                                required
+                                placeholder="Ваше имя"
+                                oninvalid="this.setCustomValidity('Забыли имя')"
+                                oninput="setCustomValidity('')"
+                            />
+                            <input
+                                type="text"
+                                name="citizenship"
+                                value
+                                required
+                                placeholder="Ваше гражданство"
+                                oninvalid="this.setCustomValidity('Забыли заполнить')"
+                                oninput="setCustomValidity('')"
+                            />
+                            <input
+                                type="number"
+                                name="age"
+                                value
+                                required
+                                placeholder="Ваш возраст"
+                                oninvalid="this.setCustomValidity('Забыли указать возраст')"
+                                oninput="setCustomValidity('')"
+                            />
+                            <input
+                                type="text"
+                                name="address"
+                                value
+                                required
+                                placeholder="Адрес проживания"
+                                oninvalid="this.setCustomValidity('Забыли указать адрес')"
+                                oninput="setCustomValidity('')"
+                            />
+                            <input
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                value
+                                required
+                                placeholder="Ваш телефон"
+                                oninvalid="this.setCustomValidity('Забыли телефон')"
+                                oninput="setCustomValidity('')"
+                            />
+                            <textarea name="comment" placeholder="Напишите свой комментарий..." rows="3"></textarea>
+                            <input type="submit" value="Оставить отзыв" />
+                        </div>
+                    </form>
+                    <p class="popup__text">Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                </div>
+            </div>
+        </div>
+
         <script src="js/app.min.js"></script>
     </body>
 </html>
