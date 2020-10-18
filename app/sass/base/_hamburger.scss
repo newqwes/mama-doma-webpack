@@ -67,6 +67,9 @@
         top: 0;
         width: 300px;
         opacity: 1;
+        > * {
+            display: block;
+        }
         .header__region {
             display: block;
         }
@@ -98,8 +101,10 @@
     z-index: 3;
     color: #000;
     text-align: center;
-
     user-select: none;
+    > * {
+        display: none;
+    }
     h3 {
         color: $color-brand-second;
         padding-bottom: 30px;
