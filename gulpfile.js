@@ -38,7 +38,6 @@ function htmlToMin() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
-        'app/js/ancors.js',
         'app/js/humburger.js',
         'app/js/hover.js',
         'app/js/animationScroll.js',
@@ -48,6 +47,7 @@ function scripts() {
         'app/js/mask.js',
         'app/js/lib/sweetalert.min.js',
         'app/js/form.js',
+        'app/js/ancors.js',
     ])
         .pipe(concat('app.min.js'))
         .pipe(uglify())
