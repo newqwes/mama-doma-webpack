@@ -49,7 +49,7 @@ function scripts() {
         'app/js/form.js',
         'app/js/ancors.js',
     ])
-        .pipe(concat('app.min.js'))
+        .pipe(concat('app01.min.js'))
         .pipe(uglify())
         .pipe(dest('app/js/'))
         .pipe(browserSync.stream());
@@ -59,7 +59,7 @@ function scripts() {
 function styles() {
     return src('app/sass/style.scss')
         .pipe(sass())
-        .pipe(concat('style.min.css'))
+        .pipe(concat('style01.min.css'))
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
         .pipe(cleanCss({ level: { 1: { specialComments: 0 } } }))
         .pipe(dest('app/css/'))
@@ -88,7 +88,7 @@ function buildcopy() {
         [
             'app/css/**/*.min.css',
             'app/**/*.php',
-            'app/js/app.min.js',
+            'app/js/app01.min.js',
             'app/images/dest/**/*',
             'app/font/**/*',
             'app/video/**/*',
