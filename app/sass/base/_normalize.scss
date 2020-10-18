@@ -390,3 +390,9 @@ a {
     margin: 0;
     padding: 0;
 }
+:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+}

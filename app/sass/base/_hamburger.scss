@@ -15,18 +15,23 @@
     position: relative;
     width: 32px;
     height: 24px;
-
+    transition: all 0.3s ease 0s;
     &:before {
         @extend %hamburger-line;
         top: 0;
         left: 0;
+
+        transition: all 0.3s ease 0s;
     }
     &:after {
         @extend %hamburger-line;
         bottom: 0;
         left: 0;
+
+        transition: all 0.3s ease 0s;
     }
 }
+
 .hamburger__line,
 .hamburger-region__line {
     @extend %hamburger-line;
@@ -44,5 +49,83 @@
     }
     @include media-tablet-768 {
         display: none;
+    }
+}
+
+.hamburger-region.is-active,
+.hamburger.is-active {
+    .hamburger-region__line,
+    .hamburger__line {
+        opacity: 0;
+    }
+    .region__humburger {
+        transition: all 0.3s ease 0s;
+        padding-top: 80px;
+        position: fixed;
+        height: 100%;
+        right: 0;
+        top: 0;
+        width: 300px;
+        opacity: 1;
+        .header__region {
+            display: block;
+        }
+
+        @include media-mobile-414 {
+            width: 100%;
+        }
+    }
+
+    &:before {
+        @extend %hamburger-line;
+        top: 10px;
+        left: 0;
+        transform: rotate(45deg);
+        z-index: 10;
+    }
+    &:after {
+        @extend %hamburger-line;
+        bottom: 10px;
+        transform: rotate(-45deg);
+        left: 0;
+        z-index: 10;
+    }
+}
+.region__humburger {
+    background-color: #fff;
+    width: 0;
+    opacity: 0;
+    z-index: 3;
+    color: #000;
+    text-align: center;
+
+    user-select: none;
+    h3 {
+        color: $color-brand-second;
+        padding-bottom: 30px;
+    }
+    h4 {
+        color: $color-brand-second;
+        @include font(2.4rem, 4.5rem, normal, normal);
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 40px;
+    }
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-brand-accent;
+        @include font(2.2rem, 4.5rem, normal, normal);
+    }
+    .hamburger__ul-regions {
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $color-brand-accent;
+            @include font(1.8rem, 4rem, normal, normal);
+        }
     }
 }

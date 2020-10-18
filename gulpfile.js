@@ -39,6 +39,7 @@ function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
         'app/js/ancors.js',
+        'app/js/humburger.js',
         'app/js/hover.js',
         'app/js/animationScroll.js',
         'app/js/yandexMap.js',
