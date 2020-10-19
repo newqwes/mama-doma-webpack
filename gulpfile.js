@@ -38,18 +38,25 @@ function htmlToMin() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
-        'app/js/humburger.js',
         'app/js/hover.js',
         'app/js/animationScroll.js',
-        'app/js/yandexMap.js',
+        'app/js/ancors.js',
         'app/js/popup.js',
+        'app/js/yandexMap.js',
         'app/js/lib/inputmask.min.js',
         'app/js/mask.js',
         'app/js/lib/sweetalert.min.js',
-        'app/js/form.js',
-        'app/js/ancors.js',
+        'app/js/humburger.js',
     ])
-        .pipe(concat('app01.min.js'))
+        .pipe(concat('app04.min.js'))
+        .pipe(uglify())
+        .pipe(dest('app/js/'))
+        .pipe(browserSync.stream());
+}
+
+function scriptsMenu() {
+    return src(['node_modules/jquery/dist/jquery.min.js', 'app/js/humburger.js', 'app/js/hover.js', 'app/js/animationScroll.js'])
+        .pipe(concat('appMenu04.min.js'))
         .pipe(uglify())
         .pipe(dest('app/js/'))
         .pipe(browserSync.stream());
@@ -59,7 +66,7 @@ function scripts() {
 function styles() {
     return src('app/sass/style.scss')
         .pipe(sass())
-        .pipe(concat('style01.min.css'))
+        .pipe(concat('style04.min.css'))
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
         .pipe(cleanCss({ level: { 1: { specialComments: 0 } } }))
         .pipe(dest('app/css/'))
@@ -88,11 +95,13 @@ function buildcopy() {
         [
             'app/css/**/*.min.css',
             'app/**/*.php',
-            'app/js/app01.min.js',
+            'app/js/app04.min.js',
+            'app/js/appMenu04.min.js',
             'app/images/dest/**/*',
             'app/font/**/*',
             'app/video/**/*',
             'app/html/**/*.html',
+            'app/**/*.htaccess',
         ],
         {
             base: 'app',
@@ -115,8 +124,8 @@ exports.styles = styles;
 exports.images = images;
 exports.cleanimg = cleanimg;
 
-exports.default = parallel(images, styles, scripts, browsersync, startwatch);
+exports.default = parallel(images, styles, scripts, scriptsMenu, browsersync, startwatch);
 exports.cleanall = series(cleanbuild, cleanhtml, cleanimg);
 
 // после в папке html вытащить и положить в корень
-exports.build = series(cleanbuild, htmlToMin, styles, scripts, images, buildcopy);
+exports.build = series(cleanbuild, htmlToMin, styles, scripts, scriptsMenu, images, buildcopy);

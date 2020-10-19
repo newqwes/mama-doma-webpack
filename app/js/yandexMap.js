@@ -17,7 +17,7 @@ ymaps.ready(function () {
             },
             {
                 iconLayout: 'default#image',
-                iconImageHref: '../images/dest/newLogo.PNG',
+                iconImageHref: '../images/dest/newLogo.png',
                 iconImageSize: [32, 32],
                 iconImageOffset: [-16, -16],
             }
@@ -30,7 +30,7 @@ ymaps.ready(function () {
             },
             {
                 iconLayout: 'default#image',
-                iconImageHref: '../images/dest/newLogo.PNG',
+                iconImageHref: '../images/dest/newLogo.png',
                 iconImageSize: [32, 32],
                 iconImageOffset: [-16, -16],
             }
@@ -43,7 +43,7 @@ ymaps.ready(function () {
             },
             {
                 iconLayout: 'default#image',
-                iconImageHref: '../images/dest/newLogo.PNG',
+                iconImageHref: '../images/dest/newLogo.png',
                 iconImageSize: [32, 32],
                 iconImageOffset: [-16, -16],
             }
@@ -56,7 +56,7 @@ ymaps.ready(function () {
             },
             {
                 iconLayout: 'default#image',
-                iconImageHref: '../images/dest/newLogo.PNG',
+                iconImageHref: '../images/dest/newLogo.png',
                 iconImageSize: [32, 32],
                 iconImageOffset: [-16, -16],
             }
