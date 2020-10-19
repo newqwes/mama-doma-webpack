@@ -43,7 +43,14 @@
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
     transform: scale(0);
     transition: all 0.8s ease;
+    color: $color-text;
     opacity: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include font(3.6rem, 18rem, 800);
+    letter-spacing: 0.2rem;
+
     @include media-mobile-414 {
         width: 300px;
         height: 170px;
@@ -54,31 +61,36 @@
     }
 
     &:hover {
-        transform: scale(1.02);
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35), 0 12px 12px rgba(0, 0, 0, 0.35);
     }
 }
 
 .menu__to-0 {
-    background-image: url('../../images/dest/menu_draniki.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('../../images/dest/menu/goryacie-bluda.jpg');
 }
 
 .menu__to-1 {
-    background-image: url('../../images/dest/menu_bliny.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('../../images/dest/menu/sup.jpg');
 }
 
 .menu__to-2 {
-    background-image: url('../../images/dest/menu_goracee.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('../../images/dest/menu/salats.jpg');
 }
 
 .menu__to-3 {
-    background-image: url('../../images/dest/menu_sladkie-bliny.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('../../images/dest/menu/draniki.jpg');
 }
 
 .menu__to-4 {
-    background-image: url('../../images/dest/menu_sup.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('../../images/dest/menu/sytnyye-bliny.jpg');
 }
 
 .menu__to-5 {
-    background-image: url('../../images/dest/menu_napitki.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('../../images/dest/menu/sladkiye-bliny.jpg');
+}
+.menu__to-6 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('../../images/dest/menu/syrniki.jpg');
+}
+.menu__to-7 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('../../images/dest/menu/napitki.jpg');
 }
