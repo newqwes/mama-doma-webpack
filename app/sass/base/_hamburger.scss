@@ -60,7 +60,7 @@
     }
     .region__humburger {
         transition: all 0.3s ease 0s;
-        padding-top: 80px;
+        padding-top: 30px;
         position: fixed;
         height: 100%;
         right: 0;
@@ -107,7 +107,7 @@
     }
     h3 {
         color: $color-brand-second;
-        padding-bottom: 30px;
+        padding-bottom: 20px;
     }
     h4 {
         color: $color-brand-second;
@@ -117,20 +117,23 @@
         list-style-type: none;
         padding: 0;
         margin: 0;
-        padding-bottom: 40px;
+        padding-bottom: 10px;
     }
     a {
         text-decoration: none;
         text-transform: uppercase;
         color: $color-brand-accent;
-        @include font(2.2rem, 4.5rem, normal, normal);
+        @include font(2.2rem, 4.2rem, normal, normal);
     }
     .hamburger__ul-regions {
         a {
             text-decoration: none;
             text-transform: uppercase;
             color: $color-brand-accent;
-            @include font(1.8rem, 4rem, normal, normal);
+            @include font(1.8rem, 3.6rem, normal, normal);
         }
     }
+}
+.region-hamburger__title {
+    padding-top: 40px;
 }

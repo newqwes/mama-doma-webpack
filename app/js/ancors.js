@@ -11,7 +11,12 @@ for (let anchor of anchors) {
         }
     });
 }
-
-let arrow = document.querySelector('.arrow-to-top').style;
-window.onscroll = () =>
-    document.body.scrollTop > 400 || document.documentElement.scrollTop > 400 ? (arrow.display = 'block') : (arrow.display = 'none');
+window.onload = function () {
+    window.onscroll = function () {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            return (document.querySelector('.arrow-to-top').style.display = 'block');
+        } else {
+            return (document.querySelector('.arrow-to-top').style.display = 'none');
+        }
+    };
+};
