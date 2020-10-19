@@ -1,20 +1,7 @@
-'use strict';
-
-function _toConsumableArray(arr) {
-    if (Array.isArray(arr)) {
-        for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
-            arr2[i] = arr[i];
-        }
-        return arr2;
-    } else {
-        return Array.from(arr);
-    }
-}
-
 window.onload = function () {
-    var city = document.querySelector('.region__now_label').innerHTML;
-    var cityCenter = [];
-    var belarusCountry = [
+    const city = document.querySelector('.region__now_label').innerHTML;
+    let cityCenter = [];
+    const belarusCountry = [
         'map',
         {
             center: [53.800439, 27.891501],
@@ -24,7 +11,7 @@ window.onload = function () {
             searchControlProvider: 'yandex#search',
         },
     ];
-    var minskCenter = [
+    const minskCenter = [
         'map',
         {
             center: [53.907508, 27.558029],
@@ -34,7 +21,7 @@ window.onload = function () {
             searchControlProvider: 'yandex#search',
         },
     ];
-    var brestCenter = [
+    const brestCenter = [
         'map',
         {
             center: [52.094246, 23.684559],
@@ -44,7 +31,7 @@ window.onload = function () {
             searchControlProvider: 'yandex#search',
         },
     ];
-    var gomelCenter = [
+    const gomelCenter = [
         'map',
         {
             center: [52.431936, 30.986377],
@@ -54,7 +41,7 @@ window.onload = function () {
             searchControlProvider: 'yandex#search',
         },
     ];
-    var mogilevCenter = [
+    const mogilevCenter = [
         'map',
         {
             center: [53.894548, 30.330654],
@@ -77,7 +64,7 @@ window.onload = function () {
         cityCenter = belarusCountry;
     }
     ymaps.ready(function () {
-        var myMap = new (Function.prototype.bind.apply(ymaps.Map, [null].concat(_toConsumableArray(cityCenter))))(),
+        var myMap = new ymaps.Map(...cityCenter),
             minskMomo = new ymaps.Placemark(
                 [53.859766, 27.674067],
                 {

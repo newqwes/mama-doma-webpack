@@ -27,7 +27,7 @@
 }
 
 .menu__item {
-    margin-bottom: 50px;
+    margin: 30px 10px;
 }
 
 .menu__layout {
@@ -52,6 +52,8 @@
     letter-spacing: 0.2rem;
 
     @include media-mobile-414 {
+        @include font(3.2rem, 14rem, 800);
+        letter-spacing: 0.1rem;
         width: 300px;
         height: 170px;
     }
