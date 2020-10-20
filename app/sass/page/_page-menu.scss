@@ -75,7 +75,19 @@
 }
 
 .menu-page__title {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
+    @include media-mobile-414 {
+        margin-bottom: 40px;
+        h2 {
+            @include font(2.7rem, $weight: bold);
+        }
+    }
+    @include media-mobilesmall-320 {
+        margin-bottom: 20px;
+        h2 {
+            @include font(2.6rem, $weight: bold);
+        }
+    }
 }
 
 .bgctext {
@@ -96,7 +108,7 @@
     flex-direction: column;
     min-height: 100%;
     width: 360px;
-    height: 350px;
+    height: 420px;
     background-size: cover;
     border-radius: 5px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
@@ -106,7 +118,6 @@
     h4 {
         margin: 5px 10px;
         padding: 0;
-        text-align: left;
     }
 
     p {
@@ -115,6 +126,8 @@
 
     h4 {
         @include font(2rem, 2.4rem, bold);
+        min-height: 4.8rem;
+        text-align: left;
     }
 
     &:hover {
@@ -125,10 +138,145 @@
 .menu-page__image {
     flex: 1;
     background-size: cover;
-    border-radius: 5px;
     margin-bottom: 10px;
+    background-position: center;
 
     &_0 {
-        background-image: url('../../images/dest/IMG_8158.jpg');
+        background-image: url('../../images/dest/menuPage/IMG_8167.jpg');
     }
+    &_1 {
+        background-image: url('../../images/dest/menuPage/IMG_8156.jpg');
+    }
+    &_2 {
+        background-image: url('../../images/dest/menuPage/IMG_8166.jpg');
+    }
+    &_sup-01 {
+        background-image: url('../../images/dest/menuPage/IMG_4477.jpg');
+    }
+    &_sup-02 {
+        background-image: url('../../images/dest/menuPage/IMG_4474.jpg');
+    }
+    &_sup-03 {
+        background-image: url('../../images/dest/menuPage/IMG_4475.jpg');
+    }
+    &_salat-01 {
+        background-image: url('../../images/dest/menuPage/IMG_3023.jpg');
+    }
+    &_salat-02 {
+        background-image: url('../../images/dest/menuPage/IMG_3024.jpg');
+    }
+    &_salat-03 {
+        background-image: url('../../images/dest/menuPage/IMG_8165.jpg');
+    }
+    &_salat-04 {
+        background-image: url('../../images/dest/menuPage/IMG_8168.jpg');
+    }
+    &_salat-05 {
+        background-image: url('../../images/dest/menuPage/IMG_8160.jpg');
+    }
+    &_draniki-01 {
+        background-image: url('../../images/dest/menuPage/IMG_4535.jpg');
+    }
+    &_draniki-02 {
+        background-image: url('../../images/dest/menuPage/IMG_4532.jpg');
+    }
+    &_draniki-03 {
+        background-image: url('../../images/dest/menuPage/IMG_4531.jpg');
+    }
+    &_draniki-04 {
+        background-image: url('../../images/dest/menuPage/IMG_3823.jpg');
+    }
+    &_draniki-05 {
+        background-image: url('../../images/dest/menuPage/IMG_3824.jpg');
+    }
+    &_bliny-01 {
+        background-image: url('../../images/dest/menuPage/IMG_4530.jpg');
+    }
+    &_bliny-02 {
+        background-image: url('../../images/dest/menuPage/IMG_3810.jpg');
+    }
+    &_bliny-03 {
+        background-image: url('../../images/dest/menuPage/IMG_4539.jpg');
+    }
+    &_bliny-04 {
+        background-image: url('../../images/dest/menuPage/IMG_4537.jpg');
+    }
+    &_bliny-05 {
+        background-image: url('../../images/dest/menuPage/IMG_4538.jpg');
+    }
+    &_bliny-06 {
+        background-image: url('../../images/dest/menuPage/IMG_4539.jpg');
+    }
+    &_bliny-07 {
+        background-image: url('../../images/dest/menuPage/IMG_4540.jpg');
+    }
+    &_bliny-08 {
+        background-image: url('../../images/dest/menuPage/IMG_4541.jpg');
+    }
+    &_bliny-09 {
+        background-image: url('../../images/dest/menuPage/IMG_4542.jpg');
+    }
+    &_sladkiyeBliny-01 {
+        background-image: url('../../images/dest/menuPage/IMG_4542.jpg');
+    }
+    &_sladkiyeBliny-02 {
+        background-image: url('../../images/dest/menuPage/IMG_4542.jpg');
+    }
+    &_sladkiyeBliny-03 {
+        background-image: url('../../images/dest/menuPage/IMG_4541.jpg');
+    }
+    &_sladkiyeBliny-04 {
+        background-image: url('../../images/dest/menuPage/IMG_4542.jpg');
+    }
+    &_sladkiyeBliny-05 {
+        background-image: url('../../images/dest/menuPage/IMG_4540.jpg');
+    }
+    &_syrniki-01 {
+        background-image: url('../../images/dest/menuPage/IMG_3517.jpg');
+    }
+    &_napitki-02 {
+        background-image: url('../../images/dest/menuPage/IMG_4476.jpg');
+    }
+    &_napitki-03 {
+        background-image: url('../../images/dest/menuPage/IMG_4476.jpg');
+    }
+    &_napitki-04 {
+        background-image: url('../../images/dest/menuPage/IMG_4476.jpg');
+    }
+    &_napitki-05 {
+        background-image: url('../../images/dest/menuPage/IMG_4476.jpg');
+    }
+    &_napitki-06 {
+        background-image: url('../../images/dest/menuPage/IMG_4476.jpg');
+    }
+    &_napitki-07 {
+        background-image: url('../../images/dest/menuPage/IMG_4476.jpg');
+    }
+    &_napitki-08 {
+        background-image: url('../../images/dest/menuPage/IMG_4476.jpg');
+    }
+    &_napitki-09 {
+        background-image: url('../../images/dest/menuPage/IMG_4476.jpg');
+    }
+    &_napitki-10 {
+        background-image: url('../../images/dest/menuPage/IMG_4476.jpg');
+    }
+    &_napitki-11 {
+        background-image: url('../../images/dest/menuPage/IMG_4476.jpg');
+    }
+    &_napitki-12 {
+        background-image: url('../../images/dest/menuPage/IMG_4476.jpg');
+    }
+    &_napitki-13 {
+        background-image: url('../../images/dest/menuPage/IMG_4476.jpg');
+    }
+    &_napitki-14 {
+        background-image: url('../../images/dest/menuPage/IMG_4542.jpg');
+    }
+}
+.menu-page__kalories {
+    text-align: right;
+}
+.menu-page__price {
+    text-align: left;
 }

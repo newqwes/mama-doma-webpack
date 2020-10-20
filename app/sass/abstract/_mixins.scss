@@ -17,9 +17,8 @@
 
     > * {
         flex-basis: $width;
-
         @include media-tablet-768 {
-            flex-basis: 47%;
+            flex-basis: 44%;
         }
         @include media-mobile-414 {
             flex-basis: 95%;

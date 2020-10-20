@@ -65,13 +65,13 @@ window.onload = function () {
         },
     ];
 
-    if (city === 'Минск') {
+    if (city === 'Минск' || city === 'Мінск') {
         cityCenter = minskCenter;
-    } else if (city === 'Брест') {
+    } else if (city === 'Брест' || city === 'Брэст') {
         cityCenter = brestCenter;
-    } else if (city === 'Гомель') {
+    } else if (city === 'Гомель' || city === 'Гомель') {
         cityCenter = gomelCenter;
-    } else if (city === 'Могилев') {
+    } else if (city === 'Могилев' || city === 'Магілёў') {
         cityCenter = mogilevCenter;
     } else {
         cityCenter = belarusCountry;
