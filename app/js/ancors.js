@@ -11,12 +11,10 @@ for (let anchor of anchors) {
         }
     });
 }
-window.onload = function () {
-    window.onscroll = function () {
-        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-            return (document.querySelector('.arrow-to-top').style.display = 'block');
-        } else {
-            return (document.querySelector('.arrow-to-top').style.display = 'none');
-        }
-    };
+window.onscroll = function () {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        document.querySelector('.arrow-to-top').style.display = 'block';
+    } else {
+        document.querySelector('.arrow-to-top').style.display = 'none';
+    }
 };

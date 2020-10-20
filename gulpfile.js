@@ -38,35 +38,30 @@ function htmlToMin() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
-        'app/js/hover.js',
+        'app/js/humburger.js',
         'app/js/animationScroll.js',
+        'app/js/yandexMap.js',
         'app/js/ancors.js',
         'app/js/popup.js',
-        'app/js/yandexMap.js',
         'app/js/lib/inputmask.min.js',
         'app/js/mask.js',
         'app/js/lib/sweetalert.min.js',
-        'app/js/humburger.js',
     ])
-        .pipe(concat('app06.min.js'))
+        .pipe(concat('app07.min.js'))
         .pipe(uglify())
         .pipe(dest('app/js/'))
         .pipe(browserSync.stream());
 }
 
 function scriptsMenu() {
-    return src(['node_modules/jquery/dist/jquery.min.js', 'app/js/humburger.js', 'app/js/hover.js', 'app/js/animationScroll.js'])
-        .pipe(concat('appMenu05.min.js'))
-        .pipe(uglify())
-        .pipe(dest('app/js/'))
-        .pipe(browserSync.stream());
+    return src(['app/js/humburger.js']).pipe(concat('appMenu07.min.js')).pipe(uglify()).pipe(dest('app/js/')).pipe(browserSync.stream());
 }
 
 // Стили из главного файла scss в css собирается минифицируется, подлючать все css/scss в файл style.scss
 function styles() {
     return src('app/sass/style.scss')
         .pipe(sass())
-        .pipe(concat('style06.min.css'))
+        .pipe(concat('style07.min.css'))
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
         .pipe(cleanCss({ level: { 1: { specialComments: 0 } } }))
         .pipe(dest('app/css/'))
@@ -95,8 +90,8 @@ function buildcopy() {
         [
             'app/css/**/*.min.css',
             'app/**/*.php',
-            'app/js/app06.min.js',
-            'app/js/appMenu05.min.js',
+            'app/js/app07.min.js',
+            'app/js/appMenu07.min.js',
             'app/images/dest/**/*',
             'app/font/**/*',
             'app/video/**/*',
@@ -120,6 +115,7 @@ function startwatch() {
 exports.htmlToMin = htmlToMin;
 exports.browsersync = browsersync;
 exports.scripts = scripts;
+exports.scriptsMenu = scriptsMenu;
 exports.styles = styles;
 exports.images = images;
 exports.cleanimg = cleanimg;
