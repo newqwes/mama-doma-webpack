@@ -242,24 +242,6 @@
     }
 }
 
-.gif {
-    width: 200px;
-    position: absolute;
-    right: 5vw;
-    top: 25vh;
-    -webkit-animation: animation 3000ms linear both;
-    animation: animation 3000ms linear both;
-    @include media-pcsmall-1366 {
-        width: 160px;
-    }
-    @include media-laptop-1024 {
-        width: 120px;
-    }
-    @include media-tablet-768 {
-        top: 20vh;
-    }
-}
-
 // intro video
 
 .header {
