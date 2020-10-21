@@ -24,14 +24,14 @@ body.lock {
 }
 
 h2 {
-    @include font(3.8rem, $weight: bold);
+    @include font(3.8rem, $weight: 900);
     color: $color-brand-second;
     text-transform: uppercase;
     @include media-tablet-768 {
-        @include font(3.6rem, $weight: bold);
+        @include font(3.6rem, $weight: 900);
     }
     @include media-mobile-414 {
-        @include font(3.4rem, $weight: bold);
+        @include font(3.4rem, $weight: 900);
     }
 }
 

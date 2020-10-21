@@ -47,21 +47,21 @@ function scripts() {
         'app/js/mask.js',
         'app/js/lib/sweetalert.min.js',
     ])
-        .pipe(concat('app07.min.js'))
+        .pipe(concat('app08.min.js'))
         .pipe(uglify())
         .pipe(dest('app/js/'))
         .pipe(browserSync.stream());
 }
 
 function scriptsMenu() {
-    return src(['app/js/humburger.js']).pipe(concat('appMenu07.min.js')).pipe(uglify()).pipe(dest('app/js/')).pipe(browserSync.stream());
+    return src(['app/js/humburger.js']).pipe(concat('appMenu08.min.js')).pipe(uglify()).pipe(dest('app/js/')).pipe(browserSync.stream());
 }
 
 // Стили из главного файла scss в css собирается минифицируется, подлючать все css/scss в файл style.scss
 function styles() {
     return src('app/sass/style.scss')
         .pipe(sass())
-        .pipe(concat('style07.min.css'))
+        .pipe(concat('style08.min.css'))
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
         .pipe(cleanCss({ level: { 1: { specialComments: 0 } } }))
         .pipe(dest('app/css/'))
@@ -90,8 +90,8 @@ function buildcopy() {
         [
             'app/css/**/*.min.css',
             'app/**/*.php',
-            'app/js/app07.min.js',
-            'app/js/appMenu07.min.js',
+            'app/js/app08.min.js',
+            'app/js/appMenu08.min.js',
             'app/images/dest/**/*',
             'app/font/**/*',
             'app/video/**/*',

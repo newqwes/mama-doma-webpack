@@ -79,8 +79,8 @@ window.onload = function () {
             minskMomo = new ymaps.Placemark(
                 [53.859766, 27.674067],
                 {
-                    hintContent: 'ТЦ “МОМО”, фудкорт 2 этаж, "Мама дома"',
-                    balloonContent: 'Просп. Партизанский, 150а, станция метро Магилевская, "Мама дома"',
+                    hintContent: 'ТЦ “МОМО”, фудкорт 2 этаж',
+                    balloonContent: 'Просп. Партизанский, 150а, станция метро Магилевская',
                 },
                 {
                     iconLayout: 'default#image',
@@ -92,8 +92,8 @@ window.onload = function () {
             minskDana = new ymaps.Placemark(
                 [53.933485, 27.652204],
                 {
-                    hintContent: 'ТРЦ “Dana Mall”, фудкорт 3 этаж, "Мама дома"',
-                    balloonContent: 'ул. Мстиславца, 11, станция метро Восток, "Мама дома"',
+                    hintContent: 'ТРЦ “Dana Mall”, фудкорт 3 этаж',
+                    balloonContent: 'ул. Мстиславца, 11, станция метро Восток, МИНСК',
                 },
                 {
                     iconLayout: 'default#image',
@@ -105,8 +105,8 @@ window.onload = function () {
             minskGalileo = new ymaps.Placemark(
                 [53.890535, 27.55374],
                 {
-                    hintContent: 'ТРЦ “Galileo”, фудкорт 3 этаж, "Мама дома"',
-                    balloonContent: 'ул. Бобруйская, 6, станция метро плошщаль Ленина, "Мама дома"',
+                    hintContent: 'ТРЦ “Galileo”, фудкорт 3 этаж',
+                    balloonContent: 'ул. Бобруйская, 6, станция метро площадь Ленина, МИНСК',
                 },
                 {
                     iconLayout: 'default#image',
@@ -118,8 +118,8 @@ window.onload = function () {
             minskPlazo = new ymaps.Placemark(
                 [53.926915, 27.510074],
                 {
-                    hintContent: 'ТРЦ “Palazzo”, фудкорт 3 этаж, "Мама дома"',
-                    balloonContent: 'ул. Тимиряева, 74А, "Мама дома"',
+                    hintContent: 'ТРЦ “Palazzo”, фудкорт 3 этаж',
+                    balloonContent: 'ул. Тимирязева, 74А, МИНСК',
                 },
                 {
                     iconLayout: 'default#image',
@@ -131,8 +131,8 @@ window.onload = function () {
         brestCYM = new ymaps.Placemark(
             [52.085091, 23.694424],
             {
-                hintContent: 'Брест, ТЦ “ЦУМ”, 3 этаж, "Мама дома"',
-                balloonContent: 'просп. Машерова, 17, "Мама дома"',
+                hintContent: 'Брест, ТЦ “ЦУМ”, 3 этаж',
+                balloonContent: 'просп. Машерова, 17',
             },
             {
                 iconLayout: 'default#image',
@@ -144,8 +144,8 @@ window.onload = function () {
         gomelSecret = new ymaps.Placemark(
             [52.423797, 30.997004],
             {
-                hintContent: 'Гомель, ТРЦ “Секрет”, 1 этаж, "Мама дома"',
-                balloonContent: 'ул. Гагарина, 65, "Мама дома"',
+                hintContent: 'Гомель, ТРЦ “Секрет”, 1 этаж',
+                balloonContent: 'ул. Гагарина, 65',
             },
             {
                 iconLayout: 'default#image',
@@ -157,8 +157,8 @@ window.onload = function () {
         mogilevPark = new ymaps.Placemark(
             [53.935452, 30.256978],
             {
-                hintContent: 'Могилев, ТЦ “Парк Сити”, фудкорт 1 этаж, "Мама дома"',
-                balloonContent: 'Минское шоссе, 31, "Мама дома"',
+                hintContent: 'Могилев, ТЦ “Парк Сити”, фудкорт 1 этаж',
+                balloonContent: 'Минское шоссе, 31',
             },
             {
                 iconLayout: 'default#image',

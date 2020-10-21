@@ -122,8 +122,9 @@
     p {
         padding-bottom: 8px;
         a {
-            @include font(1.6rem);
-            text-decoration: underline;
+            @include font(1.6rem, 1.8rem, $weight: bold);
+            text-decoration: none;
+            text-transform: uppercase;
             letter-spacing: 0.1rem;
             color: $color-brand-second;
         }

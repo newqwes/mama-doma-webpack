@@ -82,7 +82,7 @@ window.onload = function () {
                 [53.933485, 27.652204],
                 {
                     hintContent: 'ТРЦ “Dana Mall”, фудкорт 3 этаж, "Мама дома"',
-                    balloonContent: 'ул. Мстиславца, 11, станция метро Восток, "Мама дома"',
+                    balloonContent: 'ул. Мстиславца, 11, станция метро Восток, МИНСК, "Мама дома"',
                 },
                 {
                     iconLayout: 'default#image',
@@ -95,7 +95,7 @@ window.onload = function () {
                 [53.890535, 27.55374],
                 {
                     hintContent: 'ТРЦ “Galileo”, фудкорт 3 этаж, "Мама дома"',
-                    balloonContent: 'ул. Бобруйская, 6, станция метро плошщаль Ленина, "Мама дома"',
+                    balloonContent: 'ул. Бобруйская, 6, станция метро площадь Ленина, МИНСК, "Мама дома"',
                 },
                 {
                     iconLayout: 'default#image',
@@ -108,7 +108,7 @@ window.onload = function () {
                 [53.926915, 27.510074],
                 {
                     hintContent: 'ТРЦ “Palazzo”, фудкорт 3 этаж, "Мама дома"',
-                    balloonContent: 'ул. Тимиряева, 74А, "Мама дома"',
+                    balloonContent: 'ул. Тимирязева, 74А, МИНСК, "Мама дома"',
                 },
                 {
                     iconLayout: 'default#image',

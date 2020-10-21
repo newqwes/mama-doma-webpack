@@ -11,7 +11,7 @@
 
 .menu-page-header {
     background-color: $color-brand-second;
-    padding-top: 10px;
+    padding: 10px 0;
 
     .region__now_label,
     .dropbtn {
@@ -110,7 +110,7 @@
     width: 360px;
     height: 420px;
     background-size: cover;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
     transition: all 0.8s ease;
 
@@ -125,9 +125,8 @@
     }
 
     h4 {
-        @include font(2rem, 2.4rem, bold);
+        @include font(2.2rem, 2.4rem, bold);
         min-height: 4.8rem;
-        text-align: left;
     }
 
     &:hover {
@@ -140,6 +139,7 @@
     background-size: cover;
     margin-bottom: 10px;
     background-position: center;
+    border-radius: 50% 10px 50% 0;
 
     &_0 {
         background-image: url('../../images/dest/menuPage/IMG_8167.jpg');
@@ -276,10 +276,4 @@
     &_napitki-14 {
         background-image: url('../../images/dest/menuPage/IMG_1785.jpg');
     }
-}
-.menu-page__kalories {
-    text-align: right;
-}
-.menu-page__price {
-    text-align: left;
 }

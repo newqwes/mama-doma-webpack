@@ -66,6 +66,7 @@
 .popup__title {
     font-size: 4rem;
     margin-bottom: 1em;
+    text-transform: uppercase;
     @include media-tablet-768 {
         @include font(3.2rem, 3.4rem);
     }

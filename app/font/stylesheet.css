@@ -1,8 +1,16 @@
 @font-face {
     font-family: 'Circe Rounded';
+    src: local('Circe Rounded Extra Bold'), local('CirceRounded-Extra-Bold'),
+        url('CirceRounded-ExtraBold.eot?#iefix') format('embedded-opentype'), url('CirceRounded-Alt-ExtraBold.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Circe Rounded';
     src: local('Circe Rounded Bold'), local('CirceRounded-Bold'), url('CirceRounded-Bold.eot?#iefix') format('embedded-opentype'),
         url('CirceRounded-Bold.woff2') format('woff2');
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }

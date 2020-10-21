@@ -16,27 +16,32 @@
         padding: 3%;
     }
 }
+
 .header__region {
+    margin: 0 auto 0 0;
     @include media-laptop-1024 {
         display: none;
     }
 }
 .header__navigation {
+    margin: 0 0 0 auto;
+    @include media-laptop-1024 {
+        margin: 0 auto;
+    }
     @include media-tablet-768 {
         display: none;
     }
 }
 .navigatin {
     display: flex;
-    padding: 0;
 }
 
 .navigatin__link,
 .header__language {
     list-style-type: none;
-    padding: 0 20px;
+    padding: 0 30px;
     @include media-pcsmall-1366 {
-        padding: 0 8px;
+        padding: 0 12px;
     }
     a {
         color: $color-text;
@@ -48,9 +53,6 @@
         letter-spacing: 0.2rem;
         @include font(1.4rem);
         line-height: 2rem;
-        @include media-pcsmall-1366 {
-            @include font(1.3rem);
-        }
         &:hover {
             color: $color-brand-accent;
         }
@@ -189,20 +191,20 @@
     cursor: pointer;
     display: inline-block;
     background-image: url('../../images/dest/mama-doma-title.svg');
-    width: 763px;
-    height: 117px;
+    width: 850px;
+    height: 130px;
     @include appearancEffect();
     &._active {
         @include appearancEffect($translate2: 0px, $opacity: 1);
     }
     @include media-pcsmall-1366 {
-        width: 600px;
-        height: 90px;
+        width: 785px;
+        height: 120px;
         background-size: cover;
     }
     @include media-laptop-1024 {
-        width: 500px;
-        height: 75px;
+        width: 760px;
+        height: 116px;
     }
     @include media-tablet-768 {
         width: 400px;

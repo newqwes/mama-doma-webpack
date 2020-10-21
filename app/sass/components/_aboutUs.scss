@@ -30,12 +30,22 @@
             padding: 0 20px;
         }
     }
-    h3 {
+    span {
+        @include font(2.4rem, $weight: normal);
         @include media-tablet-768 {
-            @include font(2.6rem, $weight: bold);
+            @include font(2.2rem, $weight: normal);
         }
         @include media-mobile-414 {
-            @include font(2.4rem, $weight: bold);
+            @include font(2rem, $weight: normal);
+        }
+    }
+    h3 {
+        @include font(3.8rem, $weight: bold);
+        @include media-tablet-768 {
+            @include font(3.4rem, $weight: bold);
+        }
+        @include media-mobile-414 {
+            @include font(2.6rem, $weight: bold);
             padding: 0 20px;
         }
     }
@@ -119,7 +129,7 @@
 }
 
 .about-us__instagram {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../images/dest/about_us_instagram.jpg') bottom;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../images/dest/IMG_7201.gif');
     background-size: cover;
     @include appearancEffect($translate2: 20%, $translate1: 0);
 
