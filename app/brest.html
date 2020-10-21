@@ -45,8 +45,11 @@
         <title>Мама дома - Брест</title>
         <link rel="stylesheet" href="font/stylesheet.css" />
         <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-        <link rel="stylesheet" href="css/style08.min.css" />
+        <link rel="stylesheet" href="css/style09.min.css" />
+        <script
+            src="https://api-maps.yandex.ru/2.1/?apikey=b0ef4691-ef56-4fa7-88fb-d774eb4837e1&lang=ru_RU"
+            type="text/javascript"
+        ></script>
     </head>
 
     <body>
@@ -180,7 +183,7 @@
                     </div>
 
                     <div class="menu__item">
-                        <a class="menu__links menu__to-2 _anim-items" href="salat.html">Супы и салаты</a>
+                        <a class="menu__links menu__to-2 _anim-items" href="sup_salat.html">Супы и салаты</a>
                     </div>
                     <div class="menu__item">
                         <a class="menu__links menu__to-3 _anim-items" href="draniki.html">Драники</a>
@@ -189,7 +192,7 @@
                         <a class="menu__links menu__to-4 _anim-items" href="bliny.html">Сытные блины</a>
                     </div>
                     <div class="menu__item">
-                        <a class="menu__links menu__to-6 _anim-items" href="syrniki.html">Сладкие блины и</a>
+                        <a class="menu__links menu__to-6 _anim-items" href="bliny_syrniki.html">Сладкие блины и</a>
                     </div>
                     <div class="menu__item">
                         <a class="menu__links menu__to-7 _anim-items" href="napitki.html">Напитки</a>
@@ -221,58 +224,62 @@
                 </div>
                 <div class="feedback__layout">
                     <div class="feedback__contacts _anim-items">
+                        <div class="contacts__city-title">Минск</div>
                         <div class="contacts__item">
                             <div>
                                 <h4>ТЦ “МОМО”, фудкорт 2 этаж</h4>
-                                <p>просп. Партизанский, 150а, станция метро Магилевская, МИНСК</p>
+                                <p>просп. Партизанский, 150а, станция метро Магилевская</p>
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
                         <div class="contacts__item">
                             <div>
                                 <h4>ТРЦ “Dana Mall”, фудкорт 3 этаж</h4>
-                                <p>ул. Мстиславца, 11, станция метро Восток, МИНСК</p>
+                                <p>ул. Мстиславца, 11, станция метро Восток</p>
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
                         <div class="contacts__item">
                             <div>
                                 <h4>ТРЦ “Galileo”, фудкорт 3 этаж</h4>
-                                <p>ул. Бобруйская, 6, станция метро площадь Ленина, МИНСК</p>
+                                <p>ул. Бобруйская, 6, станция метро площадь Ленина</p>
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
                         <div class="contacts__item">
                             <div>
                                 <h4>ТРЦ “Palazzo”, фудкорт 3 этаж</h4>
-                                <p>ул. Тимирязева, 74А, МИНСК</p>
+                                <p>ул. Тимирязева, 74А</p>
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
+                        <div class="contacts__city-title">Гомель</div>
                         <div class="contacts__item">
                             <div>
-                                <h4>Гомель, ТРЦ “Секрет”, 1 этаж</h4>
+                                <h4>ТРЦ “Секрет”, 1 этаж</h4>
                                 <p>ул. Гагарина, 65</p>
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
+                        <div class="contacts__city-title">Брест</div>
                         <div class="contacts__item">
                             <div>
-                                <h4>Брест, “ЦУМ”, 3 этаж</h4>
+                                <h4>“ЦУМ”, 3 этаж</h4>
                                 <p>просп. Машерова, 17</p>
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
+                        <div class="contacts__city-title">Могилев</div>
                         <div class="contacts__item">
                             <div>
-                                <h4>Могилев, ТЦ “Парк Сити”, фудкорт 1 этаж</h4>
+                                <h4>ТЦ “Парк Сити”, фудкорт 1 этаж</h4>
                                 <p>Минское шоссе, 31</p>
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
+                        <div class="contacts__city-title">ХОЧЕШЬ РАБОТАТЬ У НАС?</div>
                         <div class="contacts__item">
                             <div>
-                                <h4>ХОЧЕШЬ РАБОТАТЬ У НАС?</h4>
                                 <p>
                                     Звони на номер <a href="tel:+375293713141">+ 375 29 371 31 41</a> или заполни
                                     <a href="#about-us">анкету</a> на сайте
@@ -280,11 +287,11 @@
                             </div>
                             <span class="ico ico_question"></span>
                         </div>
+                        <div class="contacts__city-title">Центральный офис в Минске</div>
                         <div class="contacts__item">
                             <div>
-                                <h4>Центральный офис в Минске</h4>
                                 <p>
-                                    ООО “ФемилиФуд” Республика Беларусь, 220125, Минск, пр. Независимости, 185, офис 8 (вход со стороны ул.
+                                    ООО “ФемилиФуд” Республика Беларусь, 220125, пр. Независимости, 185, офис 8 (вход со стороны ул.
                                     Острошицкая, в торце здания на вывеску Promofilm)
                                 </p>
                             </div>
@@ -437,10 +444,6 @@
                 </div>
             </div>
         </div>
-        <script
-            src="https://api-maps.yandex.ru/2.1/?apikey=b0ef4691-ef56-4fa7-88fb-d774eb4837e1&lang=ru_RU"
-            type="text/javascript"
-        ></script>
-        <script src="js/app08.min.js"></script>
+        <script src="js/app09.min.js"></script>
     </body>
 </html>
