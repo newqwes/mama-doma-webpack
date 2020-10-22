@@ -96,6 +96,10 @@
 .map__yandex {
     width: 100%;
     height: 900px;
+    @include media-laptop-1024 {
+        height: 1000px;
+    }
+
     @include media-tablet-768 {
         height: 450px;
     }

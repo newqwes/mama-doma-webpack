@@ -20,7 +20,7 @@
         @include media-tablet-768 {
             flex-basis: 44%;
         }
-        @include media-mobile-414 {
+        @include media-tablet-620 {
             flex-basis: 95%;
         }
     }
@@ -44,6 +44,11 @@
 }
 @mixin media-tablet-768 {
     @media (max-width: $tablet-width) {
+        @content;
+    }
+}
+@mixin media-tablet-620 {
+    @media (max-width: $tablet-width-small) {
         @content;
     }
 }
