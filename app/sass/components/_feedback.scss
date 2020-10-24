@@ -1,8 +1,29 @@
 .feedback {
-    padding: 50px 0 80px;
+    padding: 120px 0 80px;
     @include media-tablet-768 {
         padding: 40px 0 40px;
     }
+
+    background-image: url(../../images/dest/IMG_6289.jpg);
+    background-size: 62% 100px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position-y: 30px;
+    // @include media-pcsmall-1366 {
+    //     background-size: 150% 50px;
+    // }
+    // @include media-laptop-1024 {
+    //     background-size: 210% 50px;
+    // }
+    // @include media-tablet-768 {
+    //     background-size: 350% 50px;
+    // }
+    // @include media-mobile-414 {
+    //     background-size: 480% 50px;
+    // }
+    // @include media-mobilesmall-320 {
+    //     background-size: 520% 50px;
+    // }
 }
 
 .feedback__wrapper {

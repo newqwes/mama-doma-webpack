@@ -4,9 +4,6 @@
 }
 .about-us__wrapper {
     text-align: center;
-    h2 {
-        padding-bottom: 30px;
-    }
 }
 .about-us__items {
     border-radius: 5px;
@@ -40,9 +37,10 @@
         }
     }
     h3 {
-        @include font(3.8rem, $weight: bold);
+        text-transform: uppercase;
+        @include font(3.6rem, $weight: bold);
         @include media-tablet-768 {
-            @include font(3.4rem, $weight: bold);
+            @include font(3.2rem, $weight: bold);
         }
         @include media-mobile-414 {
             @include font(2.6rem, $weight: bold);
@@ -129,7 +127,7 @@
 }
 
 .about-us__instagram {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../images/dest/IMG_7201.gif');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../images/dest/qweage.jpg');
     background-size: cover;
     @include appearancEffect($translate2: 20%, $translate1: 0);
 

@@ -113,7 +113,7 @@
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
     transition: all 0.8s ease;
-
+    position: relative;
     p,
     h4 {
         margin: 5px 10px;
@@ -139,7 +139,7 @@
     background-size: cover;
     margin-bottom: 10px;
     background-position: center;
-    border-radius: 50% 10px 50% 0;
+    border-radius: 10px 10px 50% 0;
 
     &_0 {
         background-image: url('../../images/dest/menuPage/IMG_8167.jpg');
@@ -275,5 +275,21 @@
     }
     &_napitki-14 {
         background-image: url('../../images/dest/menuPage/IMG_1785.jpg');
+    }
+}
+
+.menu-page__circle-price {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    @include font(2.7rem, 7.1rem, 600);
+    background-color: $color-brand-accent;
+    border-radius: 50%;
+    color: $color-brand-second;
+    letter-spacing: 0.1rem;
+    sup {
+        @include font(1.6rem, 2rem, 900);
     }
 }

@@ -31,6 +31,16 @@
         width: 22px;
         height: 22px;
     }
+    &_clock {
+        background-image: url('../../images/dest/icons/clock.svg');
+        width: 26px;
+        height: 26px;
+    }
+    &_placeFooter {
+        background-image: url('../../images/dest/icons/placeFooter.svg');
+        width: 26px;
+        height: 26px;
+    }
     &_arrow {
         background-image: url('../../images/dest/icons/up-arrow.svg');
         width: 50px;
@@ -55,7 +65,13 @@
 }
 
 .logo img {
-    width: 70px;
+    width: 90px;
+    border: $color-brand-accent 3px solid;
+    border-radius: 50%;
+    margin-left: 10%;
+    @include media-tablet-768 {
+        margin-left: 5%;
+    }
 }
 
 .logo_instagram img {

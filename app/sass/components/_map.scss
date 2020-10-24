@@ -1,25 +1,6 @@
 .map {
     background-color: $color-brand-accent;
-    padding: 70px 0 100px;
-    background-image: url(../../images/dest/bg_line-uzor_2.png), url(../../images/dest/bg_line-uzor_black.png);
-    background-size: 120% 60px;
-    background-repeat: no-repeat;
-    background-position: top, bottom;
-    @include media-pcsmall-1366 {
-        background-size: 150% 50px;
-    }
-    @include media-laptop-1024 {
-        background-size: 210% 50px;
-    }
-    @include media-tablet-768 {
-        background-size: 350% 50px;
-    }
-    @include media-mobile-414 {
-        background-size: 480% 50px;
-    }
-    @include media-mobilesmall-320 {
-        background-size: 520% 50px;
-    }
+    padding: 50px 0 80px;
 }
 .feedback__layout {
     padding: 40px 0;
@@ -38,11 +19,6 @@
 }
 .feedback__contacts > div:nth-child(n) {
     @include appearancEffect($translate1: -100%, $translate2: 0%);
-}
-.feedback__contacts > div:last-child {
-    transition: all 0.4s ease 1.6s;
-    transform: scale(0);
-    opacity: 0;
 }
 .feedback__contacts._active > div:nth-child(1) {
     @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1);
@@ -77,25 +53,10 @@
 .feedback__contacts._active > div:nth-child(11) {
     @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 1s);
 }
-.feedback__contacts._active > div:nth-child(12) {
-    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 1.1s);
-}
-.feedback__contacts._active > div:nth-child(13) {
-    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 1.2s);
-}
-.feedback__contacts._active > div:nth-child(14) {
-    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 1.3s);
-}
-.feedback__contacts._active > div:nth-child(15) {
-    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 1.4s);
-}
-.feedback__contacts._active > div:last-child {
-    transform: scale(1);
-    opacity: 1;
-}
+
 .map__yandex {
     width: 100%;
-    height: 900px;
+    height: 600px;
     @include media-laptop-1024 {
         height: 1000px;
     }
@@ -155,14 +116,6 @@
     }
 }
 
-.map__social-links {
-    * {
-        box-sizing: content-box;
-    }
-    h4 {
-        margin-bottom: 10px;
-    }
-}
 .contacts__city-title {
     @include font(2.4rem, $weight: bold);
     padding: 0 20px 15px;
