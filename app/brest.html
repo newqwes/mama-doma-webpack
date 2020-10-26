@@ -43,9 +43,11 @@
         <!-- на время -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <title>Мама дома - Брест</title>
+        <!-- !!! -->
         <link rel="stylesheet" href="font/stylesheet.css" />
         <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="css/style13.min.css" />
+        <link rel="stylesheet" href="css/style14temphash.min.css" />
+
         <script
             src="https://api-maps.yandex.ru/2.1/?apikey=b0ef4691-ef56-4fa7-88fb-d774eb4837e1&lang=ru_RU"
             type="text/javascript"
@@ -54,6 +56,7 @@
 
     <body>
         <h1 class="visuallyhidden">Мама дома Брест</h1>
+        <!-- !!! -->
         <header class="header" id="header">
             <div class="header__intro">
                 <video
@@ -70,16 +73,17 @@
                 <div class="header__top">
                     <!-- <a href="index.html" class="logo">
                         <img src="images/dest/newLogo.png" alt="мама дома" />
-                    </a> -->
+
+                    </!-->
 
                     <nav class="header__navigation">
                         <ul class="navigatin">
-                            <li class="navigatin__link"><a href="#menu">Меню</a></li>
                             <li class="navigatin__link"><a href="#feedback">Доставка</a></li>
+                            <li class="navigatin__link"><a href="#menu">Меню</a></li>
+                            <li class="navigatin__link"><a href="#about-us">Работа</a></li>
+                            <li class="navigatin__link"><a href="#about-us">Отзывы</a></li>
                             <li class="navigatin__link"><a href="#mapTo">Рестораны на фудкортах</a></li>
                             <li class="navigatin__link"><a href="#map">Контакты</a></li>
-                            <li class="navigatin__link"><a href="#about-us">Отзывы</a></li>
-                            <li class="navigatin__link"><a href="#about-us">Работа</a></li>
                         </ul>
                     </nav>
                     <span class="hamburger">
@@ -96,14 +100,17 @@
                             </ul>
                             <h4>Выбор региона</h4>
                             <ul class="hamburger__ul-regions">
-                                <li><a href="index.html">Минск</a></li>
                                 <li><a href="#">Брест</a></li>
+                                <!-- !!! -->
+                                <li><a href="index.html">Минск</a></li>
+                                <!-- !!! -->
                                 <li><a href="gomel.html">Гомель</a></li>
                                 <li><a href="mogilev.html">Могилев</a></li>
                             </ul>
 
                             <h4>Выбор языка</h4>
                             <div><a href="#">рус |</a><a href="be/brest.html"> бел</a></div>
+                            <!-- !!! -->
                         </div>
                     </span>
                     <span class="hamburger-region">
@@ -111,29 +118,35 @@
                         <div class="region__humburger">
                             <h3 class="region-hamburger__title">Выбор региона</h3>
                             <ul>
-                                <li><a href="index.html">Минск</a></li>
                                 <li><a href="#">Брест</a></li>
+                                <!-- !!! -->
+                                <li><a href="index.html">Минск</a></li>
+                                <!-- !!! -->
                                 <li><a href="gomel.html">Гомель</a></li>
                                 <li><a href="mogilev.html">Могилев</a></li>
                             </ul>
+
                             <h4>Выбор языка</h4>
                             <div><a href="#">рус |</a><a href="be/brest.html"> бел</a></div>
+                            <!-- !!! -->
                         </div>
                     </span>
                     <div class="header__region">
                         <div class="header__language">
-                            <a href="#" class="header__language_active">РУС</a>
-                            <span></span>
+                            <a href="#" class="header__language_active">РУС</a> |
                             <a href="be/brest.html">БЕЛ</a>
-                        </div>
-                        <div class="region__now">
-                            <span class="ico ico_region"></span>
-                            <div class="region__now_label">Брест</div>
+                            <!-- !!! -->
                         </div>
                         <div class="dropdown">
-                            <a class="dropbtn">Регионы</a>
+                            <div class="region__now">
+                                <span class="ico ico_region"></span>
+                                <div class="region__now_label">Брест</div>
+                                <!-- !!! -->
+                            </div>
+                            <!-- <a class="dropbtn">Регионы</a> -->
                             <div class="dropdown-content">
                                 <a href="index.html">Минск</a>
+                                <a href="brest.html">Брест</a>
                                 <a href="gomel.html">Гомель</a>
                                 <a href="mogilev.html">Могилев</a>
                             </div>
@@ -204,15 +217,18 @@
         </section>
         <section class="about-us" id="about-us">
             <div class="about-us__wrapper wrapper">
-                <h2>— Отзывы —</h2>
+                <div class="layout-2-column">
+                    <h2>— Работа —</h2>
+                    <h2>— Отзывы —</h2>
+                </div>
                 <div class="layout-2-column">
                     <div class="about-us__work about-us__items _anim-items">
-                        <h3>С нами ПРИЯТНО работать!</h3>
+                        <h3>У нас приятно работать!</h3>
                         <span>Станьте частью нашей команды</span>
-                        <button href="#popup2" class="about-us__button popup-link">Оставьте заявку</button>
+                        <button href="#popup2" class="about-us__button popup-link">Оставить заявку</button>
                     </div>
                     <div class="about-us__instagram about-us__items _anim-items">
-                        <h3>Оставьте ОТЗЫВ</h3>
+                        <h3>Оставьте отзыв</h3>
                         <span>И мы станем еще лучше</span>
                         <button href="#popup" class="about-us__button popup-link">Оставить отзыв</button>
                     </div>
@@ -222,7 +238,7 @@
         <section class="map" id="mapTo">
             <div class="map__wrapper wrapper">
                 <div class="map__title">
-                    <h2>— Контакты —</h2>
+                    <h2>— Рестораны на фудкортах —</h2>
                 </div>
                 <div class="feedback__layout">
                     <div class="feedback__contacts _anim-items">
@@ -230,21 +246,30 @@
                         <div class="contacts__item">
                             <div>
                                 <h4>ТЦ “МОМО”, фудкорт 2 этаж</h4>
-                                <p>просп. Партизанский, 150а, станция метро Магилевская</p>
+                                <p>
+                                    просп. Партизанский, 150а, <br />
+                                    станция метро Могилевская
+                                </p>
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
                         <div class="contacts__item">
                             <div>
                                 <h4>ТРЦ “Dana Mall”, фудкорт 3 этаж</h4>
-                                <p>ул. Мстиславца, 11, станция метро Восток</p>
+                                <p>
+                                    ул. Мстиславца, 11,<br />
+                                    станция метро Восток
+                                </p>
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
                         <div class="contacts__item">
                             <div>
                                 <h4>ТРЦ “Galileo”, фудкорт 3 этаж</h4>
-                                <p>ул. Бобруйская, 6, станция метро площадь Ленина</p>
+                                <p>
+                                    ул. Бобруйская, 6,<br />
+                                    станция метро площадь Ленина
+                                </p>
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
@@ -252,6 +277,15 @@
                             <div>
                                 <h4>ТРЦ “Palazzo”, фудкорт 3 этаж</h4>
                                 <p>ул. Тимирязева, 74А</p>
+                            </div>
+                            <span class="ico ico_place"></span>
+                        </div>
+
+                        <div class="contacts__city-title">Брест</div>
+                        <div class="contacts__item">
+                            <div>
+                                <h4>“ЦУМ”, 3 этаж</h4>
+                                <p>просп. Машерова, 17</p>
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
@@ -263,14 +297,6 @@
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
-                        <div class="contacts__city-title">Брест</div>
-                        <div class="contacts__item">
-                            <div>
-                                <h4>“ЦУМ”, 3 этаж</h4>
-                                <p>просп. Машерова, 17</p>
-                            </div>
-                            <span class="ico ico_place"></span>
-                        </div>
                         <div class="contacts__city-title">Могилев</div>
                         <div class="contacts__item">
                             <div>
@@ -279,28 +305,53 @@
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
-                        <div class="contacts__city-title">ХОЧЕШЬ РАБОТАТЬ У НАС?</div>
-                        <div class="contacts__item">
+                    </div>
+                    <div id="map" class="map__yandex _anim-items"></div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__wrapper wrapper">
+                <div class="footer__layouts">
+                    <div class="footer__layouts-item_0 footer__layouts-item_space">
+                        <a href="index.html" class="logo">
+                            <img src="images/dest/newLogo.png" alt="мама дома" />
+                        </a>
+                        <div class="wrapper footer__policy">
+                            <a href="policy.html">Политика конфиденциальности</a>
+                        </div>
+                    </div>
+                    <div class="footer__layouts-item_1">
+                        <div class="footer__place-ico">
+                            <span class="ico ico_placeFooter"></span>
                             <div>
+                                <h4>Центральный офис</h4>
                                 <p>
-                                    Звони на номер <a href="tel:+375293713141">+ 375 29 371 31 41</a> или заполни
-                                    <a href="#about-us">анкету</a> на сайте
+                                    ООО "ФэмилиФуд" <br />
+                                    пр. Независимости, 185, офис 8, <br />
+                                    г.Минск, Республика Беларусь, 220125 <br />
+                                    (вход со стороны ул.Острошицкая, <br />
+                                    в торце здания на вывеску "Promofilm")
                                 </p>
                             </div>
-                            <span class="ico ico_question"></span>
                         </div>
-                        <div class="contacts__city-title">Центральный офис в Минске</div>
-                        <div class="contacts__item">
-                            <div>
-                                <p>
-                                    ООО “ФемилиФуд” Республика Беларусь, 220125, пр. Независимости, 185, офис 8 (вход со стороны ул.
-                                    Острошицкая, в торце здания на вывеску Promofilm)
-                                </p>
+                        <div class="footer__place-ico">
+                            <span class="ico ico_clock"></span>
+                            <div class="footer__place-ico_time">
+                                <h4>Время работы офиса: с 9:30 до 18:00 (пн.-пт.)</h4>
                             </div>
-                            <span class="ico ico_place"></span>
                         </div>
-                        <div class="map__social-links">
-                            <h4>— Мы в социальных сетях —</h4>
+                    </div>
+                    <div class="footer__layouts-item_2">
+                        <div class="footer__contacts">
+                            <div class="footer__mail footer__items">
+                                <a href="mailto:hr@mama-doma.by"><span class="ico ico_mail"></span>director@mama-doma.by</a>
+                            </div>
+                            <div class="footer__phone footer__items">
+                                <a href="tel:+375447933141"><span class="ico ico_phone"></span>HR-отдел: +375 (29) 371-31-41 </a>
+                            </div>
+                        </div>
+                        <div class="footer__social-links">
                             <ul class="social__menu">
                                 <li>
                                     <a
@@ -320,25 +371,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div id="map" class="map__yandex _anim-items"></div>
                 </div>
-            </div>
-        </section>
-        <footer class="footer">
-            <div class="footer__wrapper wrapper">
-                <span class="footer__logo"></span>
-                <div class="footer__contacts">
-                    <div class="footer__mail footer__items">
-                        <a href="mailto:hr@mama-doma.by"><span class="ico ico_mail"></span>hr@mama-doma.by</a>
-                    </div>
-                    <div class="footer__phone footer__items">
-                        <a href="tel:+375447933141"><span class="ico ico_phone"></span>+375 (44) 793 31 41 </a>
-                    </div>
-                </div>
-            </div>
-            <div class="wrapper footer__wrapper_developer">
-                <a href="policy.html">Политика конфиденциальности</a>
-                <span>Сайт разработан <a href="#"> Qwes</a></span>
             </div>
         </footer>
         <div id="popup" class="popup">
@@ -438,6 +471,15 @@
                                 oninvalid="this.setCustomValidity('Забыли телефон')"
                                 oninput="setCustomValidity('')"
                             />
+                            <input
+                                type="text"
+                                name="position"
+                                value
+                                required
+                                placeholder="Желаемая должность"
+                                oninvalid="this.setCustomValidity('Забыли должность')"
+                                oninput="setCustomValidity('')"
+                            />
                             <textarea name="comment" placeholder="Напишите свой комментарий..." rows="3"></textarea>
                             <input type="submit" value="Отправить" />
                         </div>
@@ -446,6 +488,6 @@
                 </div>
             </div>
         </div>
-        <script src="js/app13.min.js"></script>
+        <script src="js/app14temphash.min.js"></script>
     </body>
 </html>

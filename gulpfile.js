@@ -1,6 +1,4 @@
-// app13.min.js
-// appMenu13.min.js
-// style13.min.css
+// 14temphash
 
 //подключаем gulp
 const { src, dest, parallel, series, watch } = require('gulp');
@@ -51,21 +49,25 @@ function scripts() {
         'app/js/mask.js',
         'app/js/lib/sweetalert.min.js',
     ])
-        .pipe(concat('app13.min.js'))
+        .pipe(concat('app14temphash.min.js'))
         .pipe(uglify())
         .pipe(dest('app/js/'))
         .pipe(browserSync.stream());
 }
 
 function scriptsMenu() {
-    return src(['app/js/humburger.js']).pipe(concat('appMenu13.min.js')).pipe(uglify()).pipe(dest('app/js/')).pipe(browserSync.stream());
+    return src(['app/js/humburger.js'])
+        .pipe(concat('appMenu14temphash.min.js'))
+        .pipe(uglify())
+        .pipe(dest('app/js/'))
+        .pipe(browserSync.stream());
 }
 
 // Стили из главного файла scss в css собирается минифицируется, подлючать все css/scss в файл style.scss
 function styles() {
     return src('app/sass/style.scss')
         .pipe(sass())
-        .pipe(concat('style13.min.css'))
+        .pipe(concat('style14temphash.min.css'))
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
         .pipe(cleanCss({ level: { 1: { specialComments: 0 } } }))
         .pipe(dest('app/css/'))
@@ -94,8 +96,8 @@ function buildcopy() {
         [
             'app/css/**/*.min.css',
             'app/**/*.php',
-            'app/js/app13.min.js',
-            'app/js/appMenu13.min.js',
+            'app/js/app14temphash.min.js',
+            'app/js/appMenu14temphash.min.js',
             'app/images/dest/**/*',
             'app/font/**/*',
             'app/video/**/*',

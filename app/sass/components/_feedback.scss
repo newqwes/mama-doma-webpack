@@ -1,14 +1,17 @@
 .feedback {
-    padding: 120px 0 80px;
+    padding: 200px 0 80px;
     @include media-tablet-768 {
-        padding: 40px 0 40px;
+        padding: 100px 0 40px;
     }
 
     background-image: url(../../images/dest/IMG_6289.jpg);
-    background-size: 62% 100px;
+    background-size: 100% 180px;
     background-repeat: no-repeat;
     background-position: top;
-    background-position-y: 30px;
+    background-position-y: 0;
+    @include media-tablet-768 {
+        background-size: 100% 80px;
+    }
     // @include media-pcsmall-1366 {
     //     background-size: 150% 50px;
     // }

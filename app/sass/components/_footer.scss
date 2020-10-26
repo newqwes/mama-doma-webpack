@@ -36,6 +36,7 @@
     }
 }
 .footer__social-links {
+    padding-left: 7%;
     * {
         box-sizing: content-box;
     }
@@ -64,9 +65,24 @@
     }
 }
 .footer__layouts {
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.footer__layouts-item {
+    &_0 {
+        flex: 1 1 25%; /* отнимем margin и скажем растягиваться */
+    }
+    &_1 {
+        flex: 1 1 45%; /* отнимем margin и скажем растягиваться */
+    }
+    &_2 {
+        flex: 1 1 25%; /* отнимем margin и скажем растягиваться */
+    }
+
+    margin: 5px;
+    box-sizing: border-box; /* чтобы внутренний отступ не влиял когда там будет текст... */
+    min-width: 320px; /* мин. ширина блока, чтобы переносились на другой ряд */
 }
 .footer__place-ico_time {
     padding-top: 10px;

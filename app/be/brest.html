@@ -9,7 +9,7 @@
 		<meta property="og:title" content="КАФЕ НА ФУДКОРТАХ МАМА ДОМА">
 		<meta property="og:description" content="Если Мама Дома - значит еда будет вкусной и полезной!">
 		<meta property="og:type" content="website"> -->
-        <!-- <meta property="og:image" content="/dist/../images/dest/meta_img.jpg">
+        <!-- <meta property="og:image" content="/dist/images/dest/meta_img.jpg">
 		<link rel="canonical" href="http://mama-doma.by">
 		<meta property="fb:app_id" content="257953674358265">
 		<meta name="format-detection" content="telephone=no"> -->
@@ -45,7 +45,7 @@
         <title>Мама дома - Брэст</title>
         <link rel="stylesheet" href="../font/stylesheet.css" />
         <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="../css/style13.min.css" />
+        <link rel="stylesheet" href="../css/style14temphash.min.css" />
 
         <script
             src="https://api-maps.yandex.ru/2.1/?apikey=b0ef4691-ef56-4fa7-88fb-d774eb4837e1&lang=ru_RU"
@@ -70,17 +70,18 @@
             <div class="wrapper__header">
                 <div class="header__top">
                     <!-- <a href="index.html" class="logo">
-                        <img src="../images/dest/newLogo.png" alt="мама дома" />
-                    </a> -->
+                        <img src="images/dest/newLogo.png" alt="мама дома" />
+
+                    </!-->
 
                     <nav class="header__navigation">
                         <ul class="navigatin">
-                            <li class="navigatin__link"><a href="#menu">Меню</a></li>
                             <li class="navigatin__link"><a href="#feedback">Дастаўка</a></li>
-                            <li class="navigatin__link"><a href="#mapTo">Рэстараны на фудкорт</a></li>
-                            <li class="navigatin__link"><a href="#map">Кантакты</a></li>
-                            <li class="navigatin__link"><a href="#about-us">Водгукі</a></li>
+                            <li class="navigatin__link"><a href="#menu">Меню</a></li>
                             <li class="navigatin__link"><a href="#about-us">Праца</a></li>
+                            <li class="navigatin__link"><a href="#about-us">Водгукі</a></li>
+                            <li class="navigatin__link"><a href="#mapTo">Рэстараны на фудкортах</a></li>
+                            <li class="navigatin__link"><a href="#map">Кантакты</a></li>
                         </ul>
                     </nav>
                     <span class="hamburger">
@@ -123,25 +124,26 @@
                         </div>
                     </span>
                     <div class="header__region">
-                        <div class="header__language">
-                            <a href="../brest.html">РУС</a>
-                            <span></span>
-                            <a href="#" class="header__language_active">БЕЛ</a>
-                        </div>
-                        <div class="region__now">
-                            <span class="ico ico_region"></span>
-                            <div class="region__now_label">Брэст</div>
-                        </div>
                         <div class="dropdown">
-                            <a class="dropbtn">Рэгіёны</a>
+                            <div class="region__now">
+                                <span class="ico ico_region"></span>
+                                <div class="region__now_label">Брэст</div>
+                            </div>
+                            <!-- <a class="dropbtn">Регионы</a> -->
                             <div class="dropdown-content">
                                 <a href="index.html">Мінск</a>
+                                <a href="brest.html">Брэст</a>
                                 <a href="gomel.html">Гомель</a>
                                 <a href="mogilev.html">Магілёў</a>
                             </div>
                         </div>
+                        <div class="header__language">
+                            <a href="../brest.html">РУС</a>
+                            <a href="#" class="header__language_active">БЕЛ</a>
+                        </div>
                     </div>
                 </div>
+
                 <div class="promo__title">
                     <p class="promo__title-year _anim-items _anim-no-hide">Працуем з 2015 года</p>
                     <span class="promo__title-span _anim-items _anim-no-hide"></span>
@@ -205,12 +207,15 @@
         </section>
         <section class="about-us" id="about-us">
             <div class="about-us__wrapper wrapper">
-                <h2>— Водгукі —</h2>
+                <div class="layout-2-column">
+                    <h2>— Праца —</h2>
+                    <h2>— Водгукі —</h2>
+                </div>
                 <div class="layout-2-column">
                     <div class="about-us__work about-us__items _anim-items">
-                        <h3>З намі прыемна працаваць!</h3>
+                        <h3>У нас прыемна працаваць!</h3>
                         <span>Станьце часткай нашай каманды</span>
-                        <button href="#popup2" class="about-us__button popup-link">Пакіньце заяўку</button>
+                        <button href="#popup2" class="about-us__button popup-link">Пакінуць заяўку</button>
                     </div>
                     <div class="about-us__instagram about-us__items _anim-items">
                         <h3>Пакіньце водгук</h3>
@@ -223,7 +228,7 @@
         <section class="map" id="mapTo">
             <div class="map__wrapper wrapper">
                 <div class="map__title">
-                    <h2>— Кантакты —</h2>
+                    <h2>— Рэстараны на фудкортах —</h2>
                 </div>
                 <div class="feedback__layout">
                     <div class="feedback__contacts _anim-items">
@@ -231,21 +236,30 @@
                         <div class="contacts__item">
                             <div>
                                 <h4>ГЦ "Момо", фудкорт 2 паверх</h4>
-                                <p>прасп. Партызанскі, 150а, станцыя метро Магілёўская</p>
+                                <p>
+                                    прасп. Партызанскі, 150а, <br />
+                                    станцыя метро Магілёўская
+                                </p>
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
                         <div class="contacts__item">
                             <div>
                                 <h4>ТРЦ "Dana Mall", фудкорт 3 паверх</h4>
-                                <p>вул. Мсціслаўца, 11, станцыя метро Усход</p>
+                                <p>
+                                    вул. Мсціслаўца, 11 гадоў,<br />
+                                    станцыя метро Усход
+                                </p>
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
                         <div class="contacts__item">
                             <div>
                                 <h4>ТРЦ "Galileo", фудкорт 3 паверх</h4>
-                                <p>вул. Бабруйская, 6, станцыя метро плошчу Леніна</p>
+                                <p>
+                                    вул. Бабруйская, 6,<br />
+                                    станцыя метро плошчу Леніна
+                                </p>
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
@@ -253,6 +267,15 @@
                             <div>
                                 <h4>ТРЦ "Palazzo", фудкорт 3 паверх</h4>
                                 <p>вул. Ціміразева, 74А</p>
+                            </div>
+                            <span class="ico ico_place"></span>
+                        </div>
+
+                        <div class="contacts__city-title">Брэст</div>
+                        <div class="contacts__item">
+                            <div>
+                                <h4>"ЦУМ", 3 паверх</h4>
+                                <p>пр. Машэрава, 17</p>
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
@@ -264,14 +287,6 @@
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
-                        <div class="contacts__city-title">Брэст</div>
-                        <div class="contacts__item">
-                            <div>
-                                <h4>"ЦУМ", 3 паверх</h4>
-                                <p>пр. Машэрава, 17</p>
-                            </div>
-                            <span class="ico ico_place"></span>
-                        </div>
                         <div class="contacts__city-title">Магілёў</div>
                         <div class="contacts__item">
                             <div>
@@ -280,28 +295,52 @@
                             </div>
                             <span class="ico ico_place"></span>
                         </div>
-                        <div class="contacts__city-title">ХОЧЕШЬ ПРАЦАВАЦЬ У НАС?</div>
-                        <div class="contacts__item">
+                    </div>
+                    <div id="map" class="map__yandex _anim-items"></div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__wrapper wrapper">
+                <div class="footer__layouts">
+                    <div class="footer__layouts-item footer__layouts-item_space">
+                        <a href="index.html" class="logo">
+                            <img src="../images/dest/newLogo.png" alt="мама дома" />
+                        </a>
+                        <div class="wrapper footer__policy">
+                            <a href="policy.html">Палітыка прыватнасці</a>
+                        </div>
+                    </div>
+                    <div class="footer__layouts-item">
+                        <div class="footer__place-ico">
+                            <span class="ico ico_placeFooter"></span>
                             <div>
+                                <h4>Цэнтральны офіс</h4>
                                 <p>
-                                    Тэлефануй на нумар <a href="tel:+375293713141">+ 375 29 371 31 41</a> або запоўні
-                                    <a href="#about-us">анкету</a> на сайце
+                                    ТАА "ФэмилиФуд"<br />
+                                    пр. Незалежнасці, 185, офіс 8,<br />
+                                    г.Мінск, Рэспубліка Беларусь, 220125<br />
+                                    (Уваход з боку ул.Острошицкая, у тарцы будынка на шыльду "Promofilm")
                                 </p>
                             </div>
-                            <span class="ico ico_question"></span>
                         </div>
-                        <div class="contacts__city-title">Цэнтральны офіс у Мінску</div>
-                        <div class="contacts__item">
-                            <div>
-                                <p>
-                                    ТАА "ФемилиФуд" Рэспубліка Беларусь, 220125, пр. Незалежнасці, 185, офіс 8 (уваход з боку вул.
-                                    Астрашыцкая, у тарцы будынка на шыльду Promofilm)
-                                </p>
+                        <div class="footer__place-ico">
+                            <span class="ico ico_clock"></span>
+                            <div class="footer__place-ico_time">
+                                <h4>Час працы офіса: з 9:30 да 18:00 (пн.-пт.)</h4>
                             </div>
-                            <span class="ico ico_place"></span>
                         </div>
-                        <div class="map__social-links">
-                            <h4>— Мы ў сацыяльных сетках —</h4>
+                    </div>
+                    <div class="footer__layouts-item">
+                        <div class="footer__contacts">
+                            <div class="footer__mail footer__items">
+                                <a href="mailto:hr@mama-doma.by"><span class="ico ico_mail"></span>director@mama-doma.by</a>
+                            </div>
+                            <div class="footer__phone footer__items">
+                                <a href="tel:+375447933141"><span class="ico ico_phone"></span>HR-аддзел: +375 (29) 371-31-41 </a>
+                            </div>
+                        </div>
+                        <div class="footer__social-links">
                             <ul class="social__menu">
                                 <li>
                                     <a
@@ -321,25 +360,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div id="map" class="map__yandex _anim-items"></div>
                 </div>
-            </div>
-        </section>
-        <footer class="footer">
-            <div class="footer__wrapper wrapper">
-                <span class="footer__logo"></span>
-                <div class="footer__contacts">
-                    <div class="footer__mail footer__items">
-                        <a href="mailto:hr@mama-doma.by"><span class="ico ico_mail"></span>hr@mama-doma.by</a>
-                    </div>
-                    <div class="footer__phone footer__items">
-                        <a href="tel:+375447933141"><span class="ico ico_phone"></span>+375 (44) 793 31 41 </a>
-                    </div>
-                </div>
-            </div>
-            <div class="wrapper footer__wrapper_developer">
-                <a href="policy.html">Палітыка прыватнасці</a>
-                <span>Сайт распрацаваны <a href="#"> Qwes</a></span>
             </div>
         </footer>
         <div id="popup" class="popup">
@@ -372,7 +393,7 @@
                             <textarea
                                 name="feedback"
                                 required
-                                placeholder="Напішыце свой водгук ..."
+                                placeholder="Напішыце свой водгук..."
                                 rows="3"
                                 oninvalid="this.setCustomValidity('Забыліся водгук')"
                                 oninput="setCustomValidity('')"
@@ -399,7 +420,7 @@
                                 value
                                 required
                                 placeholder="Ваша імя"
-                                oninvalid="this.setCustomValidity('Забыліся імя')"
+                                oninvalid="this.setCustomValidity('забыліся імя')"
                                 oninput="setCustomValidity('')"
                             />
                             <input
@@ -439,6 +460,15 @@
                                 oninvalid="this.setCustomValidity('Забыліся тэлефон')"
                                 oninput="setCustomValidity('')"
                             />
+                            <input
+                                type="text"
+                                name="position"
+                                value
+                                required
+                                placeholder="Жаданая пасаду"
+                                oninvalid="this.setCustomValidity('Забыліся пасаду')"
+                                oninput="setCustomValidity('')"
+                            />
                             <textarea name="comment" placeholder="Напішыце свой каментар..." rows="3"></textarea>
                             <input type="submit" value="Адправіць" />
                         </div>
@@ -447,6 +477,6 @@
                 </div>
             </div>
         </div>
-        <script src="../js/app13.min.js"></script>
+        <script src="../js/app14temphash.min.js"></script>
     </body>
 </html>
