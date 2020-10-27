@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="be">
+<html lang="ru">
     <head>
         <meta charset="UTF-8" />
 
@@ -9,7 +9,7 @@
 		<meta property="og:title" content="КАФЕ НА ФУДКОРТАХ МАМА ДОМА">
 		<meta property="og:description" content="Если Мама Дома - значит еда будет вкусной и полезной!">
 		<meta property="og:type" content="website"> -->
-        <!-- <meta property="og:image" content="/dist/../images/dest/meta_img.jpg">
+        <!-- <meta property="og:image" content="/dist/images/dest/meta_img.jpg">
 		<link rel="canonical" href="http://mama-doma.by">
 		<meta property="fb:app_id" content="257953674358265">
 		<meta name="format-detection" content="telephone=no"> -->
@@ -45,17 +45,18 @@
         <header class="menu-page-header">
             <div class="header__top">
                 <!-- <a href="index.html" class="logo">
-                    <img src="../images/dest/newLogo.png" alt="мама дома" />
-                </a> -->
+                    <img src="images/dest/newLogo.png" alt="мама дома" />
+
+                </!-->
 
                 <nav class="header__navigation">
                     <ul class="navigatin">
-                        <li class="navigatin__link"><a href="index.html#menu">Меню</a></li>
                         <li class="navigatin__link"><a href="index.html#feedback">Дастаўка</a></li>
+                        <li class="navigatin__link"><a href="index.html#menu">Меню</a></li>
+                        <li class="navigatin__link"><a href="index.html#about-us">Праца</a></li>
+                        <li class="navigatin__link"><a href="index.html#about-us">Водгукі</a></li>
                         <li class="navigatin__link"><a href="index.html#mapTo">Рэстараны на фудкорт</a></li>
                         <li class="navigatin__link"><a href="index.html#map">Кантакты</a></li>
-                        <li class="navigatin__link"><a href="index.html#about-us">Водгукі</a></li>
-                        <li class="navigatin__link"><a href="index.html#about-us">Праца</a></li>
                     </ul>
                 </nav>
                 <span class="hamburger">
@@ -77,6 +78,7 @@
                             <li><a href="#">Гомель</a></li>
                             <li><a href="#">Магілёў</a></li>
                         </ul>
+
                         <h4>Выбар мовы</h4>
                         <div><a href="../hotDish.html">рус |</a><a href="#"> бел</a></div>
                     </div>
@@ -84,30 +86,31 @@
                 <span class="hamburger-region">
                     <span class="hamburger-region__line"></span>
                     <div class="region__humburger">
-                        <h3>Выбар рэгіёну</h3>
+                        <h3 class="region-hamburger__title">Выбар рэгіёну</h3>
                         <ul>
                             <li><a href="#">Мінск</a></li>
                             <li><a href="#">Брэст</a></li>
                             <li><a href="#">Гомель</a></li>
                             <li><a href="#">Магілёў</a></li>
                         </ul>
+
                         <h4>Выбар мовы</h4>
                         <div><a href="../hotDish.html">рус |</a><a href="#"> бел</a></div>
                     </div>
                 </span>
                 <div class="header__region">
                     <div class="header__language">
-                        <a href="../hotDish.html">РУС</a>
-                        <span></span>
+                        <a href="../hotDish.html">РУС</a> |
                         <a href="#" class="header__language_active">БЕЛ</a>
                     </div>
-                    <div class="region__now">
-                        <span class="ico ico_region"></span>
-                        <div class="region__now_label">Мінск</div>
-                    </div>
                     <div class="dropdown">
-                        <a class="dropbtn">Рэгіёны</a>
+                        <div class="region__now">
+                            <span class="ico ico_region"></span>
+                            <div class="region__now_label">Мінск</div>
+                        </div>
+                        <!-- <a class="dropbtn">Регионы</a> -->
                         <div class="dropdown-content">
+                            <a href="#">Мінск</a>
                             <a href="#">Брэст</a>
                             <a href="#">Гомель</a>
                             <a href="#">Магілёў</a>
@@ -121,45 +124,110 @@
                 <div class="menu-page__title">
                     <h2>— Гарачыя стравы —</h2>
                 </div>
-                <div class="menu-page__layout layout-3-column">
+                <div class="menu-page__layout">
                     <div class="menu__item menu-page__links _anim-items bgcacent">
                         <span class="menu-page__image menu-page__image_0"></span>
-                        <p class="menu-page__price">8.5 руб.</p>
-                        <h4>Катлета, пюрэ, агурок марынаваны, яйка</h4>
-                        <p class="menu-page__kalories">650 ккал</p>
+                        <div class="menu-page__circle-price">6<sup>60</sup></div>
+                        <h4>Грэчка па-купецкіх</h4>
+                        <p class="menu-page__kalories">300 г. (000 ккал.)</p>
                     </div>
                     <div class="menu__item menu-page__links _anim-items bgcacent">
                         <span class="menu-page__image menu-page__image_1"></span>
-                        <p class="menu-page__price">7.5 руб.</p>
-                        <h4>Каўбаскі боварские з бульбянымі дзелькамі</h4>
-                        <p class="menu-page__kalories">570 ккал</p>
+                        <div class="menu-page__circle-price">7<sup>20</sup></div>
+                        <h4>Катлета і бульбяное пюрэ</h4>
+                        <p class="menu-page__kalories">400 г. (000 ккал.)</p>
                     </div>
                     <div class="menu__item menu-page__links _anim-items bgcacent">
                         <span class="menu-page__image menu-page__image_2"></span>
-                        <p class="menu-page__price">3.5 руб.</p>
-                        <h4>Грэчка па-купецкіх</h4>
-                        <p class="menu-page__kalories">4473 ккал</p>
+                        <div class="menu-page__circle-price">3<sup>60</sup></div>
+                        <h4>Бульбу па-вясковаму</h4>
+                        <p class="menu-page__kalories">150 г. (000 ккал.)</p>
+                    </div>
+                    <div class="menu__item menu-page__links _anim-items bgcacent">
+                        <span class="menu-page__image menu-page__image_3"></span>
+                        <div class="menu-page__circle-price">3<sup>45</sup></div>
+                        <h4>Бульба "Фры"</h4>
+                        <p class="menu-page__kalories">150 г. (000 ккал.)</p>
+                    </div>
+                    <div class="menu__item menu-page__links _anim-items bgcacent">
+                        <span class="menu-page__image menu-page__image_4"></span>
+                        <div class="menu-page__circle-price">3<sup>90</sup></div>
+                        <h4>Бульба "Фры"</h4>
+                        <p class="menu-page__kalories">130 г. (000 ккал.)</p>
                     </div>
                 </div>
             </div>
         </section>
         <footer class="footer">
             <div class="footer__wrapper wrapper">
-                <span class="footer__logo"></span>
-                <div class="footer__contacts">
-                    <div class="footer__mail footer__items">
-                        <a href="mailto:hr@mama-doma.by"><span class="ico ico_mail"></span>hr@mama-doma.by</a>
+                <div class="footer__layouts">
+                    <div class="footer__layouts-item_0 footer__layouts-item_space">
+                        <a href="index.html" class="logo">
+                            <img src="../images/dest/newLogo.png" alt="мама дома" />
+                        </a>
+                        <div class="wrapper footer__policy">
+                            <a href="policy.html">Палітыка прыватнасці</a>
+                        </div>
                     </div>
-                    <div class="footer__phone footer__items">
-                        <a href="tel:+375447933141"><span class="ico ico_phone"></span>+ 375 44 793 31 41</a>
+                    <div class="footer__layouts-item_1">
+                        <div class="footer__place-ico">
+                            <span class="ico ico_placeFooter"></span>
+                            <div>
+                                <h4>Цэнтральны офіс</h4>
+                                <p>
+                                    ТАА "ФэмилиФуд" <br />
+                                    пр. Незалежнасці, 185, офіс 8, <br />
+                                    г.Мінск, Рэспубліка Беларусь, 220125 <br />
+                                    <em>
+                                        (Уваход з боку ул.Острошицкая, <br />
+                                        ў тарцы будынка на шыльду "Promofilm")
+                                    </em>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer__place-ico">
+                            <span class="ico ico_clock"></span>
+                            <div class="footer__place-ico_time">
+                                <h4>
+                                    Час працы офіса: <br />
+                                    с 9:30 до 18:00 (пн.-пт.)
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__layouts-item_2">
+                        <div class="footer__contacts">
+                            <div class="footer__mail footer__items">
+                                <a href="mailto:hr@mama-doma.by"><span class="ico ico_mail"></span>director@mama-doma.by</a>
+                            </div>
+                            <div class="footer__phone footer__items">
+                                <a href="tel:+375447933141"><span class="ico ico_phone"></span>HR-аддзел: +375 (29) 371-31-41 </a>
+                            </div>
+                        </div>
+                        <div class="footer__social-links">
+                            <ul class="social__menu">
+                                <li>
+                                    <a
+                                        href="https://www.facebook.com/mamadoma.official/?eid=ARC1fLCfcMp_iXWRBmOtnfe9J88hnlFDN9BnpAXp2Jzcr2z88Ue7uUQWIZT_J7qgMOVUuZln8QQ8IFYY&timeline_context_item_type=intro_card_work&timeline_context_item_source=100008035755019&fref=tag"
+                                        ><i class="fa fa-facebook"></i
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a href="https://vk.com/mamadomaofficial"><i class="fa fa-vk"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/mamadoma_official/?hl=ru"><i class="fa fa-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://ok.ru/mamadomaofficial"><i class="fa fa-odnoklassniki"></i></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="wrapper footer__wrapper_developer">
-                <a href="policy.html">Палітыка прыватнасці</a>
-                <span>Сайт распрацаваны <a href="#"> Qwes</a></span>
-            </div>
         </footer>
-        <script src="../js/appMenu14temphash.min.js"></script>
+
+        <script src="js/appMenu14temphash.min.js"></script>
     </body>
 </html>

@@ -136,7 +136,7 @@
 
     h4 {
         @include font(2.2rem, 2.4rem, bold);
-        min-height: 4.8rem;
+        min-height: 2.8rem;
     }
 
     &:hover {
@@ -309,6 +309,18 @@
     }
     &_napitki-14 {
         background-image: url('../../images/dest/menuPage/IMG_1785.jpg');
+    }
+    &_napitki-late {
+        background-image: url('../../images/dest/menuPage/latte1.jpg');
+    }
+    &_napitki-capu {
+        background-image: url('../../images/dest/menuPage/capucino1.jpg');
+    }
+    &_napitki-flet {
+        background-image: url('../../images/dest/menuPage/flet.jpg');
+    }
+    &_napitki-expre {
+        background-image: url('../../images/dest/menuPage/expresso.jpg');
     }
 }
 

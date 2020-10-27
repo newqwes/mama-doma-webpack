@@ -60,6 +60,10 @@
         margin-top: 10px;
         flex: 0 0 auto;
     }
+    p {
+        @include font(1.4rem, 2rem);
+        letter-spacing: 0.1rem;
+    }
     h4 {
         @include font(2.2rem, 3rem);
     }
@@ -86,6 +90,9 @@
 }
 .footer__place-ico_time {
     padding-top: 10px;
+    h4 {
+        @include font(1.8rem, 2.4rem);
+    }
 }
 .footer__phone {
     a {
