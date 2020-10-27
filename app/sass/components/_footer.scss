@@ -1,6 +1,6 @@
 .footer {
     background-color: $color-brand-second;
-    padding: 40px 0 10px;
+    padding: 20px 0 10px;
     color: $color-brand-accent;
 }
 
@@ -16,7 +16,8 @@
 }
 
 .footer__items {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+
     @include media-tablet-768 {
         margin: 10px 0 10px 20px;
     }
@@ -54,10 +55,8 @@
 }
 .footer__place-ico {
     display: flex;
-    margin-bottom: 20px;
     span {
         margin-right: 10px;
-        margin-top: 10px;
         flex: 0 0 auto;
     }
     p {
@@ -72,15 +71,21 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    h4 {
+        padding: 20px 0 5px;
+    }
 }
 .footer__layouts-item {
     &_0 {
-        flex: 1 1 25%; /* отнимем margin и скажем растягиваться */
+        flex: 1 1 15%; /* отнимем margin и скажем растягиваться */
     }
     &_1 {
-        flex: 1 1 45%; /* отнимем margin и скажем растягиваться */
+        flex: 1 1 30%; /* отнимем margin и скажем растягиваться */
     }
     &_2 {
+        flex: 1 1 27%; /* отнимем margin и скажем растягиваться */
+    }
+    &_3 {
         flex: 1 1 25%; /* отнимем margin и скажем растягиваться */
     }
 

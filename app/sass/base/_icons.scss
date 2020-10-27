@@ -33,13 +33,13 @@
     }
     &_clock {
         background-image: url('../../images/dest/icons/clock.svg');
-        width: 26px;
-        height: 26px;
+        width: 22px;
+        height: 22px;
     }
     &_placeFooter {
         background-image: url('../../images/dest/icons/placeFooter.svg');
-        width: 26px;
-        height: 26px;
+        width: 22px;
+        height: 22px;
     }
     &_arrow {
         background-image: url('../../images/dest/icons/up-arrow.svg');
@@ -66,7 +66,7 @@
 
 .logo img {
     min-width: 80px;
-    max-width: 140px;
+    max-width: 120px;
     border: $color-brand-accent 5px solid;
     border-radius: 50%;
     margin-left: 16%;
