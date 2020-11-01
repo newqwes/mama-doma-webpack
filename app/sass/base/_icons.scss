@@ -65,11 +65,7 @@
 }
 
 .logo img {
-    min-width: 80px;
-    max-width: 120px;
-    border: $color-brand-accent 5px solid;
-    border-radius: 50%;
-    margin-left: 16%;
+    width: 90px;
     @include media-tablet-768 {
         margin-left: 5%;
     }

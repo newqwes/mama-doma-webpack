@@ -1,4 +1,4 @@
-// 16temphash
+// 17temphash
 
 //подключаем gulp
 const { src, dest, parallel, series, watch } = require('gulp');
@@ -49,7 +49,7 @@ function scripts() {
         'app/js/mask.js',
         'app/js/lib/sweetalert.min.js',
     ])
-        .pipe(concat('app16temphash.min.js'))
+        .pipe(concat('app17temphash.min.js'))
         .pipe(uglify())
         .pipe(dest('app/js/'))
         .pipe(browserSync.stream());
@@ -57,7 +57,7 @@ function scripts() {
 
 function scriptsMenu() {
     return src(['app/js/humburger.js'])
-        .pipe(concat('appMenu16temphash.min.js'))
+        .pipe(concat('appMenu17temphash.min.js'))
         .pipe(uglify())
         .pipe(dest('app/js/'))
         .pipe(browserSync.stream());
@@ -67,7 +67,7 @@ function scriptsMenu() {
 function styles() {
     return src('app/sass/style.scss')
         .pipe(sass())
-        .pipe(concat('style16temphash.min.css'))
+        .pipe(concat('style17temphash.min.css'))
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
         .pipe(cleanCss({ level: { 1: { specialComments: 0 } } }))
         .pipe(dest('app/css/'))
@@ -96,8 +96,8 @@ function buildcopy() {
         [
             'app/css/**/*.min.css',
             'app/**/*.php',
-            'app/js/app16temphash.min.js',
-            'app/js/appMenu16temphash.min.js',
+            'app/js/app17temphash.min.js',
+            'app/js/appMenu17temphash.min.js',
             'app/images/dest/**/*',
             'app/font/**/*',
             'app/video/**/*',
