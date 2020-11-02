@@ -330,12 +330,12 @@
     position: absolute;
     left: 4%;
     top: 4%;
-    @include font(3.2rem, 8rem, 800);
-    background-color: $color-brand-accent;
+    @include font(5.2rem, 8rem, 800);
+    background-color: $color-brand-second;
     border-radius: 50%;
-    color: $color-brand-second;
+    color: $color-text;
     letter-spacing: 0.15rem;
     sup {
-        @include font(1.9rem, 1rem, 900);
+        @include font(2.5rem, 1rem, 900);
     }
 }

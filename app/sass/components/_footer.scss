@@ -79,12 +79,21 @@
 .footer__layouts-item {
     &_0 {
         flex: 1 1 35%; /* отнимем margin и скажем растягиваться */
+        @include media-tablet-620 {
+            padding: 5% 10%;
+        }
     }
     &_2 {
         flex: 1 1 20%; /* отнимем margin и скажем растягиваться */
+        @include media-tablet-620 {
+            margin-left: 25%;
+        }
     }
     &_3 {
         flex: 1 1 35%; /* отнимем margin и скажем растягиваться */
+        @include media-tablet-620 {
+            flex: 0 1 35%;
+        }
     }
 
     margin: 5px;
