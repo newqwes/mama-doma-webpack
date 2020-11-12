@@ -62,7 +62,7 @@ window.onload = function () {
             searchControlProvider: 'yandex#search',
         },
     ];
-
+    var linkToImg = '../../';
     if (city === 'Минск' || city === 'Мінск') {
         cityCenter = minskCenter;
     } else if (city === 'Брест' || city === 'Брэст') {
@@ -74,6 +74,7 @@ window.onload = function () {
     } else {
         cityCenter = belarusCountry;
     }
+    if (city === 'Минск') return (linkToImg = '../');
     ymaps.ready(function () {
         var myMap = new (Function.prototype.bind.apply(ymaps.Map, [null].concat(_toConsumableArray(cityCenter))))(),
             minskMomo = new ymaps.Placemark(
@@ -84,7 +85,7 @@ window.onload = function () {
                 },
                 {
                     iconLayout: 'default#image',
-                    iconImageHref: '../images/dest/newLogo.png',
+                    iconImageHref: linkToImg + 'images/dest/newLogo.png',
                     iconImageSize: [32, 32],
                     iconImageOffset: [-16, -16],
                 }
@@ -97,7 +98,7 @@ window.onload = function () {
                 },
                 {
                     iconLayout: 'default#image',
-                    iconImageHref: '../images/dest/newLogo.png',
+                    iconImageHref: linkToImg + 'images/dest/newLogo.png',
                     iconImageSize: [32, 32],
                     iconImageOffset: [-16, -16],
                 }
@@ -110,7 +111,7 @@ window.onload = function () {
                 },
                 {
                     iconLayout: 'default#image',
-                    iconImageHref: '../images/dest/newLogo.png',
+                    iconImageHref: linkToImg + 'images/dest/newLogo.png',
                     iconImageSize: [32, 32],
                     iconImageOffset: [-16, -16],
                 }
@@ -123,7 +124,7 @@ window.onload = function () {
                 },
                 {
                     iconLayout: 'default#image',
-                    iconImageHref: '../images/dest/newLogo.png',
+                    iconImageHref: linkToImg + 'images/dest/newLogo.png',
                     iconImageSize: [32, 32],
                     iconImageOffset: [-16, -16],
                 }
@@ -136,7 +137,7 @@ window.onload = function () {
             },
             {
                 iconLayout: 'default#image',
-                iconImageHref: '../images/dest/newLogo.png',
+                iconImageHref: linkToImg + 'images/dest/newLogo.png',
                 iconImageSize: [32, 32],
                 iconImageOffset: [-16, -16],
             }
@@ -149,7 +150,7 @@ window.onload = function () {
             },
             {
                 iconLayout: 'default#image',
-                iconImageHref: '../images/dest/newLogo.png',
+                iconImageHref: linkToImg + 'images/dest/newLogo.png',
                 iconImageSize: [32, 32],
                 iconImageOffset: [-16, -16],
             }
@@ -162,7 +163,7 @@ window.onload = function () {
             },
             {
                 iconLayout: 'default#image',
-                iconImageHref: '../images/dest/newLogo.png',
+                iconImageHref: linkToImg + 'images/dest/newLogo.png',
                 iconImageSize: [32, 32],
                 iconImageOffset: [-16, -16],
             }

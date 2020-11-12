@@ -31,7 +31,7 @@
     padding-top: 20px;
     a {
         color: $color-brand-accent;
-        @include font(1.8rem, 2.4rem);
+        @include font(1.6rem, 2.2rem);
         @include media-tablet-768 {
             @include font(1.3rem, 1.5rem);
         }
