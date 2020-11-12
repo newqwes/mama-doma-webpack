@@ -1,140 +1,146 @@
 .about-us {
-    padding: 80px 0;
-    color: $color-text;
+  padding: 80px 0;
+  color: $color-text;
+  h2 {
+    padding: 0;
+    margin: 0 0 80px 0;
+  }
 }
 .about-us__wrapper {
-    text-align: center;
+  text-align: center;
 }
 .about-us__items {
-    border-radius: 5px;
-    text-align: center;
-    height: 360px;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    margin-bottom: 15px;
-    h2 {
-        margin-bottom: 50px;
-    }
+  border-radius: 5px;
+  text-align: center;
+  height: 360px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 15px;
+  h2 {
+    margin-bottom: 50px;
+  }
 
+  a,
+  h3,
+  span {
+    @extend %transition;
+    transform: translateY(20px);
+    margin-top: 10px;
+    @include media-tablet-768 {
+      padding: 0 20px;
+    }
+  }
+  span {
+    @include font(2.4rem, $weight: normal);
+    @include media-tablet-768 {
+      @include font(2.2rem, $weight: normal);
+    }
+    @include media-mobile-414 {
+      @include font(2rem, $weight: normal);
+    }
+  }
+  h3 {
+    text-transform: uppercase;
+    @include font(3.6rem, $weight: bold);
+    @include media-tablet-768 {
+      @include font(3.2rem, $weight: bold);
+    }
+    @include media-mobile-414 {
+      @include font(2.6rem, $weight: bold);
+      padding: 0 20px;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    @extend %transition;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 30px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    bottom: 5%;
+    right: 5%;
+    border-top: solid 2px $color-brand-accent;
+    border-bottom: solid 2px $color-brand-accent;
+    @extend %transition;
+    transform: scaleX(0);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    bottom: 5%;
+    right: 5%;
+    border-left: solid 2px $color-brand-accent;
+    border-right: solid 2px $color-brand-accent;
+    @extend %transition;
+    transform: scaleY(0);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    transform: scale(1);
+  }
+  @include media-tablet-768 {
+    &:before,
+    &::after {
+      transform: scale(1);
+    }
+  }
+
+  &:hover a,
+  &:hover h3,
+  &:hover button,
+  &:hover span {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+  }
+  @include media-tablet-768 {
     a,
     h3,
+    button,
     span {
-        @extend %transition;
-        transform: translateY(20px);
-        margin-top: 10px;
-        @include media-tablet-768 {
-            padding: 0 20px;
-        }
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      z-index: 10;
     }
-    span {
-        @include font(2.4rem, $weight: normal);
-        @include media-tablet-768 {
-            @include font(2.2rem, $weight: normal);
-        }
-        @include media-mobile-414 {
-            @include font(2rem, $weight: normal);
-        }
-    }
-    h3 {
-        text-transform: uppercase;
-        @include font(3.6rem, $weight: bold);
-        @include media-tablet-768 {
-            @include font(3.2rem, $weight: bold);
-        }
-        @include media-mobile-414 {
-            @include font(2.6rem, $weight: bold);
-            padding: 0 20px;
-        }
-    }
-
-    button {
-        cursor: pointer;
-        @extend %transition;
-        transform: translateY(-20px);
-        opacity: 0;
-        visibility: hidden;
-        margin-top: 30px;
-    }
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 5%;
-        left: 5%;
-        bottom: 5%;
-        right: 5%;
-        border-top: solid 2px $color-brand-accent;
-        border-bottom: solid 2px $color-brand-accent;
-        @extend %transition;
-        transform: scaleX(0);
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        top: 5%;
-        left: 5%;
-        bottom: 5%;
-        right: 5%;
-        border-left: solid 2px $color-brand-accent;
-        border-right: solid 2px $color-brand-accent;
-        @extend %transition;
-        transform: scaleY(0);
-    }
-
-    &:hover::before,
-    &:hover::after {
-        transform: scale(1);
-    }
-    @include media-tablet-768 {
-        &:before,
-        &::after {
-            transform: scale(1);
-        }
-    }
-
-    &:hover a,
-    &:hover h3,
-    &:hover button,
-    &:hover span {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-        z-index: 10;
-    }
-    @include media-tablet-768 {
-        a,
-        h3,
-        button,
-        span {
-            transform: translateY(0);
-            opacity: 1;
-            visibility: visible;
-            z-index: 10;
-        }
-    }
+  }
 }
 
 .about-us__work {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../images/dest/about_us_people.jpg') center;
-    background-size: cover;
-    @include appearancEffect($translate2: -20%, $translate1: 0);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('../../images/dest/about_us_people.jpg') center;
+  background-size: cover;
+  @include appearancEffect($translate2: -20%, $translate1: 0);
 
-    &._active {
-        @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
-    }
+  &._active {
+    @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
+  }
 }
 
 .about-us__instagram {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../images/dest/qweage.jpg');
-    background-size: cover;
-    @include appearancEffect($translate2: 20%, $translate1: 0);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('../../images/dest/qweage.jpg');
+  background-size: cover;
+  @include appearancEffect($translate2: 20%, $translate1: 0);
 
-    &._active {
-        @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
-    }
+  &._active {
+    @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
+  }
 }

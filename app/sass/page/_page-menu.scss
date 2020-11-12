@@ -1,341 +1,348 @@
 .body__menu-page {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .menu-page-items {
-    flex: 1;
-    // background-color: $color-brand-accent;
+  flex: 1;
+  // background-color: $color-brand-accent;
 }
 
 .menu-page-header {
-    background-color: $color-brand-second;
-    padding: 10px 0;
+  background-color: $color-brand-second;
+  padding: 10px 0;
 
-    .region__now_label,
-    .dropbtn {
-        color: $color-text;
-    }
+  .region__now_label,
+  .dropbtn {
+    color: $color-text;
+  }
 }
 
 .menu-page__navigatin {
-    margin: 0;
+  margin: 0;
 }
 
 .menu-page-header__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .menu-page-items__wrapper {
-    text-align: center;
+  text-align: center;
 }
 
 .menu-page__navigatin {
-    display: flex;
+  display: flex;
 }
 
 .menu-page__link {
-    list-style-type: none;
-    padding: 0 20px;
+  list-style-type: none;
+  padding: 0 20px;
 
-    a {
-        color: $color-text;
-        text-transform: uppercase;
-        @extend %transition;
-        position: relative;
-        line-height: 1;
-        text-decoration: none;
-        letter-spacing: 0.2rem;
-        @include font(1.4rem);
-        line-height: 2rem;
+  a {
+    color: $color-text;
+    text-transform: uppercase;
+    @extend %transition;
+    position: relative;
+    line-height: 1;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    @include font(1.4rem);
+    line-height: 2rem;
 
-        &:hover {
-            color: $color-brand-accent;
-        }
+    &:hover {
+      color: $color-brand-accent;
     }
+  }
 
-    a:after {
-        display: block;
-        position: absolute;
-        left: 0;
-        width: 0;
-        height: 1px;
-        background-color: $color-brand-accent;
-        content: '';
-        @extend %transition;
-    }
+  a:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $color-brand-accent;
+    content: '';
+    @extend %transition;
+  }
 
-    a:hover:after,
-    a:focus:after {
-        width: 100%;
-    }
+  a:hover:after,
+  a:focus:after {
+    width: 100%;
+  }
 }
 
 .menu-page__title {
-    margin-bottom: 70px;
-    @include media-mobile-414 {
-        margin-bottom: 40px;
-        h2 {
-            @include font(2.7rem, $weight: bold);
-        }
+  margin-bottom: 70px;
+  @include media-mobile-414 {
+    margin-bottom: 40px;
+    h2 {
+      @include font(2.7rem, $weight: bold);
     }
-    @include media-mobilesmall-320 {
-        margin-bottom: 20px;
-        h2 {
-            @include font(2.6rem, $weight: bold);
-        }
+  }
+  @include media-mobilesmall-320 {
+    margin-bottom: 20px;
+    h2 {
+      @include font(2.6rem, $weight: bold);
     }
+  }
 }
 
 .bgctext {
-    background-color: $color-text;
+  background-color: $color-text;
 }
 
 .bgcacent {
-    background-color: $color-brand-accent;
+  background-color: $color-brand-accent;
 }
 
 .bgcsecond {
-    background-color: $color-brand-second;
-    color: $color-text;
+  background-color: $color-brand-second;
+  color: $color-text;
 }
 .menu-page__layout {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .menu-page__links {
-    flex: 1 1 calc(33.33% - 30px); /* отнимем margin и скажем растягиваться */
-    margin: 15px;
-    box-sizing: border-box; /* чтобы внутренний отступ не влиял когда там будет текст... */
-    min-width: 290px; /* мин. ширина блока, чтобы переносились на другой ряд */
+  flex: 1 1 calc(33.33% - 30px); /* отнимем margin и скажем растягиваться */
+  margin: 15px;
+  box-sizing: border-box; /* чтобы внутренний отступ не влиял когда там будет текст... */
+  min-width: 290px; /* мин. ширина блока, чтобы переносились на другой ряд */
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 360px;
+  height: 440px;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
+  transition: all 0.8s ease;
+  position: relative;
+  p,
+  h4 {
+    margin: 0;
+    padding: 0;
+  }
 
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    width: 360px;
-    height: 420px;
-    background-size: cover;
-    border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
-    transition: all 0.8s ease;
-    position: relative;
-    p,
-    h4 {
-        margin: 5px 10px;
-        padding: 0;
-    }
+  p {
+    @include font(1.6rem, 1.8rem, 400);
+    letter-spacing: 0.2rem;
+  }
 
-    p {
-        @include font(2.2rem, 2.6rem, 300);
-    }
+  h4 {
+    margin: 0 auto;
+    @include font(2.2rem, 2.4rem, bold);
+    min-height: 2.8rem;
+    margin-bottom: 5px;
+    max-width: 300px;
+  }
 
-    h4 {
-        @include font(2.2rem, 2.4rem, bold);
-        min-height: 2.8rem;
-    }
-
-    &:hover {
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 12px 12px rgba(0, 0, 0, 0.2);
-    }
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 12px 12px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .menu-page__image {
-    flex: 1;
-    background-size: cover;
-    margin-bottom: 10px;
-    background-position: center;
-    border-radius: 10px 10px 50% 0;
+  flex: 1;
+  background-size: cover;
+  margin-bottom: 10px;
+  background-position: center;
+  border-radius: 10px 10px 50% 0;
 
-    &_0 {
-        background-image: url('../../images/dest/menuPage/photo_2020-10-26_20-37-31.jpg');
-    }
-    &_1 {
-        background-image: url('../../images/dest/menuPage/photo_2020-10-26_20-38-59.jpg');
-    }
-    &_2 {
-        background-image: url('../../images/dest/menuPage/IMG_8165.jpg');
-    }
-    &_3 {
-        background-image: url('../../images/dest/menuPage/IMG_8168.jpg');
-    }
-    &_4 {
-        background-image: url('../../images/dest/menuPage/4.jpg');
-    }
-    &_sup-01 {
-        background-image: url('../../images/dest/menuPage/sup-0.jpg');
-    }
-    &_sup-02 {
-        background-image: url('../../images/dest/menuPage/sup-02.jpg');
-    }
-    &_sup-03 {
-        background-image: url('../../images/dest/menuPage/sup-03.jpg');
-    }
-    &_salat-01 {
-        background-image: url('../../images/dest/menuPage/salat-01.jpg');
-    }
-    &_salat-02 {
-        background-image: url('../../images/dest/menuPage/IMG_3024.jpg');
-    }
-    &_salat-03 {
-        background-image: url('../../images/dest/menuPage/IMG_8165.jpg');
-    }
-    &_salat-04 {
-        background-image: url('../../images/dest/menuPage/IMG_8168.jpg');
-    }
-    &_salat-05 {
-        background-image: url('../../images/dest/menuPage/IMG_8160.jpg');
-    }
-    &_draniki-01 {
-        background-image: url('../../images/dest/menuPage/dra-01.jpg');
-    }
-    &_draniki-02 {
-        background-image: url('../../images/dest/menuPage/dra-02.jpg');
-    }
-    &_draniki-03 {
-        background-image: url('../../images/dest/menuPage/dra-03.jpg');
-    }
-    &_draniki-04 {
-        background-image: url('../../images/dest/menuPage/dra-04.jpg');
-    }
-    &_draniki-06 {
-        background-image: url('../../images/dest/menuPage/dra-06.jpg');
-    }
-    &_bliny-01 {
-        background-image: url('../../images/dest/menuPage/blin-01.jpg');
-    }
-    &_bliny-02 {
-        background-image: url('../../images/dest/menuPage/blin-01.jpg');
-    }
-    &_bliny-03 {
-        background-image: url('../../images/dest/menuPage/blin-02.jpg');
-    }
-    &_bliny-04 {
-        background-image: url('../../images/dest/menuPage/blin-04.jpg');
-    }
-    &_bliny-05 {
-        background-image: url('../../images/dest/menuPage/blin-05.jpg');
-    }
-    &_bliny-06 {
-        background-image: url('../../images/dest/menuPage/blin-06.jpg');
-    }
-    &_bliny-07 {
-        background-image: url('../../images/dest/menuPage/blin-07.jpg');
-    }
-    &_bliny-08 {
-        background-image: url('../../images/dest/menuPage/blin-08.jpg');
-    }
-    &_bliny-09 {
-        background-image: url('../../images/dest/menuPage/blin-09.jpg');
-    }
-    &_bliny-10 {
-        background-image: url('../../images/dest/menuPage/blin-10.jpg');
-    }
-    &_bliny-11 {
-        background-image: url('../../images/dest/menuPage/blin-10.jpg');
-    }
-    &_syrnik-01 {
-        background-image: url('../../images/dest/menuPage/syrnik3.jpg');
-    }
-    &_syrnik-02 {
-        background-image: url('../../images/dest/menuPage/blinynutella.jpg');
-    }
-    &_syrnik-03 {
-        background-image: url('../../images/dest/menuPage/blin-330.jpg');
-    }
-    &_syrnik-04 {
-        background-image: url('../../images/dest/menuPage/blintvorog.jpg');
-    }
-    &_sladkiyeBliny-02 {
-        background-image: url('../../images/dest/menuPage/IMG_4542.jpg');
-    }
-    &_sladkiyeBliny-03 {
-        background-image: url('../../images/dest/menuPage/IMG_4541.jpg');
-    }
-    &_sladkiyeBliny-04 {
-        background-image: url('../../images/dest/menuPage/IMG_4542.jpg');
-    }
-    &_sladkiyeBliny-05 {
-        background-image: url('../../images/dest/menuPage/IMG_4540.jpg');
-    }
-    &_syrniki-01 {
-        background-image: url('../../images/dest/menuPage/IMG_3517.jpg');
-    }
-    &_napitki-01 {
-        background-image: url('../../images/dest/menuPage/coffe.jpg');
-    }
-    &_napitki-02 {
-        background-image: url('../../images/dest/menuPage/Tea.jpg');
-    }
-    &_napitki-03 {
-        background-image: url('../../images/dest/menuPage/teafruct.jpg');
-    }
-    &_napitki-04 {
-        background-image: url('../../images/dest/menuPage/napitki-03.jpg');
-        background-position: top;
-    }
-    &_napitki-05 {
-        background-image: url('../../images/dest/menuPage/napitki-04.jpg');
-        background-position: top;
-    }
-    &_napitki-06 {
-        background-image: url('../../images/dest/menuPage/napitki-06.jpg');
-        background-position: top;
-    }
-    &_napitki-07 {
-        background-image: url('../../images/dest/menuPage/napitki-07.jpg');
-    }
-    &_napitki-08 {
-        background-image: url('../../images/dest/menuPage/napitki-08.jpg');
-    }
-    &_napitki-09 {
-        background-image: url('../../images/dest/menuPage/napitki-09.jpg');
-    }
-    &_napitki-10 {
-        background-image: url('../../images/dest/menuPage/napitki-10.jpg');
-    }
-    &_napitki-11 {
-        background-image: url('../../images/dest/menuPage/IMG_1785.jpg');
-    }
-    &_napitki-12 {
-        background-image: url('../../images/dest/menuPage/IMG_1785.jpg');
-    }
-    &_napitki-13 {
-        background-image: url('../../images/dest/menuPage/IMG_1785.jpg');
-    }
-    &_napitki-14 {
-        background-image: url('../../images/dest/menuPage/IMG_1785.jpg');
-    }
-    &_napitki-late {
-        background-image: url('../../images/dest/menuPage/latte1.jpg');
-    }
-    &_napitki-capu {
-        background-image: url('../../images/dest/menuPage/capucino1.jpg');
-    }
-    &_napitki-flet {
-        background-image: url('../../images/dest/menuPage/flet.jpg');
-    }
-    &_napitki-expre {
-        background-image: url('../../images/dest/menuPage/expresso.jpg');
-    }
+  &_0 {
+    background-image: url('../../images/dest/menuPage/photo_2020-10-26_20-37-31.jpg');
+  }
+  &_1 {
+    background-image: url('../../images/dest/menuPage/photo_2020-10-26_20-38-59.jpg');
+  }
+  &_2 {
+    background-image: url('../../images/dest/menuPage/IMG_8165.jpg');
+  }
+  &_3 {
+    background-image: url('../../images/dest/menuPage/IMG_8168.jpg');
+  }
+  &_4 {
+    background-image: url('../../images/dest/menuPage/4.jpg');
+  }
+  &_gb-kolbaski {
+    background-image: url('../../images/dest/menuPage/IMG_8161.jpg');
+  }
+  &_sup-01 {
+    background-image: url('../../images/dest/menuPage/sup-0.jpg');
+  }
+  &_sup-02 {
+    background-image: url('../../images/dest/menuPage/sup-02.jpg');
+  }
+  &_sup-03 {
+    background-image: url('../../images/dest/menuPage/sup-03.jpg');
+  }
+  &_salat-01 {
+    background-image: url('../../images/dest/menuPage/salat-01.jpg');
+  }
+  &_salat-02 {
+    background-image: url('../../images/dest/menuPage/IMG_3024.jpg');
+  }
+  &_salat-03 {
+    background-image: url('../../images/dest/menuPage/IMG_8165.jpg');
+  }
+  &_salat-04 {
+    background-image: url('../../images/dest/menuPage/IMG_8168.jpg');
+  }
+  &_salat-05 {
+    background-image: url('../../images/dest/menuPage/IMG_8160.jpg');
+  }
+  &_draniki-01 {
+    background-image: url('../../images/dest/menuPage/dra-01.jpg');
+  }
+  &_draniki-02 {
+    background-image: url('../../images/dest/menuPage/dra-02.jpg');
+  }
+  &_draniki-03 {
+    background-image: url('../../images/dest/menuPage/dra-03.jpg');
+  }
+  &_draniki-04 {
+    background-image: url('../../images/dest/menuPage/dra-04.jpg');
+  }
+  &_draniki-06 {
+    background-image: url('../../images/dest/menuPage/dra-06.jpg');
+  }
+  &_bliny-01 {
+    background-image: url('../../images/dest/menuPage/blin-01.jpg');
+  }
+  &_bliny-02 {
+    background-image: url('../../images/dest/menuPage/blin-01.jpg');
+  }
+  &_bliny-03 {
+    background-image: url('../../images/dest/menuPage/blin-02.jpg');
+  }
+  &_bliny-04 {
+    background-image: url('../../images/dest/menuPage/blin-04.jpg');
+  }
+  &_bliny-05 {
+    background-image: url('../../images/dest/menuPage/blin-05.jpg');
+  }
+  &_bliny-06 {
+    background-image: url('../../images/dest/menuPage/blin-06.jpg');
+  }
+  &_bliny-07 {
+    background-image: url('../../images/dest/menuPage/blin-07.jpg');
+  }
+  &_bliny-08 {
+    background-image: url('../../images/dest/menuPage/blin-08.jpg');
+  }
+  &_bliny-09 {
+    background-image: url('../../images/dest/menuPage/blin-09.jpg');
+  }
+  &_bliny-10 {
+    background-image: url('../../images/dest/menuPage/blin-10.jpg');
+  }
+  &_bliny-11 {
+    background-image: url('../../images/dest/menuPage/blin-10.jpg');
+  }
+  &_syrnik-01 {
+    background-image: url('../../images/dest/menuPage/syrnik3.jpg');
+  }
+  &_syrnik-02 {
+    background-image: url('../../images/dest/menuPage/blinynutella.jpg');
+  }
+  &_syrnik-03 {
+    background-image: url('../../images/dest/menuPage/blin-330.jpg');
+  }
+  &_syrnik-04 {
+    background-image: url('../../images/dest/menuPage/blintvorog.jpg');
+  }
+  &_sladkiyeBliny-02 {
+    background-image: url('../../images/dest/menuPage/IMG_4542.jpg');
+  }
+  &_sladkiyeBliny-03 {
+    background-image: url('../../images/dest/menuPage/IMG_4541.jpg');
+  }
+  &_sladkiyeBliny-04 {
+    background-image: url('../../images/dest/menuPage/IMG_4542.jpg');
+  }
+  &_sladkiyeBliny-05 {
+    background-image: url('../../images/dest/menuPage/IMG_4540.jpg');
+  }
+  &_syrniki-01 {
+    background-image: url('../../images/dest/menuPage/IMG_3517.jpg');
+  }
+  &_napitki-01 {
+    background-image: url('../../images/dest/menuPage/coffe.jpg');
+  }
+  &_napitki-02 {
+    background-image: url('../../images/dest/menuPage/Tea.jpg');
+  }
+  &_napitki-03 {
+    background-image: url('../../images/dest/menuPage/teafruct.jpg');
+  }
+  &_napitki-04 {
+    background-image: url('../../images/dest/menuPage/napitki-03.jpg');
+    background-position: top;
+  }
+  &_napitki-05 {
+    background-image: url('../../images/dest/menuPage/napitki-04.jpg');
+    background-position: top;
+  }
+  &_napitki-06 {
+    background-image: url('../../images/dest/menuPage/napitki-06.jpg');
+    background-position: top;
+  }
+  &_napitki-07 {
+    background-image: url('../../images/dest/menuPage/napitki-07.jpg');
+  }
+  &_napitki-08 {
+    background-image: url('../../images/dest/menuPage/napitki-08.jpg');
+  }
+  &_napitki-09 {
+    background-image: url('../../images/dest/menuPage/napitki-09.jpg');
+  }
+  &_napitki-10 {
+    background-image: url('../../images/dest/menuPage/napitki-10.jpg');
+  }
+  &_napitki-11 {
+    background-image: url('../../images/dest/menuPage/IMG_1785.jpg');
+  }
+  &_napitki-12 {
+    background-image: url('../../images/dest/menuPage/IMG_1785.jpg');
+  }
+  &_napitki-13 {
+    background-image: url('../../images/dest/menuPage/IMG_1785.jpg');
+  }
+  &_napitki-14 {
+    background-image: url('../../images/dest/menuPage/IMG_1785.jpg');
+  }
+  &_napitki-late {
+    background-image: url('../../images/dest/menuPage/latte1.jpg');
+  }
+  &_napitki-capu {
+    background-image: url('../../images/dest/menuPage/capucino1.jpg');
+  }
+  &_napitki-flet {
+    background-image: url('../../images/dest/menuPage/flet.jpg');
+  }
+  &_napitki-expre {
+    background-image: url('../../images/dest/menuPage/expresso.jpg');
+  }
 }
 
 .menu-page__circle-price {
-    width: 75px;
-    height: 75px;
-    position: absolute;
-    left: 4%;
-    top: 4%;
-    @include font(5.2rem, 8rem, 800);
-    background-color: $color-brand-second;
-    border-radius: 50%;
-    color: $color-text;
-    letter-spacing: 0.15rem;
-    sup {
-        @include font(2.5rem, 1rem, 900);
-    }
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  left: 4%;
+  top: 4%;
+  @include font(5.2rem, 8rem, 800);
+  background-color: $color-brand-second;
+  border-radius: 50%;
+  color: $color-text;
+  letter-spacing: 0.15rem;
+  sup {
+    @include font(2.5rem, 1rem, 900);
+  }
 }

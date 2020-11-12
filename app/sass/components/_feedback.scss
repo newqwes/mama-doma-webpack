@@ -1,97 +1,93 @@
 .feedback {
-    padding: 80px 0;
-    @include media-tablet-768 {
-        padding: 60px 0 40px;
-    }
-    // background-image: url(../../images/dest/IMG_6289.jpg);
-    // background-size: 100% 180px;
-    // background-repeat: no-repeat;
-    // background-position: top;
-    // background-position-y: 0;
-    // @include media-tablet-768 {
-    //     background-size: 100% 80px;
-    // }
-    // @include media-pcsmall-1366 {
-    //     background-size: 150% 50px;
-    // }
-    // @include media-laptop-1024 {
-    //     background-size: 210% 50px;
-    // }
-    // @include media-tablet-768 {
-    //     background-size: 350% 50px;
-    // }
-    // @include media-mobile-414 {
-    //     background-size: 480% 50px;
-    // }
-    // @include media-mobilesmall-320 {
-    //     background-size: 520% 50px;
-    // }
+  padding: 80px 0;
+  @include media-tablet-768 {
+    padding: 60px 0 40px;
+  }
+  // background-image: url(../../image../../image_6289.jpg);
+  // background-size: 100% 180px;
+  // background-repeat: no-repeat;
+  // background-position: top;
+  // background-position-y: 0;
+  // @include media-tablet-768 {
+  //     background-size: 100% 80px;
+  // }
+  // @include media-pcsmall-1366 {
+  //     background-size: 150% 50px;
+  // }
+  // @include media-laptop-1024 {
+  //     background-size: 210% 50px;
+  // }
+  // @include media-tablet-768 {
+  //     background-size: 350% 50px;
+  // }
+  // @include media-mobile-414 {
+  //     background-size: 480% 50px;
+  // }
+  // @include media-mobilesmall-320 {
+  //     background-size: 520% 50px;
+  // }
 }
 
 .feedback__wrapper {
-    text-align: center;
-    h2 {
-        @include media-laptop-1024 {
-            margin: 10px;
-        }
-    }
+  text-align: center;
+  h2 {
+    padding: 0;
+    margin: 0 0 80px;
+  }
 }
 
-.feedback__layout-delivery {
-    padding-top: 50px;
-}
 .feedback__links {
-    display: inline-block;
-    width: 570px;
-    height: 320px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px;
-    @extend %transition;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    @include media-pcsmall-1366 {
-        width: 500px;
-        height: 285px;
-    }
-    @include media-laptop-1024 {
-        width: 440px;
-        height: 250px;
-    }
-    @include media-tablet-768 {
-        width: 380px;
-        height: 200px;
-        margin-bottom: 30px;
-    }
-    @include media-mobile-414 {
-        width: 300px;
-        height: 150px;
-    }
+  display: inline-block;
+  width: 570px;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  @extend %transition;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  @include media-pcsmall-1366 {
+    width: 500px;
+    height: 285px;
+  }
+  @include media-laptop-1024 {
+    width: 440px;
+    height: 250px;
+  }
+  @include media-tablet-768 {
+    width: 380px;
+    height: 200px;
+    margin-bottom: 30px;
+  }
+  @include media-mobile-414 {
+    width: 300px;
+    height: 150px;
+  }
 }
 
 .link__to-menu {
-    background-image: url('../../images/dest/menu.jpg');
-    @include appearancEffect($translate2: -20%, $translate1: 0);
+  background-image: url('../../images/dest/menu.jpg');
+  @include appearancEffect($translate2: -20%, $translate1: 0);
 
-    &._active {
-        @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
+  &._active {
+    @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
 
-        &:hover {
-            transform: scale(1.02);
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
-        }
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
     }
+  }
 }
 
 .link__to-delivio {
-    background-image: url('../../images/dest/feedback.jpg');
-    @include appearancEffect($translate2: 20%, $translate1: 0);
+  background-image: url('../../images/dest/feedback.jpg');
+  @include appearancEffect($translate2: 20%, $translate1: 0);
 
-    &._active {
-        @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
+  &._active {
+    @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
 
-        &:hover {
-            transform: scale(1.02);
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
-        }
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
     }
+  }
 }

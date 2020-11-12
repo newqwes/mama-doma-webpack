@@ -6,22 +6,22 @@
 @import 'abstract/placeholders';
 @import 'abstract/columns';
 
-//Utilite
+// //Utilite
 @import 'utils/bonce';
 @import 'utils/scrollbar';
 @import 'utils/sweetalert.min.scss';
 
-//Base
+// //Base
 @import 'base/base';
 @import 'base/social';
 @import 'base/icons';
 @import 'base/buttons';
 @import 'base/hamburger';
 
-//Layout
+// //Layout
 @import 'layouts/wrapper';
 
-//Component
+// //Component
 @import 'components/header';
 @import 'components/feedback';
 @import 'components/menu';
@@ -32,6 +32,6 @@
 @import 'components/popup';
 @import 'components/form';
 
-//Page
+// //Page
 @import 'page/page-menu';
 @import 'page/page-policy';

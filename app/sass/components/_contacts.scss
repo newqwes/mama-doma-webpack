@@ -1,6 +1,13 @@
 .contacts {
-    padding: 80px 0 80px;
+    padding: 80px 0;
     color: $color-brand-second;
+    h2 {
+        padding: 0;
+        margin: 0 0 70px 0;
+    }
+    h4 {
+        @include font(1.9rem, 2.4rem, $weight: bold);
+    }
 }
 .contacts__wrapper {
     @include media-laptop-1024 {
@@ -11,9 +18,8 @@
     text-align: center;
 }
 .contacts__contacts {
-    h4 {
-        @include font(1.9rem, 2.4rem, $weight: bold);
-    }
+    margin-bottom: 20px;
+
     a {
         color: $color-brand-second;
         display: flex;
@@ -54,9 +60,6 @@
         margin-bottom: 10px;
     }
 }
-.contacts__contacts {
-    margin-bottom: 20px;
-}
 .contacts__layouts-item_space {
     display: flex;
     flex-direction: column;
@@ -65,15 +68,12 @@
 .contacts__place-ico {
     display: flex;
     span {
-        margin-right: 10px;
+        margin-right: 5px;
         flex: 0 0 auto;
     }
     p {
         @include font(1.6rem, 2rem);
         letter-spacing: 0.1rem;
-    }
-    h4 {
-        @include font(2.4rem, 3rem);
     }
 }
 .contacts__layouts {
@@ -88,6 +88,9 @@
 .contacts__layouts-item {
     &_1 {
         flex-basis: 30%; /* отнимем margin и скажем растягиваться */
+        span {
+            vertical-align: top;
+        }
         @include media-tablet-768 {
             flex-basis: 45%;
         }
@@ -120,9 +123,6 @@
 }
 .contacts__place-ico_time {
     padding-top: 10px;
-    h4 {
-        @include font(1.9rem, 2.4rem);
-    }
 }
 .contacts__phone {
     a {
