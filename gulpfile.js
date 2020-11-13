@@ -1,4 +1,4 @@
-// 18temphash
+// 19temphash
 
 //подключаем gulp
 const { src, dest, parallel, series, watch } = require('gulp');
@@ -17,105 +17,108 @@ const htmlmin = require('gulp-htmlmin');
 
 // Запустить на локальном сервере папку app
 function browsersync() {
-    browserSync.init({
-        server: { baseDir: 'app/' },
-        notify: false,
-        online: true,
-    });
+  browserSync.init({
+    server: { baseDir: 'app/' },
+    notify: false,
+    online: true,
+  });
 }
 
 // Минифицируем HTML
 function htmlToMin() {
-    return src(['app/**/*.html'])
-        .pipe(
-            htmlmin({
-                collapseWhitespace: true,
-                removeComments: true,
-            })
-        )
-        .pipe(dest('app/html/'));
+  return src(['app/**/*.html'])
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true,
+        removeComments: true,
+      })
+    )
+    .pipe(dest('app/html/'));
 }
 
 // Bundle для js файлов всё собирается в одни, последовательность соблюдать!
 function scripts() {
-    return src([
-        'node_modules/jquery/dist/jquery.min.js',
-        'app/js/humburger.js',
-        'app/js/animationScroll.js',
-        'app/js/yandexMap.js',
-        'app/js/ancors.js',
-        'app/js/popup.js',
-        'app/js/lib/inputmask.min.js',
-        'app/js/mask.js',
-        'app/js/lib/sweetalert.min.js',
-    ])
-        .pipe(concat('app18temphash.min.js'))
-        .pipe(uglify())
-        .pipe(dest('app/js/'))
-        .pipe(browserSync.stream());
+  return src([
+    'node_modules/jquery/dist/jquery.min.js',
+    'app/js/humburger.js',
+    'app/js/animationScroll.js',
+    'app/js/yandexMap.js',
+    'app/js/ancors.js',
+    'app/js/popup.js',
+    'app/js/lib/inputmask.min.js',
+    'app/js/mask.js',
+    'app/js/lib/sweetalert.min.js',
+  ])
+    .pipe(concat('app19temphash.min.js'))
+    .pipe(uglify())
+    .pipe(dest('app/js/'))
+    .pipe(browserSync.stream());
 }
 
 function scriptsMenu() {
-    return src(['app/js/humburger.js'])
-        .pipe(concat('appMenu18temphash.min.js'))
-        .pipe(uglify())
-        .pipe(dest('app/js/'))
-        .pipe(browserSync.stream());
+  return src(['app/js/humburger.js'])
+    .pipe(concat('appMenu19temphash.min.js'))
+    .pipe(uglify())
+    .pipe(dest('app/js/'))
+    .pipe(browserSync.stream());
 }
 
 // Стили из главного файла scss в css собирается минифицируется, подлючать все css/scss в файл style.scss
 function styles() {
-    return src('app/sass/style.scss')
-        .pipe(sass())
-        .pipe(concat('style18temphash.min.css'))
-        .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-        .pipe(cleanCss({ level: { 1: { specialComments: 0 } } }))
-        .pipe(dest('app/css/'))
-        .pipe(browserSync.stream());
+  return src('app/sass/style.scss')
+    .pipe(sass())
+    .pipe(concat('style19temphash.min.css'))
+    .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
+    .pipe(cleanCss({ level: { 1: { specialComments: 0 } } }))
+    .pipe(dest('app/css/'))
+    .pipe(browserSync.stream());
 }
 
 // Все картинки из папки src сжимает удачно и ставить в папку dest
 function images() {
-    return src('app/images/src/**/*').pipe(newer('app/images/dest/')).pipe(imagemin()).pipe(dest('app/images/dest/'));
+  return src('app/images/src/**/*')
+    .pipe(newer('app/images/dest/'))
+    .pipe(imagemin())
+    .pipe(dest('app/images/dest/'));
 }
 
 // функции очистки
 function cleanimg() {
-    return del('app/images/dest/**/*', { force: true });
+  return del('app/images/dest/**/*', { force: true });
 }
 function cleanhtml() {
-    return del('app/html/**/*', { force: true });
+  return del('app/html/**/*', { force: true });
 }
 function cleanbuild() {
-    return del(['dist/**/*', 'app/html/**/*'], { force: true });
+  return del(['dist/**/*', 'app/html/**/*'], { force: true });
 }
 
 // Можно подключить файлы которые войдут в бандл, просто копируется с app в dist
 function buildcopy() {
-    return src(
-        [
-            'app/css/**/*.min.css',
-            'app/**/*.php',
-            'app/js/app18temphash.min.js',
-            'app/js/appMenu18temphash.min.js',
-            'app/images/dest/**/*',
-            'app/font/**/*',
-            'app/video/**/*',
-            'app/html/**/*.html',
-            'app/**/*.htaccess',
-        ],
-        {
-            base: 'app',
-        }
-    ).pipe(dest('dist'));
+  return src(
+    [
+      'app/css/**/*.min.css',
+      'app/**/*.php',
+      'app/js/app19temphash.min.js',
+      'app/js/appMenu19temphash.min.js',
+      'app/images/dest/**/*',
+      'app/font/**/*',
+      'app/video/**/*',
+      'app/html/**/*.html',
+      'app/**/*.htaccess',
+    ],
+    {
+      base: 'app',
+    }
+  ).pipe(dest('dist'));
 }
 
 // Следит за изменениями файлов
 function startwatch() {
-    watch('app/**/*.scss', styles);
-    watch(['app/**/*.js', '!app/**/*.min.js'], scripts);
-    watch('app/**/*.html').on('change', browserSync.reload);
-    watch('app/images/src/**/*', images);
+  watch('app/**/*.scss', styles);
+  watch(['app/**/*.js', '!app/**/*.min.js'], scripts);
+  watch('app/**/*.html').on('change', browserSync.reload);
+  watch('app/images/src/**/*', images);
 }
 // команды gulp
 exports.htmlToMin = htmlToMin;
