@@ -63,32 +63,32 @@
     visibility: hidden;
     margin-top: 30px;
   }
+  // Поставить рамки вокруг Работа Отзывы
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 5%;
+  //   left: 5%;
+  //   bottom: 5%;
+  //   right: 5%;
+  //   border-top: solid 2px $color-brand-accent;
+  //   border-bottom: solid 2px $color-brand-accent;
+  //   @extend %transition;
+  //   transform: scaleX(0);
+  // }
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    bottom: 5%;
-    right: 5%;
-    border-top: solid 2px $color-brand-accent;
-    border-bottom: solid 2px $color-brand-accent;
-    @extend %transition;
-    transform: scaleX(0);
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    bottom: 5%;
-    right: 5%;
-    border-left: solid 2px $color-brand-accent;
-    border-right: solid 2px $color-brand-accent;
-    @extend %transition;
-    transform: scaleY(0);
-  }
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 5%;
+  //   left: 5%;
+  //   bottom: 5%;
+  //   right: 5%;
+  //   border-left: solid 2px $color-brand-accent;
+  //   border-right: solid 2px $color-brand-accent;
+  //   @extend %transition;
+  //   transform: scaleY(0);
+  // }
 
   &:hover::before,
   &:hover::after {
