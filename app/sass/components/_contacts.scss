@@ -1,9 +1,9 @@
 .contacts {
-  padding: 80px 0;
+  padding: 40px 0;
   color: $color-brand-second;
   h2 {
     padding: 0;
-    margin: 0 0 70px 0;
+    margin: 0 0 20px 0;
   }
   h4 {
     @include font(1.9rem, 2.4rem, $weight: bold);
@@ -39,7 +39,6 @@
 
 .contacts__items {
   margin-bottom: 5px;
-margin-left: 15%;
 }
 
 .contacts__policy {
@@ -71,7 +70,7 @@ margin-left: 15%;
 }
 .contacts__place-ico {
   display: flex;
-  text-align: center; // выровнять контакты по центру
+  // text-align: center; // выровнять контакты по центру
   div {
     margin: 0 auto;
   }
@@ -96,23 +95,22 @@ margin-left: 15%;
 .contacts__layouts-item {
   &_1 {
     flex-basis: 100%; /* отнимем margin и скажем растягиваться */
-    text-align: center;
+    // text-align: center;
     span {
       vertical-align: top;
     }
-
   }
   &_2 {
     flex-basis: 100%; /* отнимем margin и скажем растягиваться */
     justify-content: space-between;
-    text-align: center;
+    // text-align: center;
     display: flex;
     @include media-tablet-620 {
-  flex-direction: column;
-  flex-basis: 100%;
-  >* {
-  margin: 0 auto;
-  }
+      flex-direction: column;
+      flex-basis: 100%;
+      > * {
+        margin: 0 auto;
+      }
     }
   }
   &_3 {
@@ -128,7 +126,6 @@ margin-left: 15%;
 }
 .contacts__place-ico_time {
   padding-top: 10px;
-
 }
 .contacts__phone {
   a {
