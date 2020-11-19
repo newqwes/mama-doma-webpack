@@ -10,9 +10,6 @@
   }
 }
 .contacts__wrapper {
-  @include media-laptop-1024 {
-    padding: 0 50px;
-  }
   @include media-tablet-768 {
     padding: 0 25px;
   }
@@ -24,9 +21,16 @@
   text-align: center;
 }
 .contacts__contacts {
-  margin-bottom: 20px;
+  margin: 20px 35px;
   min-width: 300px;
-
+  @include media-laptop-1024 {
+    margin: 20px 0;
+    min-width: 200px;
+  }
+  @include media-tablet-620 {
+    margin: 20px 0;
+    width: 300px;
+  }
   a {
     color: $color-brand-second;
     display: flex;
@@ -71,6 +75,8 @@
 .contacts__place-ico {
   display: flex;
   // text-align: center; // выровнять контакты по центру
+  min-width: 200px;
+
   div {
     margin: 0 auto;
   }
@@ -95,7 +101,7 @@
 .contacts__layouts-item {
   &_1 {
     flex-basis: 100%; /* отнимем margin и скажем растягиваться */
-    // text-align: center;
+    text-align: center;
     span {
       vertical-align: top;
     }
@@ -103,7 +109,6 @@
   &_2 {
     flex-basis: 100%; /* отнимем margin и скажем растягиваться */
     justify-content: space-between;
-    // text-align: center;
     display: flex;
     @include media-tablet-620 {
       flex-direction: column;
@@ -116,8 +121,6 @@
   &_3 {
     flex-basis: 100%; /* отнимем margin и скажем растягиваться */
     text-align: center;
-    @include media-tablet-620 {
-    }
   }
 
   margin: 5px;
@@ -126,6 +129,12 @@
 }
 .contacts__place-ico_time {
   padding-top: 10px;
+  @include media-tablet-620 {
+    width: 300px;
+  }
+  h4 {
+    display: flex;
+  }
 }
 .contacts__phone {
   a {

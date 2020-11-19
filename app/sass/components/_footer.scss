@@ -1,114 +1,127 @@
 .footer {
-    background-color: $color-brand-second;
-    padding: 20px 0 20px;
-    color: $color-brand-accent;
-    .logo {
-        width: 90px;
-    }
-}
-
-.footer__contacts {
-    a {
-        color: $color-brand-accent;
-        display: flex;
-        @include font(1.8rem, 2.4rem);
-        @include media-mobile-414 {
-            @include font(1.3rem, 1.4rem);
-        }
-    }
+  background-color: $color-brand-second;
+  padding: 40px 0 40px;
+  color: $color-brand-accent;
+  .logo {
+    width: 100px;
+  }
 }
 
 .footer__items {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 
-    @include media-tablet-768 {
-        margin: 10px 0 10px 20px;
-    }
+  @include media-tablet-768 {
+    margin: 10px 0 10px 20px;
+  }
 }
 
-.footer__policy {
-    margin: 0;
-    padding-top: 20px;
-    a {
-        color: $color-brand-accent;
-        @include font(1.6rem, 2.2rem);
-        @include media-tablet-768 {
-            @include font(1.3rem, 1.5rem);
-        }
-        @include media-mobile-414 {
-            @include font(1.1rem, 1.4rem);
-        }
-    }
-}
 .footer__social-links {
-    padding-left: 7%;
-    * {
-        box-sizing: content-box;
-    }
-    h4 {
-        margin-bottom: 10px;
-    }
+  padding-left: 7%;
+  * {
+    box-sizing: content-box;
+  }
+  h4 {
+    margin-bottom: 10px;
+  }
+  @include media-tablet-620 {
+    padding: 0;
+  }
 }
 .footer__layouts-item_space {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .footer__place-ico {
-    display: flex;
-    span {
-        margin-right: 10px;
-        flex: 0 0 auto;
-    }
-    p {
-        @include font(1.4rem, 2rem);
-        letter-spacing: 0.1rem;
-    }
-    h4 {
-        @include font(2.2rem, 3rem);
-    }
+  display: flex;
+  span {
+    margin-right: 10px;
+    flex: 0 0 auto;
+  }
+  p {
+    @include font(1.4rem, 2rem);
+    letter-spacing: 0.1rem;
+  }
+  h4 {
+    @include font(2.2rem, 3rem);
+  }
 }
 .footer__layouts {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    h4 {
-        padding: 20px 0 5px;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  h4 {
+    padding: 20px 0 5px;
+  }
 }
 .footer__layouts-item {
-    &_0 {
-        flex: 1 1 35%; /* отнимем margin и скажем растягиваться */
-        @include media-tablet-620 {
-            padding: 5% 10%;
-        }
+  &_0 {
+    flex: 1 1 35%; /* отнимем margin и скажем растягиваться */
+    margin-left: 3%;
+    @include media-tablet-620 {
+      flex: 100%;
+      align-items: center;
+      margin: 20px 0;
+      img {
+        margin: 0;
+      }
     }
-    &_2 {
-        flex: 1 1 20%; /* отнимем margin и скажем растягиваться */
-        @include media-tablet-620 {
-            margin-left: 25%;
-        }
+  }
+  &_2 {
+    flex: 1 1 23%;
+    padding-left: 5%;
+    @include media-tablet-620 {
+      flex: 100%;
+      text-align: center;
+      padding-left: 45%;
     }
-    &_3 {
-        flex: 1 1 35%; /* отнимем margin и скажем растягиваться */
-        @include media-tablet-620 {
-            flex: 0 1 35%;
-        }
+  }
+  &_3 {
+    flex: 1 1 35%;
+    @include media-tablet-620 {
+      flex: 100%;
+      margin: 20px 0;
+      text-align: center;
     }
+  }
 
-    margin: 5px;
-    box-sizing: border-box; /* чтобы внутренний отступ не влиял когда там будет текст... */
-    min-width: 320px; /* мин. ширина блока, чтобы переносились на другой ряд */
+  margin: 5px;
+  box-sizing: border-box;
+  min-width: 320px;
 }
 .footer__place-ico_time {
-    padding-top: 10px;
-    h4 {
-        @include font(1.8rem, 2.4rem);
-    }
+  padding-top: 10px;
+  h4 {
+    @include font(1.8rem, 2.4rem);
+  }
 }
 .footer__phone {
-    a {
-        text-decoration: none;
-        @include font(1.8rem, 3.2rem);
+  a {
+    text-decoration: none;
+    @include font(1.8rem, 3.2rem);
+  }
+}
+.footer__contacts {
+  a {
+    color: $color-brand-accent;
+    display: flex;
+    @include font(1.8rem, 2.4rem);
+    @include media-mobile-414 {
+      @include font(1.3rem, 1.4rem);
     }
+  }
+}
+.footer__policy {
+  margin: 0;
+  padding-top: 20px;
+  a {
+    color: $color-brand-accent;
+    @include font(1.6rem, 2.2rem);
+    @include media-tablet-768 {
+      @include font(1.3rem, 1.5rem);
+    }
+    @include media-mobile-414 {
+      @include font(1.1rem, 1.4rem);
+    }
+  }
 }
