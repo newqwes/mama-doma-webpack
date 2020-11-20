@@ -11,7 +11,10 @@ ul.social__menu {
     display: inline-block;
     margin: 3px;
     @include media-tablet-620 {
-      margin: 0 15px;
+      margin: 0 12px;
+    }
+    @include media-mobile-414 {
+      margin: 0 6px;
     }
     a {
       text-decoration: none;

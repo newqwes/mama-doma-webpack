@@ -77,6 +77,7 @@
   // text-align: center; // выровнять контакты по центру
   min-width: 200px;
 
+  padding: 10px;
   div {
     margin: 0 auto;
   }
@@ -108,7 +109,7 @@
   }
   &_2 {
     flex-basis: 100%; /* отнимем margin и скажем растягиваться */
-    justify-content: space-between;
+    justify-content: space-around;
     display: flex;
     @include media-tablet-620 {
       flex-direction: column;

@@ -1,4 +1,4 @@
-// 23temphash
+// 24temphash
 
 //подключаем gulp
 const { src, dest, parallel, series, watch } = require('gulp');
@@ -49,7 +49,7 @@ function scripts() {
     'app/js/mask.js',
     'app/js/lib/sweetalert.min.js',
   ])
-    .pipe(concat('app23temphash.min.js'))
+    .pipe(concat('app24temphash.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js/'))
     .pipe(browserSync.stream());
@@ -57,7 +57,7 @@ function scripts() {
 
 function scriptsMenu() {
   return src(['app/js/humburger.js'])
-    .pipe(concat('appMenu23temphash.min.js'))
+    .pipe(concat('appMenu24temphash.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js/'))
     .pipe(browserSync.stream());
@@ -67,7 +67,7 @@ function scriptsMenu() {
 function styles() {
   return src('app/sass/style.scss')
     .pipe(sass())
-    .pipe(concat('style23temphash.min.css'))
+    .pipe(concat('style24temphash.min.css'))
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
     .pipe(cleanCss({ level: { 1: { specialComments: 0 } } }))
     .pipe(dest('app/css/'))
@@ -99,8 +99,8 @@ function buildcopy() {
     [
       'app/css/**/*.min.css',
       'app/**/*.php',
-      'app/js/app23temphash.min.js',
-      'app/js/appMenu23temphash.min.js',
+      'app/js/app24temphash.min.js',
+      'app/js/appMenu24temphash.min.js',
       'app/images/dest/**/*',
       'app/font/**/*',
       'app/video/**/*',
