@@ -132,6 +132,9 @@
   &._active {
     @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
   }
+  @include media-tablet-620 {
+    margin-bottom: 80px;
+  }
 }
 
 .about-us__instagram {
