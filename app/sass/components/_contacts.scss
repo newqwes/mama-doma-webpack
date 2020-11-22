@@ -7,6 +7,9 @@
   }
   h4 {
     @include font(1.9rem, 2.4rem, $weight: bold);
+    @include media-tablet-620 {
+      text-align: center;
+    }
   }
 }
 .contacts__wrapper {
@@ -43,6 +46,10 @@
 
 .contacts__items {
   margin-bottom: 5px;
+  @include media-tablet-620 {
+    padding-left: 12%;
+    width: 100%;
+  }
 }
 
 .contacts__policy {
@@ -132,6 +139,7 @@
   padding-top: 10px;
   @include media-tablet-620 {
     width: 300px;
+    padding-left: 12%;
   }
   h4 {
     display: flex;

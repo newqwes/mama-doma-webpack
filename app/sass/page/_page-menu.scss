@@ -8,6 +8,9 @@
   flex: 1;
   // background-color: $color-brand-accent;
   padding: 80px 10px;
+  @include media-mobile-414 {
+    padding: 50px 10px;
+  }
 }
 
 .menu-page-header {
@@ -82,13 +85,16 @@
   }
   @include media-mobile-414 {
     h2 {
-      @include font(2.7rem, $weight: bold);
+      @include font(2.7rem, 4rem, $weight: 900);
+      max-width: 295px;
+      margin-bottom: 40px;
+      margin: 0 auto 40px auto;
     }
   }
   @include media-mobilesmall-320 {
     margin-bottom: 20px;
     h2 {
-      @include font(2.6rem, $weight: bold);
+      @include font(2.6rem, $weight: 900);
     }
   }
 }
