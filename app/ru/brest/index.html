@@ -106,7 +106,7 @@
       rel="stylesheet prefetch"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../../css/style26temphash.min.css" />
+    <link rel="stylesheet" href="../../css/style27temphash.min.css" />
 
     <script
       src="https://api-maps.yandex.ru/2.1/?apikey=b0ef4691-ef56-4fa7-88fb-d774eb4837e1&lang=ru_RU"
@@ -514,12 +514,33 @@
                 oninput="setCustomValidity('')"
               />
               <input
+                type="input"
+                onfocus="(this.type='datetime-local')"
+                name="time"
+                id="time"
+                value
+                required
+                placeholder="Дата и время посещения"
+                oninvalid="this.setCustomValidity('Забыли время')"
+                oninput="setCustomValidity('')"
+              />
+              <select class="select-css" form="formFeedback" name="selectRestoran">
+                <option value="" disabled selected hidden>Выбор ресторана</option>
+                <option>ТЦ «МОМО» (Минск)</option>
+                <option>ТРЦ «DANA MALL» (Минск)</option>
+                <option>ТРЦ «Galileo» (Минск)</option>
+                <option>ТРЦ «Palazzo» (Минск)</option>
+                <option>ЦУМ (Брест)</option>
+                <option>ТРЦ «Секрет» (Гомель)</option>
+                <option>ТЦ «Парк Сити» (Могилёв)</option>
+              </select>
+              <input
                 type="tel"
                 name="phone"
                 id="phone"
                 value
                 required
-                placeholder="Ваш телефон"
+                placeholder="Контактный телефон"
                 oninvalid="this.setCustomValidity('Забыли телефон')"
                 oninput="setCustomValidity('')"
               />
@@ -591,7 +612,7 @@
                 id="phone__worker"
                 value
                 required
-                placeholder="Ваш телефон"
+                placeholder="Контактный телефон"
                 oninvalid="this.setCustomValidity('Забыли телефон')"
                 oninput="setCustomValidity('')"
               />
@@ -618,6 +639,6 @@
         </div>
       </div>
     </div>
-    <script src="../../js/app26temphash.min.js"></script>
+    <script src="../../js/app27temphash.min.js"></script>
   </body>
 </html>

@@ -106,7 +106,7 @@
       rel="stylesheet prefetch"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../../css/style26temphash.min.css" />
+    <link rel="stylesheet" href="../../css/style27temphash.min.css" />
 
     <script
       src="https://api-maps.yandex.ru/2.1/?apikey=b0ef4691-ef56-4fa7-88fb-d774eb4837e1&lang=ru_RU"
@@ -515,6 +515,28 @@
                 oninput="setCustomValidity('')"
               />
               <input
+                type="input"
+                onfocus="(this.type='datetime-local')"
+                name="time"
+                id="time"
+                value
+                required
+                placeholder="Дата і час наведвання"
+                oninvalid="this.setCustomValidity('Забыліся час')"
+                oninput="setCustomValidity('')"
+              />
+              <select class="select-css" form="formFeedback" name="selectRestoran">
+                <option value="" disabled selected hidden>Выбар рэстарана</option>
+                <option>ГЦ «МОМО» (Мінск)</option>
+                <option>ГЗЦ «DANA MALL» (Мінск)</option>
+                <option>ГЗЦ «Galileo» (Мінск)</option>
+                <option>ГЗЦ «Palazzo» (Мінск)</option>
+                <option>ЦУМ (Брэст)</option>
+                <option>ГЗЦ «Секрет» (Гомель)</option>
+                <option>ГЦ «Парк Сити» (Магілёў)</option>
+              </select>
+
+              <input
                 type="tel"
                 name="phone"
                 id="phone"
@@ -615,6 +637,6 @@
         </div>
       </div>
     </div>
-    <script src="../../js/app26temphash.min.js"></script>
+    <script src="../../js/app27temphash.min.js"></script>
   </body>
 </html>

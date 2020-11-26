@@ -1,6 +1,8 @@
 <?php
 //Сбор данных из полей формы. 
 $name = $_POST['name'];// Берём данные из input c атрибутом name="name"
+$time = $_POST['time'];// Берём данные из input c атрибутом name="name"
+$select = $_POST['selectRestoran'];// Берём данные из input c атрибутом name="name"
 $phone = str_replace("+", "", $_POST['phone']);  // Берём данные из input c атрибутом name="phone"
 $feedback = $_POST['feedback']; // Берём данные из input c атрибутом name="mail"
 
@@ -9,10 +11,10 @@ $chat_id = "-367886163"; // Тут пишем ID группы, куда буду
 $sitename = "mama-doma.by отзыв"; //Указываем название сайта
 
 $arr = array(
-
-  'С сайта: ' => $sitename,
   'Дата: ' => date('d-m-Y H:i:s'),
   'Имя: ' => $name,
+  'Дата и время посещения: ' => $time,
+  'Выбор ресторана: ' => $select,
   'Телефон: %2B' => $phone,
   'Отзыв: ' => $feedback
 );
