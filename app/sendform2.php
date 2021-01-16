@@ -21,7 +21,6 @@ $arr = array(
   'Адрес: ' => $address,
   'Должность: ' => $position,
   'Комментарий: ' => $comment,
-
 );
 
 foreach($arr as $key => $value) {

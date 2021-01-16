@@ -23,6 +23,15 @@ foreach($arr as $key => $value) {
   $txt .= "<b>".$key."</b> ".$value."%0A";
 };
 
+$msg="
+Имя: $name
+Дата и время посещения: $time
+Выбор ресторана: $select
+Телефон: $phone
+Отзыв: $feedback";
+
+mail("hr@mama-doma.by", "Отзывы с сайта mamadoma.by", $msg, "From: hr@mama-doma.by");
+
 $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 
 ?>
