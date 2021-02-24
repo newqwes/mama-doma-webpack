@@ -1,0 +1,8 @@
+
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^mama\-doma\.by$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.mama\-doma\.by$
+RewriteRule ^/?$ "https\:\/\/mama\-doma\.by\/" [R=301,L]
+
