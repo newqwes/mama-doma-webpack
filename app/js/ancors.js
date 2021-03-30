@@ -11,11 +11,14 @@ for (let anchor of anchors) {
     }
   });
 }
+
+const bottomArrowsIndent = window.innerWidth > 500 ? 0 : 40;
+
 window.onscroll = function () {
   if (
     (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) &&
     !(
-      window.scrollY + 1 >=
+      window.scrollY + bottomArrowsIndent >=
       document.documentElement.scrollHeight - document.documentElement.clientHeight
     )
   ) {

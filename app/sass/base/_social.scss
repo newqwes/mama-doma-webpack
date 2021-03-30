@@ -16,6 +16,9 @@ ul.social__menu {
     @include media-mobile-414 {
       margin: 0 6px;
     }
+    @include media-mobilesmall-320 {
+      margin: 0;
+    }
     a {
       text-decoration: none;
       i.fa {
@@ -114,6 +117,21 @@ ul.social__menu {
           }
         }
       }
+
+      i.fa-youtube:hover,
+      i.fa-youtube.hover {
+        &::after {
+          background-color: #dc2743;
+        }
+      }
+      i.fa-youtube {
+        @include media-laptop-1024 {
+          &::after {
+            background-color: #dc2743;
+          }
+        }
+      }
+
       i.fa-odnoklassniki:hover,
       i.fa-odnoklassniki.hover {
         &::after {
