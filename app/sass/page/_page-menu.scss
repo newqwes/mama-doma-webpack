@@ -245,7 +245,6 @@
     background-image: url('../../images/dest/menuPage/blin-330.jpg');
   }
   &_napitki_mar-01 {
-    // американо с молоком
     background-image: url('../../images/dest/menuPage/napitki_mar-01.jpg');
   }
   &_napitki-kompot {
@@ -434,6 +433,21 @@
     position: absolute;
     right: 4%;
     top: 4%;
+    @include font(5.2rem, 8rem, 800);
+    background-color: $color-brand-second;
+    border-radius: 50%;
+    color: $color-text;
+    letter-spacing: 0.15rem;
+    sup {
+      @include font(2.5rem, 1rem, 900);
+    }
+  }
+  &_2 {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    left: 4%;
+    top: 22%;
     @include font(5.2rem, 8rem, 800);
     background-color: $color-brand-second;
     border-radius: 50%;

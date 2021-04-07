@@ -1,64 +1,70 @@
 // @include font($size, $height, $weight, $style);
 @mixin font($size, $height: $size, $weight: normal, $style: normal) {
-    font-size: $size;
-    font-weight: $weight;
-    font-style: $style;
-    line-height: $height;
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+  line-height: $height;
 }
 
 @mixin columns($width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    @include media-pcsmall-1366 {
-        justify-content: space-around;
-    }
+  @include media-pcsmall-1366 {
+    justify-content: space-around;
+  }
 
-    > * {
-        flex-basis: $width;
-        @include media-tablet-768 {
-            flex-basis: 44%;
-        }
-        @include media-tablet-620 {
-            flex-basis: 95%;
-        }
+  > * {
+    flex-basis: $width;
+    @include media-tablet-768 {
+      flex-basis: 44%;
     }
+    @include media-tablet-620 {
+      flex-basis: 95%;
+    }
+  }
 }
 
-@mixin appearancEffect($transition1: 0.8s, $transition2: 0s, $opacity: 0, $translate1: 0px, $translate2: 120%) {
-    transform: translate($translate1, $translate2);
-    transition: all $transition1 ease $transition2;
-    opacity: $opacity;
+@mixin appearancEffect(
+  $transition1: 0.8s,
+  $transition2: 0s,
+  $opacity: 0,
+  $translate1: 0px,
+  $translate2: 120%
+) {
+  transform: translate($translate1, $translate2);
+  transition: all $transition1 ease $transition2;
+  opacity: $opacity;
 }
 
 @mixin media-pcsmall-1366 {
-    @media (max-width: $pc-small) {
-        @content;
-    }
+  @media (max-width: $pc-small) {
+    @content;
+  }
 }
 @mixin media-laptop-1024 {
-    @media (max-width: $media-laptop) {
-        @content;
-    }
+  @media (max-width: $media-laptop) {
+    @content;
+  }
 }
 @mixin media-tablet-768 {
-    @media (max-width: $tablet-width) {
-        @content;
-    }
+  @media (max-width: $tablet-width) {
+    @content;
+  }
 }
 @mixin media-tablet-620 {
-    @media (max-width: $tablet-width-small) {
-        @content;
-    }
+  @media (max-width: $tablet-width-small) {
+    @content;
+  }
 }
 @mixin media-mobile-414 {
-    @media (max-width: $mobile-big-width) {
-        @content;
-    }
+  @media (max-width: $mobile-big-width) {
+    @content;
+  }
 }
 @mixin media-mobilesmall-320 {
-    @media (max-width: $mobile-small-width) {
-        @content;
-    }
+  @media (max-width: $mobile-small-width) {
+    @content;
+  }
 }

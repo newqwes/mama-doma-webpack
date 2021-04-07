@@ -12,7 +12,7 @@ for (let anchor of anchors) {
   });
 }
 
-const bottomArrowsIndent = window.innerWidth > 500 ? 0 : 40;
+const bottomArrowsIndent = window.innerWidth > 500 ? 0 : 140;
 
 window.onscroll = function () {
   if (
