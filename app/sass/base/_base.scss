@@ -1,48 +1,61 @@
 html {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 body {
-    @include font(1.6rem);
-    font-family: 'Circe Rounded', Verdana, sans-serif;
+  @include font(1.6rem);
+  font-family: 'Circe Rounded', Verdana, sans-serif;
 }
 
 body.lock {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .visuallyhidden {
-    position: absolute;
-    clip: rect(1px, 1px, 1px, 1px);
-    -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
-    clip-path: inset(0px 0px 99.9% 99.9%);
-    overflow: hidden;
-    height: 1px;
-    width: 1px;
-    padding: 0;
-    border: 0;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
 }
 
 h2 {
-    @include font(3.8rem, $weight: 900);
-    color: $color-brand-second;
-    text-transform: uppercase;
-    @include media-tablet-768 {
-        @include font(3.6rem, $weight: 900);
-    }
-    @include media-mobile-414 {
-        @include font(3.4rem, $weight: 900);
-    }
+  @include font(3.8rem, $weight: 900);
+  color: $color-brand-second;
+  text-transform: uppercase;
+  @include media-tablet-768 {
+    @include font(3.6rem, $weight: 900);
+  }
+  @include media-mobile-414 {
+    @include font(3.4rem, $weight: 900);
+  }
 }
 
 h3 {
-    @include font(3.2rem, $weight: bold);
-    color: $color-text;
+  @include font(3.2rem, $weight: bold);
+  color: $color-text;
 }
+
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+.mb5 {
+  margin-bottom: 5px !important;
+}
+
+.minH0 {
+  min-height: 0 !important;
+}
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    select:focus,
-    textarea:focus,
-    input:focus {
-        font-size: 16px;
-    }
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
+  }
 }
