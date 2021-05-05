@@ -41,16 +41,16 @@
 
 .feedback__links {
   display: inline-block;
-  width: 570px;
-  height: 320px;
+  width: 100%;
+  height: 210px;
   background-size: cover;
   background-position: center;
   border-radius: 5px;
   @extend %transition;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   @include media-pcsmall-1366 {
-    width: 500px;
-    height: 285px;
+    width: 100%;
+    height: 210px;
   }
   @include media-laptop-1024 {
     width: 440px;
@@ -93,6 +93,21 @@
     }
   }
 }
+
+.link__to-beengo {
+  background-image: url('../../images/dest/beengo.png');
+  @include appearancEffect($translate2: 20%, $translate1: 0);
+
+  &._active {
+    @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
 .feedback__text {
   padding: 20px 0 30px;
   width: 75%;
