@@ -2,6 +2,10 @@ $width: 25px;
 $padding: 14px;
 $fontSize: 25px;
 
+$minWidth: 25px;
+$minPadding: 8px;
+$minFontSize: 24px;
+
 ul.social__menu {
   margin: 0;
   transform: translate(0%, 0%);
@@ -59,6 +63,15 @@ ul.social__menu {
             animation: animate ease 0.6s forwards;
           }
         }
+        @include media-tablet-768 {
+          height: $minWidth;
+          width: $minWidth;
+          padding: $minPadding;
+          font-size: $minFontSize;
+          &::after {
+            animation: animate ease 0.6s forwards;
+          }
+        }
       }
       i.fa-facebook:hover,
       i.fa-facebook.hover {
@@ -73,6 +86,7 @@ ul.social__menu {
           }
         }
       }
+
       i.fa-vk:hover,
       i.fa-vk.hover {
         &::after {
@@ -83,6 +97,20 @@ ul.social__menu {
         @include media-laptop-1024 {
           &::after {
             background-color: #00aced;
+          }
+        }
+      }
+
+      i.fa-linkedin:hover,
+      i.fa-linkedin.hover {
+        &::after {
+          background-color: #2566c2;
+        }
+      }
+      i.fa-linkedin {
+        @include media-laptop-1024 {
+          &::after {
+            background-color: #2566c2;
           }
         }
       }
