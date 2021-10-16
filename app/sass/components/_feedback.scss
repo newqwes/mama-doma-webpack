@@ -94,8 +94,8 @@
   }
 }
 
-.link__to-beengo {
-  background-image: url('../../images/dest/beengo.png');
+.link__to-yandexDelivery {
+  background-image: url('../../images/dest/yandexDelivery.jpg');
   @include appearancEffect($translate2: 20%, $translate1: 0);
 
   &._active {

@@ -32,16 +32,6 @@ window.onload = function () {
       searchControlProvider: 'yandex#search',
     },
   ];
-  var brestCenter = [
-    'map',
-    {
-      center: [52.094246, 23.684559],
-      zoom: 12,
-    },
-    {
-      searchControlProvider: 'yandex#search',
-    },
-  ];
   var gomelCenter = [
     'map',
     {
@@ -68,8 +58,6 @@ window.onload = function () {
   }
   if (city === 'Минск' || city === 'Мінск') {
     cityCenter = minskCenter;
-  } else if (city === 'Брест' || city === 'Брэст') {
-    cityCenter = brestCenter;
   } else if (city === 'Гомель' || city === 'Гомель') {
     cityCenter = gomelCenter;
   } else if (city === 'Могилев' || city === 'Магілёў') {
@@ -80,7 +68,7 @@ window.onload = function () {
   ymaps.ready(function () {
     var myMap = new (Function.prototype.bind.apply(
         ymaps.Map,
-        [null].concat(_toConsumableArray(cityCenter))
+        [null].concat(_toConsumableArray(cityCenter)),
       ))(),
       minskMomo = new ymaps.Placemark(
         [53.859766, 27.674067],
@@ -93,7 +81,20 @@ window.onload = function () {
           iconImageHref: linkToImg + 'images/dest/newLogo.png',
           iconImageSize: [32, 32],
           iconImageOffset: [-16, -16],
-        }
+        },
+      ),
+      minskExpobel = new ymaps.Placemark(
+        [53.964164, 27.623744],
+        {
+          hintContent: 'ТЦ EXPOBEL, фудкорт 1 этаж',
+          balloonContent: '50-й километр Минский район, пересечение ул. Мирошниченко и МКАД',
+        },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: linkToImg + 'images/dest/newLogo.png',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-16, -16],
+        },
       ),
       minskDana = new ymaps.Placemark(
         [53.933485, 27.652204],
@@ -106,7 +107,7 @@ window.onload = function () {
           iconImageHref: linkToImg + 'images/dest/newLogo.png',
           iconImageSize: [32, 32],
           iconImageOffset: [-16, -16],
-        }
+        },
       ),
       minskGalileo = new ymaps.Placemark(
         [53.890535, 27.55374],
@@ -119,7 +120,7 @@ window.onload = function () {
           iconImageHref: linkToImg + 'images/dest/newLogo.png',
           iconImageSize: [32, 32],
           iconImageOffset: [-16, -16],
-        }
+        },
       ),
       minskPlazo = new ymaps.Placemark(
         [53.926915, 27.510074],
@@ -132,21 +133,8 @@ window.onload = function () {
           iconImageHref: linkToImg + 'images/dest/newLogo.png',
           iconImageSize: [32, 32],
           iconImageOffset: [-16, -16],
-        }
+        },
       );
-    brestCYM = new ymaps.Placemark(
-      [52.085091, 23.694424],
-      {
-        hintContent: 'Брест, ТЦ “ЦУМ”, 3 этаж',
-        balloonContent: 'просп. Машерова, 17',
-      },
-      {
-        iconLayout: 'default#image',
-        iconImageHref: linkToImg + 'images/dest/newLogo.png',
-        iconImageSize: [32, 32],
-        iconImageOffset: [-16, -16],
-      }
-    );
     gomelSecret = new ymaps.Placemark(
       [52.423797, 30.997004],
       {
@@ -158,7 +146,7 @@ window.onload = function () {
         iconImageHref: linkToImg + 'images/dest/newLogo.png',
         iconImageSize: [32, 32],
         iconImageOffset: [-16, -16],
-      }
+      },
     );
     mogilevPark = new ymaps.Placemark(
       [53.935452, 30.256978],
@@ -171,7 +159,7 @@ window.onload = function () {
         iconImageHref: linkToImg + 'images/dest/newLogo.png',
         iconImageSize: [32, 32],
         iconImageOffset: [-16, -16],
-      }
+      },
     );
 
     myMap.geoObjects
@@ -179,7 +167,7 @@ window.onload = function () {
       .add(minskDana)
       .add(minskGalileo)
       .add(minskPlazo)
-      .add(brestCYM)
+      .add(minskExpobel)
       .add(gomelSecret)
       .add(mogilevPark);
     myMap.behaviors.disable('scrollZoom');
