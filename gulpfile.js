@@ -41,11 +41,13 @@ function htmlToMin() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.min.js',
+    'app/js/lib/swiper-bundle.min.js',
     'app/js/humburger.js',
     'app/js/animationScroll.js',
     'app/js/yandexMap.js',
     'app/js/ancors.js',
     'app/js/popup.js',
+    'app/js/swiper.js',
     'app/js/lib/inputmask.min.js',
     'app/js/mask.js',
     'app/js/lib/sweetalert.min.js',

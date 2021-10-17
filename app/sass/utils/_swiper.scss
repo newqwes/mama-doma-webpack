@@ -1,0 +1,17 @@
+.swiper {
+  padding: 15px;
+}
+
+.swiper-slide {
+  a {
+    cursor: default;
+  }
+  img {
+    @extend %transition;
+    max-width: 100%;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
