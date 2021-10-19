@@ -409,13 +409,13 @@
   position: absolute;
   left: 4%;
   top: 4%;
-  @include font(5.2rem, 8rem, 800);
+  @include font(4.4rem, 8rem, 600);
   background-color: $color-brand-second;
   border-radius: 50%;
   color: $color-text;
   letter-spacing: 0.15rem;
   sup {
-    @include font(2.5rem, 1rem, 900);
+    @include font(1.8rem, 1.2rem, 900);
   }
   &_1 {
     width: 75px;
@@ -423,13 +423,13 @@
     position: absolute;
     right: 4%;
     top: 4%;
-    @include font(5.2rem, 8rem, 800);
+    @include font(4.4rem, 8rem, 600);
     background-color: $color-brand-second;
     border-radius: 50%;
     color: $color-text;
     letter-spacing: 0.15rem;
     sup {
-      @include font(2.5rem, 1rem, 900);
+      @include font(1.8rem, 1.2rem, 900);
     }
   }
   &_2 {
@@ -438,13 +438,13 @@
     position: absolute;
     left: 4%;
     top: 22%;
-    @include font(5.2rem, 8rem, 800);
+    @include font(4.4rem, 8rem, 600);
     background-color: $color-brand-second;
     border-radius: 50%;
     color: $color-text;
     letter-spacing: 0.15rem;
     sup {
-      @include font(2.5rem, 1rem, 900);
+      @include font(1.8rem, 1.2rem, 900);
     }
   }
 }
