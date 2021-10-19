@@ -1,6 +1,6 @@
 .header {
-  padding: 10px 0;
   color: $color-text;
+
   @include media-laptop-1024 {
     text-align: right;
   }
@@ -11,6 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+
   @include media-tablet-768 {
     justify-content: space-between;
     padding: 3%;
@@ -18,13 +19,11 @@
 }
 
 .header__region {
-  margin: 0 auto 0 60px;
   @include media-laptop-1024 {
     display: none;
   }
 }
 .header__navigation {
-  margin: 0 0 0 auto;
   @include media-laptop-1024 {
     margin: 0 auto;
   }

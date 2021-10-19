@@ -1,140 +1,140 @@
 %hamburger-line {
-    content: '';
-    position: absolute;
-    display: inline-block;
-    background: $color-brand-accent;
-    border-radius: 5px;
-    height: 3px;
-    width: 100%;
+  content: '';
+  position: absolute;
+  display: inline-block;
+  background: $color-brand-accent;
+  border-radius: 5px;
+  height: 3px;
+  width: 100%;
 }
 .hamburger,
 .hamburger-region {
-    text-transform: uppercase;
-    cursor: pointer;
-    display: none;
-    margin: 20px;
-    position: relative;
-    width: 32px;
-    height: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: none;
+  margin: 20px;
+  position: relative;
+  width: 32px;
+  height: 24px;
+  transition: all 0.3s ease 0s;
+  &:before {
+    @extend %hamburger-line;
+    top: 0;
+    left: 0;
+
     transition: all 0.3s ease 0s;
-    &:before {
-        @extend %hamburger-line;
-        top: 0;
-        left: 0;
+  }
+  &:after {
+    @extend %hamburger-line;
+    bottom: 0;
+    left: 0;
 
-        transition: all 0.3s ease 0s;
-    }
-    &:after {
-        @extend %hamburger-line;
-        bottom: 0;
-        left: 0;
-
-        transition: all 0.3s ease 0s;
-    }
+    transition: all 0.3s ease 0s;
+  }
 }
 
 .hamburger__line,
 .hamburger-region__line {
-    @extend %hamburger-line;
-    top: calc(50% - 1.5px);
-    left: 0;
+  @extend %hamburger-line;
+  top: calc(50% - 1.5px);
+  left: 0;
 }
 .hamburger {
-    @include media-tablet-768 {
-        display: inline-block;
-    }
+  @include media-tablet-768 {
+    display: inline-block;
+  }
 }
 .hamburger-region {
-    @include media-laptop-1024 {
-        display: inline-block;
-    }
-    @include media-tablet-768 {
-        display: none;
-    }
+  @include media-laptop-1024 {
+    display: inline-block;
+  }
+  @include media-tablet-768 {
+    display: none;
+  }
 }
 
 .hamburger-region.is-active,
 .hamburger.is-active {
-    .hamburger-region__line,
-    .hamburger__line {
-        opacity: 0;
+  .hamburger-region__line,
+  .hamburger__line {
+    opacity: 0;
+  }
+  .region__humburger {
+    transition: all 0.3s ease 0s;
+    padding-top: 30px;
+    position: fixed;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 300px;
+    opacity: 1;
+    > * {
+      display: block;
     }
-    .region__humburger {
-        transition: all 0.3s ease 0s;
-        padding-top: 30px;
-        position: fixed;
-        height: 100%;
-        right: 0;
-        top: 0;
-        width: 300px;
-        opacity: 1;
-        > * {
-            display: block;
-        }
-        .header__region {
-            display: block;
-        }
-
-        @include media-mobile-414 {
-            width: 100%;
-        }
+    .header__region {
+      display: block;
     }
 
-    &:before {
-        @extend %hamburger-line;
-        top: 10px;
-        left: 0;
-        transform: rotate(45deg);
-        z-index: 10;
+    @include media-mobile-414 {
+      width: 100%;
     }
-    &:after {
-        @extend %hamburger-line;
-        bottom: 10px;
-        transform: rotate(-45deg);
-        left: 0;
-        z-index: 10;
-    }
+  }
+
+  &:before {
+    @extend %hamburger-line;
+    top: 10px;
+    left: 0;
+    transform: rotate(45deg);
+    z-index: 10;
+  }
+  &:after {
+    @extend %hamburger-line;
+    bottom: 10px;
+    transform: rotate(-45deg);
+    left: 0;
+    z-index: 10;
+  }
 }
 .region__humburger {
-    background-color: #fff;
-    width: 0;
-    opacity: 0;
-    z-index: 3;
-    color: #000;
-    text-align: center;
-    user-select: none;
-    > * {
-        display: none;
-    }
-    h3 {
-        color: $color-brand-second;
-        padding-bottom: 20px;
-    }
-    h4 {
-        color: $color-brand-second;
-        @include font(2.4rem, 4.5rem, normal, normal);
-    }
-    ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        padding-bottom: 10px;
-    }
+  background-color: #fff;
+  width: 0;
+  opacity: 0;
+  z-index: 3;
+  color: #000;
+  text-align: center;
+  user-select: none;
+  > * {
+    display: none;
+  }
+  h3 {
+    color: $color-brand-second;
+    padding-bottom: 20px;
+  }
+  h4 {
+    color: $color-brand-second;
+    @include font(2.4rem, 4.5rem, normal, normal);
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-brand-accent;
+    @include font(2.2rem, 4.2rem, normal, normal);
+  }
+  .hamburger__ul-regions {
     a {
-        text-decoration: none;
-        text-transform: uppercase;
-        color: $color-brand-accent;
-        @include font(2.2rem, 4.2rem, normal, normal);
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-brand-accent;
+      @include font(1.8rem, 3.6rem, normal, normal);
     }
-    .hamburger__ul-regions {
-        a {
-            text-decoration: none;
-            text-transform: uppercase;
-            color: $color-brand-accent;
-            @include font(1.8rem, 3.6rem, normal, normal);
-        }
-    }
+  }
 }
 .region-hamburger__title {
-    padding-top: 40px;
+  padding-top: 40px;
 }
