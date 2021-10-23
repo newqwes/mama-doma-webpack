@@ -70,7 +70,8 @@
 }
 
 .logo img {
-  width: $logoFooterWidth;
+  height: 40px;
+
   @include media-tablet-768 {
     margin-left: 5%;
   }

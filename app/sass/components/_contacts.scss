@@ -1,153 +1,52 @@
 .contacts {
   padding: 40px 0;
   color: $color-brand-second;
-  h2 {
-    padding: 0;
-    margin: 0 0 20px 0;
-  }
-  h4 {
-    @include font(1.9rem, 2.4rem, $weight: bold);
-    @include media-tablet-620 {
-      text-align: center;
-    }
-  }
-}
-.contacts__wrapper {
-  @include media-tablet-768 {
-    padding: 0 25px;
-  }
-  @include media-mobile-414 {
-    padding: 0 10px;
-  }
-}
-.contacts__title {
-  text-align: center;
-}
-.contacts__contacts {
-  margin: 20px 35px;
-  min-width: 300px;
-  @include media-laptop-1024 {
-    margin: 20px 0;
-    min-width: 200px;
-  }
-  @include media-tablet-620 {
-    margin: 20px 0;
-    width: 300px;
-  }
-  a {
-    color: $color-brand-second;
-    display: flex;
-    @include font(1.9rem, 2.4rem);
-    @include media-mobile-414 {
-      @include font(1.7rem, 1.4rem);
-    }
-  }
-}
 
-.contacts__items {
-  margin-bottom: 5px;
-  @include media-tablet-620 {
-    padding-left: 12%;
-    width: 100%;
-  }
-}
-
-.contacts__policy {
-  margin: 0;
-  a {
-    color: $color-brand-second;
-    @include font(1.9rem, 2.4rem);
-    @include media-tablet-768 {
-      @include font(1.3rem, 1.5rem);
-    }
-    @include media-mobile-414 {
-      @include font(1.1rem, 1.4rem);
-    }
-  }
-}
-.contacts__social-links {
-  padding-left: 7%;
-  * {
-    box-sizing: content-box;
-  }
-  h4 {
-    margin-bottom: 10px;
-  }
-}
-.contacts__layouts-item_space {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.contacts__place-ico {
-  display: flex;
-  // text-align: center; // выровнять контакты по центру
-  min-width: 200px;
-
-  padding: 10px;
-  div {
-    margin: 0 auto;
-  }
-  span {
-    margin-right: 5px;
-    flex: 0 0 auto;
-  }
-  p {
-    @include font(1.8rem, 2rem);
-    letter-spacing: 0.1rem;
-  }
-}
-.contacts__layouts {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  justify-content: space-between;
-  h4 {
-    padding: 20px 0 5px;
-  }
-}
-.contacts__layouts-item {
-  &_1 {
-    flex-basis: 100%; /* отнимем margin и скажем растягиваться */
+  &__title {
     text-align: center;
+
+    h2 {
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__layouts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include columns(31.5%);
+  }
+
+  &__part {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+  }
+
+  &__box {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+
+    h4 {
+      @include font(1.9rem, 2.4rem, $weight: bold);
+    }
+
     span {
-      vertical-align: top;
+      margin-right: 5px;
     }
-  }
-  &_2 {
-    flex-basis: 100%; /* отнимем margin и скажем растягиваться */
-    justify-content: space-around;
-    display: flex;
-    @include media-tablet-620 {
-      flex-direction: column;
-      flex-basis: 100%;
-      > * {
-        margin: 0 auto;
-      }
-    }
-  }
-  &_3 {
-    flex-basis: 100%; /* отнимем margin и скажем растягиваться */
-    text-align: center;
-  }
 
-  margin: 5px;
-  box-sizing: border-box; /* чтобы внутренний отступ не влиял когда там будет текст... */
-  min-width: 320px; /* мин. ширина блока, чтобы переносились на другой ряд */
-}
-.contacts__place-ico_time {
-  padding-top: 10px;
-  @include media-tablet-620 {
-    width: 300px;
-    padding-left: 12%;
-  }
-  h4 {
-    display: flex;
-  }
-}
-.contacts__phone {
-  a {
-    text-decoration: none;
-    @include font(1.9rem, 3.2rem);
+    p {
+      @include font(1.8rem, 2rem);
+      letter-spacing: 0.1rem;
+    }
+
+    a {
+      color: $color-brand-second;
+      display: flex;
+      @include font(1.9rem, 2.4rem);
+    }
   }
 }

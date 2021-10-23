@@ -129,6 +129,7 @@ ul {
   @extend %transition;
   position: relative;
   display: inline-block;
+  padding: 5px 0;
 }
 
 .dropdown-content {
@@ -166,7 +167,7 @@ ul {
 ._pc .dropdown:hover .dropdown-content {
   opacity: 1;
   visibility: visible;
-  transform: translate(0px, 0px);
+  transform: translate(20px, 0);
   pointer-events: all;
 }
 

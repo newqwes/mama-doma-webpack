@@ -28,36 +28,6 @@ window.onscroll = function () {
   }
 };
 
-const isMobile = {
-  Android: () => navigator.userAgent.match(/Android/i),
-  BlackBerry: () => navigator.userAgent.match(/BlackBerry/i),
-  iOS: () => navigator.userAgent.match(/iPhone|iPad|iPod/i),
-  Opera: () => navigator.userAgent.match(/Opera Mini/i),
-  Windows: () => navigator.userAgent.match(/IEModile/i),
-  any: () =>
-    isMobile.Android() ||
-    isMobile.BlackBerry() ||
-    isMobile.iOS() ||
-    isMobile.Opera() ||
-    isMobile.Windows(),
-};
-
-if (isMobile.any()) {
-  document.body.classList.add('_touch');
-
-  const touchElements = document.querySelectorAll('._touch_element');
-
-  if (touchElements.length > 0) {
-    touchElements.forEach(touchElement => {
-      touchElement.addEventListener('click', e =>
-        touchElement.parentElement.classList.toggle('_touchElementIsActive'),
-      );
-    });
-  }
-} else {
-  document.body.classList.add('_pc');
-}
-
 // const bottomArrowsIndent = window.innerWidth > 500 ? 0 : 140;
 
 // window.onscroll = function () {

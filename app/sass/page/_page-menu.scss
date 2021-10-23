@@ -13,32 +13,8 @@
   }
 }
 
-.menu-page-header {
-  background-color: $color-brand-second;
-  padding: 10px 0;
-
-  .region__now_label,
-  .dropbtn {
-    color: $color-text;
-  }
-}
-
-.menu-page__navigatin {
-  margin: 0;
-}
-
-.menu-page-header__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
 .menu-page-items__wrapper {
   text-align: center;
-}
-
-.menu-page__navigatin {
-  display: flex;
 }
 
 .menu-page__link {
