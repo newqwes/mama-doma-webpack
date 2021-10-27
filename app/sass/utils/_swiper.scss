@@ -15,3 +15,23 @@
     }
   }
 }
+
+.popup__body {
+  .swiper-slide {
+    a {
+      cursor: pointer;
+    }
+
+    img {
+      @extend %transition;
+      height: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

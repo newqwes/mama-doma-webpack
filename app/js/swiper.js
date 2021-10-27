@@ -22,3 +22,10 @@ const swiper = new Swiper('.swiper', {
     },
   },
 });
+
+new Swiper('.swiperMenu', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
