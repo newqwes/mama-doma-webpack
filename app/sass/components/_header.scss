@@ -248,7 +248,7 @@ ul {
 }
 
 .promo__title-description {
-  padding-top: 40px;
+  padding-top: 25vh;
   text-transform: uppercase;
   @include font(2.5rem, $weight: 500);
   letter-spacing: 0.15rem;
@@ -266,12 +266,10 @@ ul {
   @include media-tablet-768 {
     @include font(1.7rem, $weight: 500);
     letter-spacing: 0.07rem;
-    padding-top: 30px;
   }
   @include media-mobile-414 {
     @include font(1.4rem, $weight: 500);
     letter-spacing: 0.05rem;
-    padding-top: 20px;
   }
 }
 
