@@ -54,7 +54,6 @@
     h4 {
       @include font(1.9rem, 2.4rem, $weight: bold);
       display: flex;
-      padding-bottom: 10px;
     }
 
     span {
@@ -64,6 +63,7 @@
     p {
       @include font(1.8rem, 2rem);
       letter-spacing: 0.1rem;
+      padding: 5px 0;
     }
 
     a {
