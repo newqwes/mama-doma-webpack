@@ -26,6 +26,9 @@
   // @include media-mobilesmall-320 {
   //     background-size: 520% 50px;
   // }
+  &__layout-delivery {
+    justify-content: space-around;
+  }
 }
 
 .feedback__wrapper {
