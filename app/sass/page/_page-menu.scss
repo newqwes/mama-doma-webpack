@@ -91,6 +91,17 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
+
+  &_one {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-around;
+
+    .menu-page__links {
+      flex: none;
+    }
+  }
 }
 
 .menu-page__links {
