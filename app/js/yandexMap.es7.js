@@ -79,24 +79,37 @@ window.onload = function () {
           iconImageOffset: [-16, -16],
         },
       ),
-      minskGalileo = new ymaps.Placemark(
-        [53.890535, 27.55374],
-        {
-          hintContent: 'ТРЦ “Galileo”, фудкорт,  3 этаж, "Мама дома"',
-          balloonContent: 'ул. Бобруйская, 6, станция метро площадь Ленина, МИНСК, "Мама дома"',
-        },
-        {
-          iconLayout: 'default#image',
-          iconImageHref: '../images/dest/newLogo.png',
-          iconImageSize: [32, 32],
-          iconImageOffset: [-16, -16],
-        },
-      ),
+      // minskGalileo = new ymaps.Placemark(
+      //   [53.890535, 27.55374],
+      //   {
+      //     hintContent: 'ТРЦ “Galileo”, фудкорт,  3 этаж, "Мама дома"',
+      //     balloonContent: 'ул. Бобруйская, 6, станция метро площадь Ленина, МИНСК, "Мама дома"',
+      //   },
+      //   {
+      //     iconLayout: 'default#image',
+      //     iconImageHref: '../images/dest/newLogo.png',
+      //     iconImageSize: [32, 32],
+      //     iconImageOffset: [-16, -16],
+      //   },
+      // ),
       minskExpobel = new ymaps.Placemark(
         [53.964164, 27.623744],
         {
           hintContent: 'ТЦ EXPOBEL, фудкорт,  1 этаж',
           balloonContent: '50-й километр Минский район, пересечение ул. Мирошниченко и МКАД',
+        },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: linkToImg + 'images/dest/newLogo.png',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-16, -16],
+        },
+      ),
+      minskCityMall = new ymaps.Placemark(
+        [53.890203, 27.546928],
+        {
+          hintContent: 'ТЦ «Minsk City Mall», фудкорт',
+          balloonContent: 'ул. Вокзальная, 34 станция метро Вокзальная',
         },
         {
           iconLayout: 'default#image',
@@ -148,8 +161,9 @@ window.onload = function () {
     myMap.geoObjects
       .add(minskMomo)
       .add(minskDana)
-      .add(minskGalileo)
+      // .add(minskGalileo)
       .add(minskPlazo)
+      .add(minskCityMall)
       .add(minskExpobel)
       .add(gomelSecret)
       .add(mogilevPark);

@@ -96,6 +96,19 @@ window.onload = function () {
           iconImageOffset: [-16, -16],
         },
       ),
+      minskCityMall = new ymaps.Placemark(
+        [53.890203, 27.546928],
+        {
+          hintContent: 'ТЦ «Minsk City Mall», фудкорт',
+          balloonContent: 'ул. Вокзальная, 34 станция метро Вокзальная',
+        },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: linkToImg + 'images/dest/newLogo.png',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-16, -16],
+        },
+      ),
       minskDana = new ymaps.Placemark(
         [53.933485, 27.652204],
         {
@@ -109,19 +122,19 @@ window.onload = function () {
           iconImageOffset: [-16, -16],
         },
       ),
-      minskGalileo = new ymaps.Placemark(
-        [53.890535, 27.55374],
-        {
-          hintContent: 'ТРЦ “Galileo”, фудкорт,  3 этаж',
-          balloonContent: 'ул. Бобруйская, 6, станция метро площадь Ленина, МИНСК',
-        },
-        {
-          iconLayout: 'default#image',
-          iconImageHref: linkToImg + 'images/dest/newLogo.png',
-          iconImageSize: [32, 32],
-          iconImageOffset: [-16, -16],
-        },
-      ),
+      // minskGalileo = new ymaps.Placemark(
+      //   [53.890535, 27.55374],
+      //   {
+      //     hintContent: 'ТРЦ “Galileo”, фудкорт,  3 этаж',
+      //     balloonContent: 'ул. Бобруйская, 6, станция метро площадь Ленина, МИНСК',
+      //   },
+      //   {
+      //     iconLayout: 'default#image',
+      //     iconImageHref: linkToImg + 'images/dest/newLogo.png',
+      //     iconImageSize: [32, 32],
+      //     iconImageOffset: [-16, -16],
+      //   },
+      // ),
       minskPlazo = new ymaps.Placemark(
         [53.926915, 27.510074],
         {
@@ -165,9 +178,10 @@ window.onload = function () {
     myMap.geoObjects
       .add(minskMomo)
       .add(minskDana)
-      .add(minskGalileo)
+      // .add(minskGalileo)
       .add(minskPlazo)
       .add(minskExpobel)
+      .add(minskCityMall)
       .add(gomelSecret)
       .add(mogilevPark);
     myMap.behaviors.disable('scrollZoom');
