@@ -108,6 +108,60 @@
   }
 }
 
+.menu__additionalWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__additional {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 360px;
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
+  transform: scale(0);
+  transition: all 0.8s ease;
+  color: $color-text;
+  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include font(2.4rem, 4.4rem, $weight: 700);
+  text-decoration: none;
+  background-color: #3c2b23;
+  padding: 5px 0;
+
+  @include media-laptop-1024 {
+    width: 460px;
+  }
+
+  @include media-tablet-768 {
+    width: 460px;
+  }
+
+  @include media-tablet-620 {
+    width: 400px;
+  }
+
+  @include media-mobile-414 {
+    @include font(2rem, $weight: 700);
+    width: 100%;
+    padding: 8px;
+  }
+
+  &._active {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
 .menu__to-0 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
     url('../../images/dest/menu/goryacie-bluda.jpg');

@@ -26,6 +26,9 @@
   // @include media-mobilesmall-320 {
   //     background-size: 520% 50px;
   // }
+  &__layout-delivery {
+    justify-content: space-around;
+  }
 }
 
 .feedback__wrapper {
@@ -41,21 +44,19 @@
 
 .feedback__links {
   display: inline-block;
-  width: 100%;
-  height: 210px;
+  width: 90%;
+  height: 250px;
   background-size: cover;
   background-position: center;
   border-radius: 5px;
   @extend %transition;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  @include media-pcsmall-1366 {
-    width: 100%;
-    height: 210px;
-  }
+
   @include media-laptop-1024 {
     width: 440px;
     height: 250px;
   }
+
   @include media-tablet-768 {
     width: 380px;
     height: 200px;
@@ -94,8 +95,8 @@
   }
 }
 
-.link__to-beengo {
-  background-image: url('../../images/dest/beengo.png');
+.link__to-yandexDelivery {
+  background-image: url('../../images/dest/yandexDelivery.jpg');
   @include appearancEffect($translate2: 20%, $translate1: 0);
 
   &._active {

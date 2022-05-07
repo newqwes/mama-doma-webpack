@@ -32,16 +32,6 @@ window.onload = function () {
       searchControlProvider: 'yandex#search',
     },
   ];
-  var brestCenter = [
-    'map',
-    {
-      center: [52.094246, 23.684559],
-      zoom: 12,
-    },
-    {
-      searchControlProvider: 'yandex#search',
-    },
-  ];
   var gomelCenter = [
     'map',
     {
@@ -68,8 +58,6 @@ window.onload = function () {
   }
   if (city === 'Минск' || city === 'Мінск') {
     cityCenter = minskCenter;
-  } else if (city === 'Брест' || city === 'Брэст') {
-    cityCenter = brestCenter;
   } else if (city === 'Гомель' || city === 'Гомель') {
     cityCenter = gomelCenter;
   } else if (city === 'Могилев' || city === 'Магілёў') {
@@ -80,12 +68,12 @@ window.onload = function () {
   ymaps.ready(function () {
     var myMap = new (Function.prototype.bind.apply(
         ymaps.Map,
-        [null].concat(_toConsumableArray(cityCenter))
+        [null].concat(_toConsumableArray(cityCenter)),
       ))(),
       minskMomo = new ymaps.Placemark(
         [53.859766, 27.674067],
         {
-          hintContent: 'ТЦ “МОМО”, фудкорт 2 этаж',
+          hintContent: 'ТЦ “МОМО”, фудкорт,  2 этаж',
           balloonContent: 'Просп. Партизанский, 150а, станция метро Магилевская',
         },
         {
@@ -93,38 +81,64 @@ window.onload = function () {
           iconImageHref: linkToImg + 'images/dest/newLogo.png',
           iconImageSize: [32, 32],
           iconImageOffset: [-16, -16],
-        }
+        },
+      ),
+      minskExpobel = new ymaps.Placemark(
+        [53.964164, 27.623744],
+        {
+          hintContent: 'ТЦ EXPOBEL, фудкорт,  1 этаж',
+          balloonContent: '50-й километр Минский район, пересечение ул. Мирошниченко и МКАД',
+        },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: linkToImg + 'images/dest/newLogo.png',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-16, -16],
+        },
+      ),
+      minskCityMall = new ymaps.Placemark(
+        [53.890203, 27.546928],
+        {
+          hintContent: 'ТЦ «Minsk City Mall», фудкорт',
+          balloonContent: 'ул. Вокзальная, 34 станция метро Вокзальная',
+        },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: linkToImg + 'images/dest/newLogo.png',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-16, -16],
+        },
       ),
       minskDana = new ymaps.Placemark(
         [53.933485, 27.652204],
         {
-          hintContent: 'ТРЦ “Dana Mall”, фудкорт 3 этаж',
-          balloonContent: 'ул. Мстиславца, 11, станция метро Восток, МИНСК',
+          hintContent: 'ТРЦ “Dana Mall”, фудкорт,  3 этаж',
+          balloonContent: 'ул. П.Мстиславца, 11, станция метро Восток, МИНСК',
         },
         {
           iconLayout: 'default#image',
           iconImageHref: linkToImg + 'images/dest/newLogo.png',
           iconImageSize: [32, 32],
           iconImageOffset: [-16, -16],
-        }
-      ),
-      minskGalileo = new ymaps.Placemark(
-        [53.890535, 27.55374],
-        {
-          hintContent: 'ТРЦ “Galileo”, фудкорт 3 этаж',
-          balloonContent: 'ул. Бобруйская, 6, станция метро площадь Ленина, МИНСК',
         },
-        {
-          iconLayout: 'default#image',
-          iconImageHref: linkToImg + 'images/dest/newLogo.png',
-          iconImageSize: [32, 32],
-          iconImageOffset: [-16, -16],
-        }
       ),
+      // minskGalileo = new ymaps.Placemark(
+      //   [53.890535, 27.55374],
+      //   {
+      //     hintContent: 'ТРЦ “Galileo”, фудкорт,  3 этаж',
+      //     balloonContent: 'ул. Бобруйская, 6, станция метро площадь Ленина, МИНСК',
+      //   },
+      //   {
+      //     iconLayout: 'default#image',
+      //     iconImageHref: linkToImg + 'images/dest/newLogo.png',
+      //     iconImageSize: [32, 32],
+      //     iconImageOffset: [-16, -16],
+      //   },
+      // ),
       minskPlazo = new ymaps.Placemark(
         [53.926915, 27.510074],
         {
-          hintContent: 'ТРЦ “Palazzo”, фудкорт 3 этаж',
+          hintContent: 'ТРЦ “Palazzo”, фудкорт,  3 этаж',
           balloonContent: 'ул. Тимирязева, 74А, МИНСК',
         },
         {
@@ -132,21 +146,8 @@ window.onload = function () {
           iconImageHref: linkToImg + 'images/dest/newLogo.png',
           iconImageSize: [32, 32],
           iconImageOffset: [-16, -16],
-        }
+        },
       );
-    brestCYM = new ymaps.Placemark(
-      [52.085091, 23.694424],
-      {
-        hintContent: 'Брест, ТЦ “ЦУМ”, 3 этаж',
-        balloonContent: 'просп. Машерова, 17',
-      },
-      {
-        iconLayout: 'default#image',
-        iconImageHref: linkToImg + 'images/dest/newLogo.png',
-        iconImageSize: [32, 32],
-        iconImageOffset: [-16, -16],
-      }
-    );
     gomelSecret = new ymaps.Placemark(
       [52.423797, 30.997004],
       {
@@ -158,12 +159,12 @@ window.onload = function () {
         iconImageHref: linkToImg + 'images/dest/newLogo.png',
         iconImageSize: [32, 32],
         iconImageOffset: [-16, -16],
-      }
+      },
     );
     mogilevPark = new ymaps.Placemark(
       [53.935452, 30.256978],
       {
-        hintContent: 'Могилев, ТЦ “Парк Сити”, фудкорт 1 этаж',
+        hintContent: 'Могилев, ТЦ “Парк Сити”, фудкорт,  1 этаж',
         balloonContent: 'Минское шоссе, 31',
       },
       {
@@ -171,15 +172,16 @@ window.onload = function () {
         iconImageHref: linkToImg + 'images/dest/newLogo.png',
         iconImageSize: [32, 32],
         iconImageOffset: [-16, -16],
-      }
+      },
     );
 
     myMap.geoObjects
       .add(minskMomo)
       .add(minskDana)
-      .add(minskGalileo)
+      // .add(minskGalileo)
       .add(minskPlazo)
-      .add(brestCYM)
+      .add(minskExpobel)
+      .add(minskCityMall)
       .add(gomelSecret)
       .add(mogilevPark);
     myMap.behaviors.disable('scrollZoom');

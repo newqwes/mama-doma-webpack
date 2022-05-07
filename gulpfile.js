@@ -1,5 +1,5 @@
-// Важно!!! Делаем поиск по всему проекту 45temphash и заменяем на +1 к числу, заменяем везде
-// 45temphash  затем только билдим проект!!!
+// Важно!!! Делаем поиск по всему проекту 62temphash и заменяем на +1 к числу, заменяем везде
+// 62temphash  затем только билдим проект!!!
 
 //подключаем gulp
 const { src, dest, parallel, series, watch } = require('gulp');
@@ -41,16 +41,18 @@ function htmlToMin() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.min.js',
+    'app/js/lib/swiper-bundle.min.js',
     'app/js/humburger.js',
     'app/js/animationScroll.js',
     'app/js/yandexMap.js',
     'app/js/ancors.js',
     'app/js/popup.js',
+    'app/js/swiper.js',
     'app/js/lib/inputmask.min.js',
     'app/js/mask.js',
     'app/js/lib/sweetalert.min.js',
   ])
-    .pipe(concat('app45temphash.min.js'))
+    .pipe(concat('app62temphash.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js/'))
     .pipe(browserSync.stream());
@@ -58,7 +60,7 @@ function scripts() {
 
 function scriptsMenu() {
   return src(['app/js/humburger.js'])
-    .pipe(concat('appMenu45temphash.min.js'))
+    .pipe(concat('appMenu62temphash.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js/'))
     .pipe(browserSync.stream());
@@ -68,7 +70,7 @@ function scriptsMenu() {
 function styles() {
   return src('app/sass/style.scss')
     .pipe(sass())
-    .pipe(concat('style45temphash.min.css'))
+    .pipe(concat('style62temphash.min.css'))
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
     .pipe(cleanCss({ level: { 1: { specialComments: 0 } } }))
     .pipe(dest('app/css/'))
@@ -100,8 +102,8 @@ function buildcopy() {
     [
       'app/css/**/*.min.css',
       'app/**/*.php',
-      'app/js/app45temphash.min.js',
-      'app/js/appMenu45temphash.min.js',
+      'app/js/app62temphash.min.js',
+      'app/js/appMenu62temphash.min.js',
       'app/images/dest/**/*',
       'app/font/**/*',
       'app/video/**/*',

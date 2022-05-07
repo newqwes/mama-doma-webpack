@@ -1,8 +1,40 @@
 .header {
-  padding: 10px 0;
   color: $color-text;
+
   @include media-laptop-1024 {
     text-align: right;
+  }
+}
+
+.header__top {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  padding: 8px;
+  @extend %transition;
+
+  &._scroll {
+    background-color: $color-light;
+
+    .navigatin__link a,
+    .header__region .dropdown .region__now_label,
+    .header__language,
+    .header__language a {
+      color: $color-brand-second;
+    }
+
+    .header__language .header__language_active {
+      color: $color-brand-accent;
+    }
+  }
+
+  @include media-pcsmall-1366 {
+    padding: 8px 0;
+
+    .logo img {
+      width: 100px;
+      padding-left: 10px;
+    }
   }
 }
 
@@ -11,20 +43,19 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+
   @include media-tablet-768 {
     justify-content: space-between;
-    padding: 3%;
   }
 }
 
 .header__region {
-  margin: 0 auto 0 60px;
   @include media-laptop-1024 {
     display: none;
   }
 }
+
 .header__navigation {
-  margin: 0 0 0 auto;
   @include media-laptop-1024 {
     margin: 0 auto;
   }
@@ -32,17 +63,24 @@
     display: none;
   }
 }
+
 .navigatin {
   display: flex;
+}
+
+ul {
+  padding-inline-start: 0;
 }
 
 .navigatin__link,
 .header__language {
   list-style-type: none;
-  padding: 0 30px;
+  padding: 0 27px;
+
   @include media-pcsmall-1366 {
-    padding: 0 12px;
+    padding: 0 10px;
   }
+
   a {
     color: $color-text;
     text-transform: uppercase;
@@ -51,15 +89,15 @@
     line-height: 1;
     text-decoration: none;
     letter-spacing: 0.2rem;
-    @include font(1.4rem);
-    line-height: 2rem;
+    @include font(1.3rem, 2rem, 600);
+
     &:hover {
       color: $color-brand-accent;
     }
-  }
 
-  .header__language_active {
-    color: $color-brand-accent;
+    @include media-laptop-1024 {
+      @include font(1rem, 2rem, 600);
+    }
   }
 
   a:after {
@@ -91,62 +129,66 @@
   @extend %transition;
   position: relative;
   display: inline-block;
+  padding: 5px 0;
 }
 
 .dropdown-content {
-  @include media-pcsmall-1366 {
-    left: -50px;
-  }
-  @extend %transition;
-  text-align: center;
   position: absolute;
+  top: 100%;
+  right: 0;
   background-color: $color-light;
+  padding: 10px;
   min-width: 140px;
+  transform: translate(0px, 10%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  @extend %transition;
+
+  text-align: center;
   z-index: 10;
   border-radius: 5px;
   text-transform: uppercase;
-  opacity: 0;
-  padding: 10px;
-  top: 50px;
-  left: -15px;
-  @extend %transition;
+
+  a {
+    color: $color-brand-second;
+    @include font(1.4rem, 2rem, 600);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    @extend %transition;
+
+    &:hover {
+      color: $color-brand-accent;
+    }
+  }
 }
 
-.dropdown-content a {
-  @extend %transition;
-  color: $color-brand-second;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  color: $color-brand-accent;
-}
-
-.dropdown:hover .dropdown-content {
+._pc .dropdown:hover .dropdown-content {
   opacity: 1;
-}
-
-.dropbtn {
-  text-transform: uppercase;
-  @include font(1.1rem, 2.4rem);
-  margin-left: 5px;
-  letter-spacing: 0.1rem;
+  visibility: visible;
+  transform: translate(20px, 0);
+  pointer-events: all;
 }
 
 .region__now {
   cursor: pointer;
   display: flex;
-  border: 1px solid $color-brand-accent;
+  border: 2px solid $color-brand-accent;
   padding: 10px 12px 7px;
   border-radius: 5px;
-  @include font(1.4rem, 2.4rem);
+  @include font(1.3rem, 2rem, 600);
   letter-spacing: 0.1rem;
   text-transform: uppercase;
 
   &_label {
     padding-left: 5px;
+  }
+
+  @include media-pcsmall-1366 {
+    padding: 8px 10px 6px;
+    @include font(1.2rem, 1.8rem, 600);
+    letter-spacing: 0.1rem;
   }
 }
 
@@ -206,7 +248,7 @@
 }
 
 .promo__title-description {
-  padding-top: 40px;
+  padding-top: 25vh;
   text-transform: uppercase;
   @include font(2.5rem, $weight: 500);
   letter-spacing: 0.15rem;
@@ -224,12 +266,10 @@
   @include media-tablet-768 {
     @include font(1.7rem, $weight: 500);
     letter-spacing: 0.07rem;
-    padding-top: 30px;
   }
   @include media-mobile-414 {
     @include font(1.4rem, $weight: 500);
     letter-spacing: 0.05rem;
-    padding-top: 20px;
   }
 }
 

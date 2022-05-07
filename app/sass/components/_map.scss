@@ -1,150 +1,145 @@
 .map {
-    background-color: $color-brand-accent;
-    padding: 80px 0;
-    h2 {
-        margin: 0 0 80px 0;
-        padding: 0;
-    }
+  background-color: $color-brand-accent;
+  padding: 80px 0;
+  h2 {
+    margin: 0 0 80px 0;
+    padding: 0;
+  }
 }
 .feedback__layout {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+  grid-template-rows: 1fr;
+  @include media-tablet-768 {
+    grid-template-columns: 1fr;
     padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 20px;
-    grid-template-rows: 1fr;
-    @include media-tablet-768 {
-        grid-template-columns: 1fr;
-        padding: 0;
-    }
+  }
 }
 .feedback__contacts {
-    @include media-tablet-768 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    @include media-tablet-620 {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+  @include media-tablet-768 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @include media-tablet-620 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 .map__wrapper {
-    text-align: center;
+  text-align: center;
 }
 .feedback__contacts > div:nth-child(n) {
-    @include appearancEffect($translate1: -100%, $translate2: 0%);
+  @include appearancEffect($translate1: -100%, $translate2: 0%);
 }
 .feedback__contacts._active > div:nth-child(1) {
-    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1);
+  @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1);
 }
 .feedback__contacts._active > div:nth-child(2) {
-    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.1s);
+  @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.1s);
 }
 .feedback__contacts._active > div:nth-child(3) {
-    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.2s);
+  @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.2s);
 }
 .feedback__contacts._active > div:nth-child(4) {
-    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.3s);
+  @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.3s);
 }
 .feedback__contacts._active > div:nth-child(5) {
-    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.4s);
+  @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.4s);
 }
 .feedback__contacts._active > div:nth-child(6) {
-    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.5s);
+  @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.5s);
 }
 .feedback__contacts._active > div:nth-child(7) {
-    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.6s);
+  @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.6s);
 }
 .feedback__contacts._active > div:nth-child(8) {
-    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.7s);
+  @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.7s);
 }
 .feedback__contacts._active > div:nth-child(9) {
-    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.8s);
+  @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.8s);
 }
 .feedback__contacts._active > div:nth-child(10) {
-    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.9s);
+  @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 0.9s);
 }
 .feedback__contacts._active > div:nth-child(11) {
-    @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 1s);
+  @include appearancEffect($translate1: 0%, $translate2: 0%, $opacity: 1, $transition2: 1s);
 }
 
 .map__yandex {
-    width: 100%;
-    height: 600px;
-    @include media-tablet-768 {
-        height: 450px;
-    }
-    @include media-mobile-414 {
-        height: 250px;
-    }
-    @include appearancEffect($translate2: 20%, $translate1: 0);
-    &._active {
-        @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
+  width: 100%;
+  min-height: 400px;
+  height: calc(100% - 20px);
+  @include appearancEffect($translate2: 20%, $translate1: 0);
+  &._active {
+    @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
 
-        &:hover {
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
-        }
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
     }
+  }
 }
 .contacts__item {
-    display: grid;
-    grid-template-columns: 1fr 20px;
-    grid-template-rows: 1fr;
-    @include media-tablet-768 {
-        grid-template-columns: 1fr;
-    }
-    text-align: right;
-    color: $color-brand-second;
-    padding-bottom: 15px;
-    @include media-tablet-768 {
-        text-align: center;
-        span {
-            display: none;
-        }
-    }
-    a {
-        @include font(1.8rem);
-        text-decoration: none;
-        letter-spacing: 0.2rem;
-        color: $color-brand-second;
-    }
-    h4 {
-        padding-bottom: 3px;
-    }
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  grid-template-rows: 1fr;
+  @include media-tablet-768 {
+    grid-template-columns: 1fr;
+  }
+  text-align: right;
+  color: $color-brand-second;
+  padding-bottom: 15px;
+  @include media-tablet-768 {
+    text-align: center;
     span {
-        margin-left: 5px;
+      display: none;
     }
-    p {
-        padding-bottom: 8px;
-        a {
-            @include font(1.6rem, 1.8rem, $weight: bold);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.1rem;
-            color: $color-brand-second;
-        }
+  }
+  a {
+    @include font(1.8rem);
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    color: $color-brand-second;
+  }
+  h4 {
+    padding-bottom: 3px;
+  }
+  span {
+    margin-left: 5px;
+  }
+  p {
+    padding-bottom: 8px;
+    a {
+      @include font(1.6rem, 1.8rem, $weight: bold);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      color: $color-brand-second;
     }
+  }
 }
 
 .contacts__city-title {
-    @include font(2.4rem, $weight: bold);
-    padding: 0 20px 15px;
-    text-align: right;
-    margin: 0;
-    @include media-tablet-768 {
-        text-align: center;
-    }
+  @include font(2.4rem, $weight: bold);
+  padding: 0 20px 15px;
+  text-align: right;
+  margin: 0;
+  @include media-tablet-768 {
+    text-align: center;
+  }
 }
 .map__title {
+  &_before-425 {
+    display: none;
+  }
+  @include media-tablet-620 {
+    &_at-425 {
+      display: none;
+    }
     &_before-425 {
-        display: none;
+      display: inline;
     }
-    @include media-tablet-620 {
-        &_at-425 {
-            display: none;
-        }
-        &_before-425 {
-            display: inline;
-        }
-    }
+  }
 }
