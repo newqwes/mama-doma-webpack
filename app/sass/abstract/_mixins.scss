@@ -43,6 +43,11 @@
     @content;
   }
 }
+@mixin media-pcsmallextra-1130 {
+  @media (max-width: $pc-extra-small) {
+    @content;
+  }
+}
 @mixin media-laptop-1024 {
   @media (max-width: $media-laptop) {
     @content;
