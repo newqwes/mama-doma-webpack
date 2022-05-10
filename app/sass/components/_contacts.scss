@@ -15,7 +15,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
 
     @include media-pcsmall-1366 {
       justify-content: space-around;
