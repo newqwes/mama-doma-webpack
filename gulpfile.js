@@ -1,5 +1,5 @@
-// Важно!!! Делаем поиск по всему проекту 70temphash и заменяем на +1 к числу, заменяем везде
-// 70temphash  затем только билдим проект!!!
+// Важно!!! Делаем поиск по всему проекту 72temphash и заменяем на +1 к числу, заменяем везде
+// 72temphash  затем только билдим проект!!!
 
 //подключаем gulp
 const { src, dest, parallel, series, watch } = require('gulp');
@@ -21,7 +21,7 @@ function browsersync() {
   browserSync.init({
     server: { baseDir: 'app/' },
     notify: false,
-    online: true,
+    online: true
   });
 }
 
@@ -31,8 +31,8 @@ function htmlToMin() {
     .pipe(
       htmlmin({
         collapseWhitespace: true,
-        removeComments: true,
-      }),
+        removeComments: true
+      })
     )
     .pipe(dest('app/html/'));
 }
@@ -50,9 +50,9 @@ function scripts() {
     'app/js/swiper.js',
     'app/js/lib/inputmask.min.js',
     'app/js/mask.js',
-    'app/js/lib/sweetalert.min.js',
+    'app/js/lib/sweetalert.min.js'
   ])
-    .pipe(concat('app70temphash.min.js'))
+    .pipe(concat('app72temphash.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js/'))
     .pipe(browserSync.stream());
@@ -60,7 +60,7 @@ function scripts() {
 
 function scriptsMenu() {
   return src(['app/js/humburger.js'])
-    .pipe(concat('appMenu70temphash.min.js'))
+    .pipe(concat('appMenu72temphash.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js/'))
     .pipe(browserSync.stream());
@@ -70,7 +70,7 @@ function scriptsMenu() {
 function styles() {
   return src('app/sass/style.scss')
     .pipe(sass())
-    .pipe(concat('style70temphash.min.css'))
+    .pipe(concat('style72temphash.min.css'))
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
     .pipe(cleanCss({ level: { 1: { specialComments: 0 } } }))
     .pipe(dest('app/css/'))
@@ -79,10 +79,7 @@ function styles() {
 
 // Все картинки из папки src сжимает удачно и ставить в папку dest
 function images() {
-  return src('app/images/src/**/*')
-    .pipe(newer('app/images/dest/'))
-    .pipe(imagemin())
-    .pipe(dest('app/images/dest/'));
+  return src('app/images/src/**/*').pipe(newer('app/images/dest/')).pipe(imagemin()).pipe(dest('app/images/dest/'));
 }
 
 // функции очистки
@@ -102,17 +99,17 @@ function buildcopy() {
     [
       'app/css/**/*.min.css',
       'app/**/*.php',
-      'app/js/app70temphash.min.js',
-      'app/js/appMenu70temphash.min.js',
+      'app/js/app72temphash.min.js',
+      'app/js/appMenu72temphash.min.js',
       'app/images/dest/**/*',
       'app/font/**/*',
       'app/video/**/*',
       'app/html/**/*.html',
-      'app/**/*.htaccess',
+      'app/**/*.htaccess'
     ],
     {
-      base: 'app',
-    },
+      base: 'app'
+    }
   ).pipe(dest('dist'));
 }
 

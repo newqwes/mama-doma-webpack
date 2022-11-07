@@ -8,26 +8,26 @@ const swiper = new Swiper('.swiper', {
   centeredSlides: 1,
 
   // Указать то количество сколько объектов(картинок, слайдов) в самом слайде
-  loopedSlides: 6,
+  loopedSlides: 9,
 
   autoplay: {
     delay: 5000,
-    disableOnInteraction: false,
+    disableOnInteraction: false
   },
 
   breakpoints: {
     680: {
       slidesPerView: 2,
-      spaceBetween: 15,
-    },
-  },
+      spaceBetween: 15
+    }
+  }
 });
 
 new Swiper('.swiperMenu', {
   navigation: {
     nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    prevEl: '.swiper-button-prev'
   },
 
-  slidesPerView: 'auto',
+  slidesPerView: 'auto'
 });

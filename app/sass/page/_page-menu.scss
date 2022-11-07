@@ -7,7 +7,7 @@
 .menu-page-items {
   flex: 1;
   // background-color: $color-brand-accent;
-  padding: 80px 10px;
+  padding: 100px 10px;
   @include media-mobile-414 {
     padding: 50px 10px;
   }
@@ -64,7 +64,7 @@
       @include font(2.7rem, 4rem, $weight: 900);
       max-width: 295px;
       margin-bottom: 40px;
-      margin: 0 auto 40px auto;
+      margin: 50px auto 40px auto;
     }
   }
   @include media-mobilesmall-320 {
@@ -100,6 +100,24 @@
 
     .menu-page__links {
       flex: none;
+    }
+  }
+
+  &_four {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-around;
+
+    .menu-page__links {
+      flex: 1 1 calc(10% - 30px); /* отнимем margin и скажем растягиваться */
+      min-width: 270px; /* мин. ширина блока, чтобы переносились на другой ряд */
+      height: 330px;
+
+      @include media-pcsmall-1366 {
+        flex: 1 1 calc(47% - 30px); /* отнимем margin и скажем растягиваться */
+        max-width: 400px; /* мин. ширина блока, чтобы переносились на другой ряд */
+      }
     }
   }
 }
@@ -296,7 +314,7 @@
     background-image: url('../../images/dest/menuPage/blin-04.jpg');
   }
   &_bliny-06 {
-    background-image: url('../../images/dest/menuPage/blin-06.jpg');
+    background-image: url('../../images/dest/menuPage/blin-06.png');
   }
   &_bliny-07 {
     background-image: url('../../images/dest/menuPage/blin-07.jpg');
@@ -350,7 +368,7 @@
     background-image: url('../../images/dest/menuPage/teafruct.jpg');
   }
   &_napitki-04 {
-    background-image: url('../../images/dest/menuPage/napitki-03.jpg');
+    background-image: url('../../images/dest/menuPage/napitki-03.png');
     background-position: top;
   }
   &_napitki-05 {

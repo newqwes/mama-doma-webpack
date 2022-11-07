@@ -6,6 +6,11 @@
   a {
     cursor: default;
   }
+
+  .img-big {
+    width: 200%;
+  }
+
   img {
     @extend %transition;
     max-width: 100%;
