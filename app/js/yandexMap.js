@@ -74,11 +74,11 @@ window.onload = function () {
         [53.859766, 27.674067],
         {
           hintContent: 'ТЦ “МОМО”, фудкорт,  2 этаж',
-          balloonContent: 'Просп. Партизанский, 150а, станция метро Магилевская',
+          balloonContent: 'Просп. Партизанский, 150а, станции метро Магилевская',
         },
         {
           iconLayout: 'default#image',
-          iconImageHref: linkToImg + 'images/dest/newLogo.png',
+          iconImageHref: linkToImg + 'images/dest/logo23.PNG',
           iconImageSize: [32, 32],
           iconImageOffset: [-16, -16],
         },
@@ -91,7 +91,7 @@ window.onload = function () {
         },
         {
           iconLayout: 'default#image',
-          iconImageHref: linkToImg + 'images/dest/newLogo.png',
+          iconImageHref: linkToImg + 'images/dest/logo23.PNG',
           iconImageSize: [32, 32],
           iconImageOffset: [-16, -16],
         },
@@ -100,11 +100,11 @@ window.onload = function () {
         [53.890203, 27.546928],
         {
           hintContent: 'ТЦ «Minsk City Mall», фудкорт',
-          balloonContent: 'ул. Вокзальная, 34 станция метро Вокзальная',
+          balloonContent: 'ул. Вокзальная, 34 станции метро Вокзальная',
         },
         {
           iconLayout: 'default#image',
-          iconImageHref: linkToImg + 'images/dest/newLogo.png',
+          iconImageHref: linkToImg + 'images/dest/logo23.PNG',
           iconImageSize: [32, 32],
           iconImageOffset: [-16, -16],
         },
@@ -113,11 +113,11 @@ window.onload = function () {
         [53.933485, 27.652204],
         {
           hintContent: 'ТРЦ “Dana Mall”, фудкорт,  3 этаж',
-          balloonContent: 'ул. П.Мстиславца, 11, станция метро Восток, МИНСК',
+          balloonContent: 'ул. П.Мстиславца, 11, станции метро Восток, МИНСК',
         },
         {
           iconLayout: 'default#image',
-          iconImageHref: linkToImg + 'images/dest/newLogo.png',
+          iconImageHref: linkToImg + 'images/dest/logo23.PNG',
           iconImageSize: [32, 32],
           iconImageOffset: [-16, -16],
         },
@@ -126,11 +126,11 @@ window.onload = function () {
       //   [53.890535, 27.55374],
       //   {
       //     hintContent: 'ТРЦ “Galileo”, фудкорт,  3 этаж',
-      //     balloonContent: 'ул. Бобруйская, 6, станция метро площадь Ленина, МИНСК',
+      //     balloonContent: 'ул. Бобруйская, 6, станции метро площадь Ленина, МИНСК',
       //   },
       //   {
       //     iconLayout: 'default#image',
-      //     iconImageHref: linkToImg + 'images/dest/newLogo.png',
+      //     iconImageHref: linkToImg + 'images/dest/logo23.PNG',
       //     iconImageSize: [32, 32],
       //     iconImageOffset: [-16, -16],
       //   },
@@ -143,7 +143,7 @@ window.onload = function () {
         },
         {
           iconLayout: 'default#image',
-          iconImageHref: linkToImg + 'images/dest/newLogo.png',
+          iconImageHref: linkToImg + 'images/dest/logo23.PNG',
           iconImageSize: [32, 32],
           iconImageOffset: [-16, -16],
         },
@@ -156,7 +156,7 @@ window.onload = function () {
       },
       {
         iconLayout: 'default#image',
-        iconImageHref: linkToImg + 'images/dest/newLogo.png',
+        iconImageHref: linkToImg + 'images/dest/logo23.PNG',
         iconImageSize: [32, 32],
         iconImageOffset: [-16, -16],
       },
@@ -169,7 +169,7 @@ window.onload = function () {
       },
       {
         iconLayout: 'default#image',
-        iconImageHref: linkToImg + 'images/dest/newLogo.png',
+        iconImageHref: linkToImg + 'images/dest/logo23.PNG',
         iconImageSize: [32, 32],
         iconImageOffset: [-16, -16],
       },

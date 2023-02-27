@@ -57,7 +57,7 @@ window.onload = function () {
         [53.859766, 27.674067],
         {
           hintContent: 'ТЦ “МОМО”, фудкорт,  2 этаж, "Мама дома"',
-          balloonContent: 'Просп. Партизанский, 150а, станция метро Магилевская, "Мама дома"',
+          balloonContent: 'Просп. Партизанский, 150а, станции метро Магилевская, "Мама дома"',
         },
         {
           iconLayout: 'default#image',
@@ -70,7 +70,7 @@ window.onload = function () {
         [53.933485, 27.652204],
         {
           hintContent: 'ТРЦ “Dana Mall”, фудкорт,  3 этаж, "Мама дома"',
-          balloonContent: 'ул. П.Мстиславца, 11, станция метро Восток, МИНСК, "Мама дома"',
+          balloonContent: 'ул. П.Мстиславца, 11, станции метро Восток, МИНСК, "Мама дома"',
         },
         {
           iconLayout: 'default#image',
@@ -83,7 +83,7 @@ window.onload = function () {
       //   [53.890535, 27.55374],
       //   {
       //     hintContent: 'ТРЦ “Galileo”, фудкорт,  3 этаж, "Мама дома"',
-      //     balloonContent: 'ул. Бобруйская, 6, станция метро площадь Ленина, МИНСК, "Мама дома"',
+      //     balloonContent: 'ул. Бобруйская, 6, станции метро площадь Ленина, МИНСК, "Мама дома"',
       //   },
       //   {
       //     iconLayout: 'default#image',
@@ -109,7 +109,7 @@ window.onload = function () {
         [53.890203, 27.546928],
         {
           hintContent: 'ТЦ «Minsk City Mall», фудкорт',
-          balloonContent: 'ул. Вокзальная, 34 станция метро Вокзальная',
+          balloonContent: 'ул. Вокзальная, 34 станции метро Вокзальная',
         },
         {
           iconLayout: 'default#image',
