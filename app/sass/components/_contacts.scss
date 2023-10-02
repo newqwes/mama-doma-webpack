@@ -41,6 +41,21 @@
 
     @include media-tablet-768 {
       align-items: center;
+      &_last {
+        flex-direction: row;
+        max-width: 625px;
+        justify-content: space-between;
+        height: 50px;
+      }
+    }
+
+    @include media-tablet-620 {
+      &_last {
+        flex-direction: column;
+        max-width: 295px;
+        justify-content: center;
+        height: 250px;
+      }
     }
   }
 

@@ -215,6 +215,12 @@
   &_hot-11 {
     background-image: url('../../images/dest/menuPage/hot-11.jpg');
   }
+  &_hot-12 {
+    background-image: url('../../images/dest/menuPage/IMG_4191.PNG');
+  }  
+  &_hot-13 {
+    background-image: url('../../images/dest/menuPage/IMG_4190.PNG');
+  }
   &_sup-mar30-1 {
     background-image: url('../../images/dest/menuPage/sup-mar30-1.jpg');
   }
@@ -309,11 +315,14 @@
   &_sup-03 {
     background-image: url('../../images/dest/menuPage/sup-03.jpg');
   }
+  &_sup-04 {
+    background-image: url('../../images/dest/menuPage/IMG_4197.PNG');
+  }
   &_salat-01 {
-    background-image: url('../../images/dest/menuPage/salat-01.png');
+    background-image: url('../../images/dest/menuPage/IMG_4200.PNG');
   }
   &_salat-02 {
-    background-image: url('../../images/dest/menuPage/salat-02.jpg');
+    background-image: url('../../images/dest/menuPage/IMG_4201.PNG');
   }
   &_salat-03 {
     background-image: url('../../images/dest/menuPage/salat-03.png');
@@ -331,7 +340,7 @@
     background-image: url('../../images/dest/menuPage/blin-04.jpg');
   }
   &_bliny-06 {
-    background-image: url('../../images/dest/menuPage/blin-06.png');
+    background-image: url('../../images/dest/menuPage/IMG_4210.PNG');
   }
   &_bliny-07 {
     background-image: url('../../images/dest/menuPage/blin-07.jpg');
@@ -352,7 +361,7 @@
     background-image: url('../../images/dest/menuPage/blin-12.jpg');
   }
   &_syrnik-01 {
-    background-image: url('../../images/dest/menuPage/syrnik3.jpg');
+    background-image: url('../../images/dest/menuPage/IMG_4214.PNG');
   }
   &_syrnik-02 {
     background-image: url('../../images/dest/menuPage/blinynutella.jpg');
@@ -442,7 +451,7 @@
   position: absolute;
   left: 4%;
   top: 4%;
-  @include font(4.4rem, 8rem, 600);
+  @include font(4.3rem, 7.5rem, 600);
   background-color: $color-brand-second;
   border-radius: 50%;
   color: $color-text;

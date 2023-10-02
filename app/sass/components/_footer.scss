@@ -73,14 +73,6 @@
       }
     }
     @include media-tablet-768 {
-      flex: 15%;
-      align-items: center;
-      margin: 20px 0;
-      img {
-        margin: 0;
-      }
-    }
-    @include media-tablet-620 {
       flex: 100%;
       align-items: center;
       margin: 20px 0;
@@ -91,12 +83,11 @@
   }
   &_2 {
     flex: 21%;
-    @include media-tablet-620 {
-    }
   }
   &_3 {
     flex: 37%;
-    @include media-tablet-620 {
+
+    @include media-tablet-768 {
       flex: 100%;
       margin: 20px 0;
       text-align: center;
