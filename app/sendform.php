@@ -7,7 +7,7 @@ $phone = str_replace("+", "", $_POST['phone']);  // Берём данные из
 $feedback = $_POST['feedback']; // Берём данные из input c атрибутом name="mail"
 
 $token = "961615825:AAEoRf-UDkAFB7BXG1LKTC5-6C4BgG8LaYs"; // Тут пишем токен
-$chat_id = "-367886163"; // Тут пишем ID группы, куда будут отправляться сообщения
+$chat_id = "-1001413646466"; // Тут пишем ID группы, куда будут отправляться сообщения
 $sitename = "mama-doma.by отзыв"; //Указываем название сайта
 
 $arr = array(
@@ -30,7 +30,7 @@ $msg="
 Телефон: $phone
 Отзыв: $feedback";
 
-mail("hr@mama-doma.by", "Отзывы с сайта mamadoma.by", $msg, "From: hr@mama-doma.by");
+mail("mamadomainfo@gmail.com", "Отзывы с сайта mamadoma.by", $msg, "From: mamadomainfo@gmail.com");
 
 $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 
