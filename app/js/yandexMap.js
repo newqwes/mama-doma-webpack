@@ -99,8 +99,8 @@ window.onload = function () {
       minskCityMall = new ymaps.Placemark(
         [53.890203, 27.546928],
         {
-          hintContent: 'ТЦ «МинскСитиМолл», фудкорт',
-          balloonContent: 'ул. Вокзальная, 34 ст.м. Вокзальная'
+          hintContent: 'ТРК «Minsk City Mall», фудкорт, 3 этаж',
+          balloonContent: 'ул. Толстого, 1 ст.м. Вокзальная'
         },
         {
           iconLayout: 'default#image',
