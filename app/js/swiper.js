@@ -8,7 +8,7 @@ const swiper = new Swiper('.swiper', {
   centeredSlides: 1,
 
   // Указать то количество сколько объектов(картинок, слайдов) в самом слайде
-  loopedSlides: 8,
+  loopedSlides: 7,
 
   autoplay: {
     delay: 5000,
