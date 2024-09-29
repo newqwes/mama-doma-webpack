@@ -125,7 +125,7 @@
 
 .about-us__work {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('../../images/dest/about_us_people.jpg') center;
+    url('../../images/dest/work1.jpg') center;
   background-size: cover;
   @include appearancEffect($translate2: -20%, $translate1: 0);
 
@@ -139,7 +139,7 @@
 
 .about-us__instagram {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('../../images/dest/qweage.jpg');
+    url('../../images/dest/fb1.jpg');
   background-size: cover;
   @include appearancEffect($translate2: 20%, $translate1: 0);
 
