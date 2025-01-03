@@ -1,5 +1,5 @@
-// Важно!!! Делаем поиск по всему проекту  2temphash и заменяем на +1 к числу, заменяем везде
-//  2temphash  затем только билдим проект!!!
+// Важно!!! Делаем поиск по всему проекту  3temphash и заменяем на +1 к числу, заменяем везде
+//  3temphash  затем только билдим проект!!!
 
 //подключаем gulp
 const { src, dest, parallel, series, watch } = require('gulp');
@@ -52,7 +52,7 @@ function scripts() {
     'app/js/mask.js',
     'app/js/lib/sweetalert.min.js'
   ])
-    .pipe(concat('app 2temphash.min.js'))
+    .pipe(concat('app 3temphash.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js/'))
     .pipe(browserSync.stream());
@@ -60,7 +60,7 @@ function scripts() {
 
 function scriptsMenu() {
   return src(['app/js/humburger.js'])
-    .pipe(concat('appMenu 2temphash.min.js'))
+    .pipe(concat('appMenu 3temphash.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js/'))
     .pipe(browserSync.stream());
@@ -70,7 +70,7 @@ function scriptsMenu() {
 function styles() {
   return src('app/sass/style.scss')
     .pipe(sass())
-    .pipe(concat('style 2temphash.min.css'))
+    .pipe(concat('style 3temphash.min.css'))
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
     .pipe(cleanCss({ level: { 1: { specialComments: 0 } } }))
     .pipe(dest('app/css/'))
@@ -79,10 +79,7 @@ function styles() {
 
 // Все картинки из папки src сжимает удачно и ставить в папку dest
 function images() {
-  return src('app/images/src/**/*')
-    .pipe(newer('app/images/dest/'))
-    .pipe(imagemin())
-    .pipe(dest('app/images/dest/'));
+  return src('app/images/src/**/*').pipe(newer('app/images/dest/')).pipe(imagemin()).pipe(dest('app/images/dest/'));
 }
 
 // функции очистки
@@ -102,8 +99,8 @@ function buildcopy() {
     [
       'app/css/**/*.min.css',
       'app/**/*.php',
-      'app/js/app 2temphash.min.js',
-      'app/js/appMenu 2temphash.min.js',
+      'app/js/app 3temphash.min.js',
+      'app/js/appMenu 3temphash.min.js',
       'app/images/dest/**/*',
       'app/font/**/*',
       'app/video/**/*',

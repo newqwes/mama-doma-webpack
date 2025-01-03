@@ -66,10 +66,7 @@ window.onload = function () {
     cityCenter = belarusCountry;
   }
   ymaps.ready(function () {
-    var myMap = new (Function.prototype.bind.apply(
-        ymaps.Map,
-        [null].concat(_toConsumableArray(cityCenter))
-      ))(),
+    var myMap = new (Function.prototype.bind.apply(ymaps.Map, [null].concat(_toConsumableArray(cityCenter))))(),
       minskMomo = new ymaps.Placemark(
         [53.859766, 27.674067],
         {
@@ -122,19 +119,19 @@ window.onload = function () {
           iconImageOffset: [-16, -16]
         }
       ),
-      // minskGalileo = new ymaps.Placemark(
-      //   [53.890535, 27.55374],
-      //   {
-      //     hintContent: 'ТРЦ “Galileo”, фудкорт,  3 этаж',
-      //     balloonContent: 'ул. Бобруйская, 6, ст.м. площадь Ленина, МИНСК',
-      //   },
-      //   {
-      //     iconLayout: 'default#image',
-      //     iconImageHref: linkToImg + 'images/dest/logo7.png',
-      //     iconImageSize: [32, 32],
-      //     iconImageOffset: [-16, -16],
-      //   },
-      // ),
+      minskGreenCity = new ymaps.Placemark(
+        [53.908721, 27.431585],
+        {
+          hintContent: 'ТРЦ “Green City”, фудкорт,  3 этаж',
+          balloonContent: 'ул. Притыцкого, 156, МИНСК'
+        },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: linkToImg + 'images/dest/logo7.png',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-16, -16]
+        }
+      ),
       minskPlazo = new ymaps.Placemark(
         [53.926915, 27.510074],
         {
@@ -178,7 +175,7 @@ window.onload = function () {
     myMap.geoObjects
       .add(minskMomo)
       .add(minskDana)
-      // .add(minskGalileo)
+      .add(minskGreenCity)
       .add(minskPlazo)
       .add(minskExpobel)
       .add(minskCityMall)
