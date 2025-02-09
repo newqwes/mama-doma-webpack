@@ -66,11 +66,14 @@ window.onload = function () {
     cityCenter = belarusCountry;
   }
   ymaps.ready(function () {
-    var myMap = new (Function.prototype.bind.apply(ymaps.Map, [null].concat(_toConsumableArray(cityCenter))))(),
+    var myMap = new (Function.prototype.bind.apply(
+        ymaps.Map,
+        [null].concat(_toConsumableArray(cityCenter))
+      ))(),
       minskMomo = new ymaps.Placemark(
         [53.859766, 27.674067],
         {
-          hintContent: 'ТЦ “МОМО”, фудкорт,  2 этаж',
+          hintContent: 'ТЦ «МОМО», фудкорт,  2 этаж',
           balloonContent: 'Просп. Партизанский, 150а, ст.м. Магилевская'
         },
         {
@@ -109,7 +112,7 @@ window.onload = function () {
       minskDana = new ymaps.Placemark(
         [53.933485, 27.652204],
         {
-          hintContent: 'ТРЦ “Dana Mall”, фудкорт,  3 этаж',
+          hintContent: 'ТРЦ «Dana Mall», фудкорт,  3 этаж',
           balloonContent: 'ул. П.Мстиславца, 11, ст.м. Восток, МИНСК'
         },
         {
@@ -122,8 +125,8 @@ window.onload = function () {
       minskGreenCity = new ymaps.Placemark(
         [53.908721, 27.431585],
         {
-          hintContent: 'ТРЦ “Green City”, фудкорт,  3 этаж',
-          balloonContent: 'ул. Притыцкого, 156, МИНСК'
+          hintContent: 'ТРЦ «Green City», фудкорт,  3 этаж',
+          balloonContent: 'ул. Притыцкого, 156, ст.м. Каменная Горка, МИНСК'
         },
         {
           iconLayout: 'default#image',
@@ -135,7 +138,7 @@ window.onload = function () {
       minskPlazo = new ymaps.Placemark(
         [53.926915, 27.510074],
         {
-          hintContent: 'ТРЦ “Palazzo”, фудкорт,  3 этаж',
+          hintContent: 'ТРЦ «Palazzo», фудкорт,  3 этаж',
           balloonContent: 'ул. Тимирязева, 74А, МИНСК'
         },
         {
@@ -148,7 +151,7 @@ window.onload = function () {
     gomelSecret = new ymaps.Placemark(
       [52.423797, 30.997004],
       {
-        hintContent: 'Гомель, ТРЦ “Секрет”, 1 этаж',
+        hintContent: 'Гомель, ТРЦ «Секрет», 1 этаж',
         balloonContent: 'ул. Гагарина, 65'
       },
       {
@@ -161,7 +164,7 @@ window.onload = function () {
     mogilevPark = new ymaps.Placemark(
       [53.935452, 30.256978],
       {
-        hintContent: 'Могилев, ТЦ “Парк Сити”, фудкорт,  1 этаж',
+        hintContent: 'Могилев, ТЦ «Парк Сити», фудкорт,  1 этаж',
         balloonContent: 'Минское шоссе, 31'
       },
       {

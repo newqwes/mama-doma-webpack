@@ -56,7 +56,7 @@ window.onload = function () {
       minskMomo = new ymaps.Placemark(
         [53.859766, 27.674067],
         {
-          hintContent: 'ТЦ “МОМО”, фудкорт,  2 этаж, "Мама дома"',
+          hintContent: 'ТЦ «МОМО», фудкорт,  2 этаж, "Мама дома"',
           balloonContent: 'Просп. Партизанский, 150а, ст.м. Магилевская, "Мама дома"'
         },
         {
@@ -69,7 +69,7 @@ window.onload = function () {
       minskDana = new ymaps.Placemark(
         [53.933485, 27.652204],
         {
-          hintContent: 'ТРЦ “Dana Mall”, фудкорт,  3 этаж, "Мама дома"',
+          hintContent: 'ТРЦ «Dana Mall», фудкорт,  3 этаж, "Мама дома"',
           balloonContent: 'ул. П.Мстиславца, 11, ст.м. Восток, МИНСК, "Мама дома"'
         },
         {
@@ -82,7 +82,7 @@ window.onload = function () {
       // minskGalileo = new ymaps.Placemark(
       //   [53.890535, 27.55374],
       //   {
-      //     hintContent: 'ТРЦ “Galileo”, фудкорт,  3 этаж, "Мама дома"',
+      //     hintContent: 'ТРЦ «Galileo», фудкорт,  3 этаж, "Мама дома"',
       //     balloonContent: 'ул. Бобруйская, 6, ст.м. площадь Ленина, МИНСК, "Мама дома"',
       //   },
       //   {
@@ -95,7 +95,7 @@ window.onload = function () {
       minskExpobel = new ymaps.Placemark(
         [53.964164, 27.623744],
         {
-          hintContent: 'ТЦ EXPOBEL, фудкорт,  1 этаж',
+          hintContent: 'ТЦ «EXPOBEL», фудкорт,  1 этаж',
           balloonContent: '50-й километр Минский район, пересечение ул. Мирошниченко и МКАД'
         },
         {
@@ -121,7 +121,7 @@ window.onload = function () {
       minskPlazo = new ymaps.Placemark(
         [53.926915, 27.510074],
         {
-          hintContent: 'ТРЦ “Palazzo”, фудкорт,  3 этаж, "Мама дома"',
+          hintContent: 'ТРЦ «Palazzo», фудкорт,  3 этаж, "Мама дома"',
           balloonContent: 'ул. Тимирязева, 74А, МИНСК, "Мама дома"'
         },
         {
@@ -134,7 +134,7 @@ window.onload = function () {
     gomelSecret = new ymaps.Placemark(
       [52.423797, 30.997004],
       {
-        hintContent: 'Гомель, ТРЦ “Секрет”, 1 этаж, "Мама дома"',
+        hintContent: 'Гомель, ТРЦ «Секрет», 1 этаж, "Мама дома"',
         balloonContent: 'ул. Гагарина, 65, "Мама дома"'
       },
       {
@@ -147,7 +147,7 @@ window.onload = function () {
     mogilevPark = new ymaps.Placemark(
       [53.935452, 30.256978],
       {
-        hintContent: 'Могилев, ТЦ “Парк Сити”, фудкорт,  1 этаж, "Мама дома"',
+        hintContent: 'Могилев, ТЦ «Парк Сити», фудкорт,  1 этаж, "Мама дома"',
         balloonContent: 'Минское шоссе, 31, "Мама дома"'
       },
       {
