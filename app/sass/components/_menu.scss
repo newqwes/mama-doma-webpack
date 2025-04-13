@@ -10,25 +10,31 @@
 .menu__item {
   margin: 15px 5px;
 }
+
 .menu__title {
   margin-bottom: 80px - 15px; // margin of menu__item 15px
+
   h2 {
     padding: 0;
     margin: 0;
   }
 }
+
 .menu__links._long-desc {
   &::after {
     bottom: 20%;
   }
+
   &::after {
     @include media-tablet-620 {
       bottom: 27.5%;
     }
   }
 }
+
 .menu__links {
   position: relative;
+
   &::before,
   &::after {
     content: '';
@@ -40,20 +46,26 @@
     z-index: 2;
     border-radius: 3px;
   }
+
   &::before {
     top: 22.5%;
+
     @include media-tablet-620 {
       top: 25%;
     }
+
     @include media-mobile-414 {
       top: 22%;
     }
   }
+
   &::after {
     bottom: 35%;
+
     @include media-tablet-620 {
       bottom: 30%;
     }
+
     @include media-mobile-414 {
       bottom: 22%;
     }
@@ -63,7 +75,8 @@
   width: 360px;
   height: 200px;
   border-radius: 5px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15),
+  0 10px 10px rgba(0, 0, 0, 0.12);
   transform: scale(0);
   transition: all 0.8s ease;
   color: $color-text;
@@ -76,19 +89,23 @@
   text-decoration: none;
   letter-spacing: 0.1rem;
   padding: 20% 10px 20%;
+
   @include media-laptop-1024 {
     width: 460px;
     height: 240px;
   }
+
   @include media-tablet-768 {
     width: 460px;
     height: 240px;
   }
+
   @include media-tablet-620 {
     width: 400px;
     height: 250px;
     padding: 100px 10px 20%;
   }
+
   @include media-mobile-414 {
     @include font(2.6rem, $weight: 700);
     letter-spacing: 0.1rem;
@@ -97,6 +114,7 @@
     padding: 70px 10px 20%;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.15);
   }
+
   &._active {
     transform: scale(1);
     opacity: 1;
@@ -183,12 +201,12 @@
 
 .menu__to-1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
-    url('../../images/dest/menu/sup.jpg');
+    url('../../images/dest/menu/sup-new.jpg');
 }
 
 .menu__to-2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
-    url('../../images/dest/menu/salat.jpg');
+    url('../../images/dest/menu/salati.jpg');
 }
 
 .menu__to-3 {
@@ -205,10 +223,12 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
     url('../../images/dest/menu/sladkiye-bliny.jpg');
 }
+
 .menu__to-6 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
     url('../../images/dest/menu/syrniki.jpg');
 }
+
 .menu__to-7 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
     url('../../images/dest/menu/napitki.jpg');
