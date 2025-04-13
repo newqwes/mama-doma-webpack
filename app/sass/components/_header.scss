@@ -58,6 +58,7 @@
   @include media-laptop-1024 {
     margin: 0 auto;
   }
+
   @include media-tablet-768 {
     display: none;
   }
@@ -118,6 +119,7 @@ ul {
 
 .header__language {
   color: $color-text;
+
   a {
     margin: 0 6px;
   }
@@ -201,12 +203,15 @@ ul {
   letter-spacing: 0.15rem;
   margin-bottom: 40px;
   @include appearancEffect();
+
   &._active {
     @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.5s);
   }
+
   @include media-tablet-768 {
     margin-bottom: 30px;
   }
+
   @include media-mobile-414 {
     margin-bottom: 15px;
     @include font(1.2rem, 2rem);
@@ -216,33 +221,48 @@ ul {
 .promo__title-span {
   cursor: pointer;
   display: inline-block;
-  background-image: url('../../images/dest/mama-doma-title.svg');
+  background-image: url('../../images/dest/mama-doma-title-new.png');
   width: 848px;
-  height: 130px;
+  height: 160px;
+  // height: 130px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   @include appearancEffect();
+
   &._active {
     @include appearancEffect($translate2: 0px, $opacity: 1);
   }
+
   @include media-pcsmall-1366 {
     width: 785px;
-    height: 120px;
+    height: 150px;
+    // height: 120px;
     background-size: cover;
   }
+
   @include media-laptop-1024 {
     width: 760px;
-    height: 116px;
+    height: 145px;
+    // height: 116px;
   }
+
   @include media-tablet-768 {
     width: 600px;
-    height: 92px;
+    height: 115px;
+    // height: 92px;
   }
+
   @include media-tablet-620 {
     width: 390px;
-    height: 59px;
+    height: 75px;
+    // height: 59px;
   }
+
   @include media-mobile-414 {
     width: 300px;
-    height: 45px;
+    height: 60px;
+    // height: 45px;
   }
 }
 
@@ -256,16 +276,20 @@ ul {
   &._active {
     @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.5s);
   }
+
   @include media-pcsmall-1366 {
     @include font(2.2rem, $weight: 500);
   }
+
   @include media-laptop-1024 {
     @include font(2.1rem, $weight: 500);
   }
+
   @include media-tablet-768 {
     @include font(1.7rem, $weight: 500);
     letter-spacing: 0.07rem;
   }
+
   @include media-mobile-414 {
     @include font(1.4rem, $weight: 500);
     letter-spacing: 0.05rem;
