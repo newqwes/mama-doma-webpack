@@ -57,7 +57,7 @@ npm run clean
 3. Делаем билд проекта командой
 
 ```bash
-npm run build
+npm run build 
 ```
 
 3. 1. Картинки доставки (и те что нужно сохранить в хорошем качестве) заменяешь всё из dist/images/dest на app/images/src (в app всё оставляешь как есть!)
